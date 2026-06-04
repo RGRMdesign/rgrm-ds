@@ -1,12 +1,13 @@
 import '@rgrmdesign/rgrm-ds-tokens';
 
 import type { Preview } from '@storybook/react-vite';
+import React from 'react';
 
 import './preview.css';
 
 const preview: Preview = {
   parameters: {
-    layout: 'fullscreen',
+    layout: 'padded',
     docs: {
       canvas: { layout: 'padded' },
     },
