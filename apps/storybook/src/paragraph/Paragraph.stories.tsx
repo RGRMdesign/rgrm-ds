@@ -47,20 +47,3 @@ export const Small: Story = {
     children: 'Small paragraph for captions and fine print.',
   },
 };
-
-export const AllSizes: Story = {
-  parameters: {
-    controls: { disable: true },
-  },
-  render: () => (
-    <>
-      <Paragraph size="large">
-        Large lead paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </Paragraph>
-      <Paragraph>
-        Default body paragraph. The quick brown fox jumps over the lazy dog.
-      </Paragraph>
-      <Paragraph size="small">Small paragraph for captions and fine print.</Paragraph>
-    </>
-  ),
-};
