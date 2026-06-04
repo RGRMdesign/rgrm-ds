@@ -9,6 +9,34 @@ body {
     color 0.2s ease;
 }
 
+/* Documentation tab: neutral page chrome; tokens only on docs canvases. */
+body:has(.sbdocs-wrapper) {
+  background: #fff;
+  color: #2e3438;
+  transition: none;
+}
+
 .sb-story {
   max-width: 42rem;
+}
+
+/* Full docs canvas block (preview chrome + padded .docs-story area). */
+.sbdocs-preview[data-theme],
+.docs-story[data-theme] {
+  background: var(--rgrm-theme-background) !important;
+  color: var(--rgrm-theme-text);
+  border-color: var(--rgrm-theme-border) !important;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sbdocs-preview[data-theme] .innerZoomElementWrapper > * {
+  border-color: transparent !important;
+}
+
+.sb-docs-canvas {
+  width: 100%;
+  color: inherit;
 }
