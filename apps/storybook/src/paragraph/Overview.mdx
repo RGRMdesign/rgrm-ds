@@ -1,6 +1,6 @@
 import { Meta, Canvas } from '@storybook/addon-docs/blocks';
 
-import * as ReactStories from './Paragraph.react.stories';
+import * as CssStories from './Paragraph.css.stories';
 
 <Meta title="Typography/Paragraph/Overview" name="Overview" />
 
@@ -15,7 +15,19 @@ defined.
 
 ## Preview
 
-<Canvas of={ReactStories.Default} />
+Default body scale (main paragraph style).
+
+<Canvas of={CssStories.Default} sourceState="none" />
+
+## Variants
+
+### Large
+
+<Canvas of={CssStories.Large} sourceState="none" />
+
+### Small
+
+<Canvas of={CssStories.Small} sourceState="none" />
 
 ## Choose an implementation
 
