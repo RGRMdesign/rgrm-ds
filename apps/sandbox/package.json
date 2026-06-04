@@ -1,0 +1,21 @@
+{
+  "name": "sandbox",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@rgrmdesign/heading": "workspace:*",
+    "@rgrmdesign/paragraph": "workspace:*",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.1.1"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "vite": "^8.0.16"
+  }
+}

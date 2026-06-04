@@ -1,0 +1,54 @@
+/**
+ * @rgrmdesign/paragraph
+ *
+ * Body / paragraph typography for the RGRM design system.
+ * Consumes CSS custom properties from @rgrmdesign/rgrm-ds-tokens.
+ * Load the tokens stylesheet once in your app before this file.
+ */
+
+.rgrm-paragraph {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height);
+  letter-spacing: var(--main-letter-spacing);
+  text-transform: var(--main-text-transform);
+  text-wrap: var(--main-text-wrap);
+}
+
+/* Size variants mapped to the semantic token groups (small / main / large) */
+.rgrm-paragraph--small {
+  font-family: var(--small-font-family);
+  font-size: var(--small-font-size);
+  font-weight: var(--small-font-weight);
+  line-height: var(--small-line-height);
+  letter-spacing: var(--small-letter-spacing);
+  text-transform: var(--small-text-transform);
+  text-wrap: var(--small-text-wrap);
+}
+
+.rgrm-paragraph--large {
+  font-family: var(--large-font-family);
+  font-size: var(--large-font-size);
+  font-weight: var(--large-font-weight);
+  line-height: var(--large-line-height);
+  letter-spacing: var(--large-letter-spacing);
+  text-transform: var(--large-text-transform);
+  text-wrap: var(--large-text-wrap);
+}
+
+/* Weight modifiers */
+.rgrm-paragraph--medium {
+  font-weight: var(--font-primary-medium);
+}
+
+.rgrm-paragraph--bold {
+  font-weight: var(--font-primary-bold);
+}
+
+/* Constrain measure for comfortable reading */
+.rgrm-paragraph--measure {
+  max-width: var(--max-width-small);
+}
