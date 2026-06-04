@@ -86,6 +86,12 @@ importers:
 
   apps/storybook:
     dependencies:
+      '@rgrmdesign/paragraph-css':
+        specifier: workspace:*
+        version: link:../../packages/paragraph-css
+      '@rgrmdesign/paragraph-element':
+        specifier: workspace:*
+        version: link:../../packages/paragraph-element
       '@rgrmdesign/paragraph-react':
         specifier: workspace:*
         version: link:../../packages/paragraph-react

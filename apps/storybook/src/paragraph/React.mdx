@@ -1,0 +1,38 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { paragraphReactPropArgNames } from './fixtures';
+import * as ReactStories from './Paragraph.react.stories';
+import { paragraphReactInstallSnippet, paragraphReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name="Documentation" />
+
+# React
+
+React wrapper via `@rgrmdesign/paragraph-react`. Importing the package also loads
+`@rgrmdesign/paragraph-css` — no separate stylesheet import is required.
+
+## Install
+
+<Source language="bash" code={paragraphReactInstallSnippet()} />
+
+## Setup
+
+Import tokens once in your app entry, then the React wrapper (CSS loads automatically).
+
+<Source language="tsx" code={paragraphReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={paragraphReactPropArgNames} />
+
+## Default
+
+<Canvas of={ReactStories.Default} />
+
+## Large
+
+<Canvas of={ReactStories.Large} />
+
+## Small
+
+<Canvas of={ReactStories.Small} />

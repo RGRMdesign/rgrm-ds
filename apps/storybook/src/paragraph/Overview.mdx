@@ -1,0 +1,29 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+import * as ReactStories from './Paragraph.react.stories';
+
+<Meta title="Typography/Paragraph/Overview" name="Overview" />
+
+# Paragraph
+
+Body typography for the RGRM design system. Visual styles live in
+`@rgrmdesign/paragraph-css`; React and the web component are thin wrappers that apply
+the same BEM classes.
+
+Load `@rgrmdesign/rgrm-ds-tokens` once in your app so the CSS custom properties are
+defined.
+
+## Preview
+
+<Canvas of={ReactStories.Default} />
+
+## Choose an implementation
+
+Pick a page in the sidebar under **Typography → Paragraph**, or jump directly:
+
+- **React** — [`@rgrmdesign/paragraph-react`](?path=/docs/typography-paragraph-react--documentation) for React apps
+- **CSS** — [`@rgrmdesign/paragraph-css`](?path=/docs/typography-paragraph-css--documentation) for hand-written HTML or any stack without a wrapper
+- **Web component** — [`@rgrmdesign/paragraph-element`](?path=/docs/typography-paragraph-element--documentation) for vanilla JS, server-rendered HTML, or non-React frameworks
+
+Each documentation page includes install steps, copy-paste examples, and all size
+variants.

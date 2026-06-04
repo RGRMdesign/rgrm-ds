@@ -1,0 +1,41 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { paragraphElementAttributeArgNames } from './fixtures';
+import * as ElementStories from './Paragraph.element.stories';
+import { paragraphElementInstallSnippet, paragraphElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name="Documentation" />
+
+# Web component
+
+Custom element `<rgrm-paragraph>` via `@rgrmdesign/paragraph-element`. Importing the
+package registers the element and loads `@rgrmdesign/paragraph-css`.
+
+The element uses **light DOM** (inner `<p>` with BEM classes) so design tokens from the
+document apply normally.
+
+## Install
+
+<Source language="bash" code={paragraphElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the custom element once in your app entry.
+
+<Source language="tsx" code={paragraphElementSetupSnippet()} />
+
+## Attributes
+
+<ArgTypes of={ElementStories} include={paragraphElementAttributeArgNames} />
+
+## Default
+
+<Canvas of={ElementStories.Default} />
+
+## Large
+
+<Canvas of={ElementStories.Large} />
+
+## Small
+
+<Canvas of={ElementStories.Small} />

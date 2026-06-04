@@ -14,7 +14,30 @@ const preview: Preview = {
   parameters: {
     layout: 'padded',
     docs: {
-      canvas: { layout: 'padded' },
+      codePanel: true,
+      canvas: {
+        layout: 'padded',
+        sourceState: 'shown',
+      },
+    },
+    options: {
+      storySort: {
+        order: [
+          'Typography',
+          [
+            'Paragraph',
+            [
+              'Overview',
+              'React',
+              ['Documentation', '*'],
+              'CSS',
+              ['Documentation', '*'],
+              'Element',
+              ['Documentation', '*'],
+            ],
+          ],
+        ],
+      },
     },
   },
   globalTypes: {

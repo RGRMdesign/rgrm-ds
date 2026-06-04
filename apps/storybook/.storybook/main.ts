@@ -4,7 +4,7 @@ import type { StorybookConfig } from '@storybook/react-vite';
 const GITHUB_PAGES_BASE = '/rgrm-ds/';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(ts|tsx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(ts|tsx)'],
   addons: ['@storybook/addon-docs'],
   framework: {
     name: '@storybook/react-vite',
