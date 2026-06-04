@@ -1,0 +1,47 @@
+{
+  "name": "@rgrmdesign/paragraph-element",
+  "version": "0.0.0",
+  "description": "Web Component (<rgrm-paragraph>) for the RGRM design system. Styles come from @rgrmdesign/paragraph-css.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "@rgrmdesign/paragraph-css",
+    "./dist/index.js"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@rgrmdesign/paragraph-css": "workspace:*"
+  },
+  "peerDependencies": {
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.3.0"
+  },
+  "devDependencies": {
+    "@rgrmdesign/rgrm-ds-tokens": "^0.3.0",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "custom-elements",
+    "design-system",
+    "paragraph",
+    "typography",
+    "web-components"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="root">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RGRM DS — sandbox-element</title>
+</head>
+
+<body>
+  <header class="sandbox-bar">
+    <span class="sandbox-bar__title">RGRM DS · sandbox-element</span>
+    <div class="sandbox-bar__themes" role="group" aria-label="Theme">
+      <button type="button" data-set-theme="root" aria-pressed="true">Root</button>
+      <button type="button" data-set-theme="dark" aria-pressed="false">Dark</button>
+      <button type="button" data-set-theme="brand" aria-pressed="false">Brand</button>
+    </div>
+  </header>
+
+  <main class="sandbox-main">
+    <section class="sandbox-section">
+      <p class="sandbox-section__label">@rgrmdesign/paragraph-element</p>
+
+      <rgrm-paragraph size="large">
+        Large lead paragraph (custom element). Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </rgrm-paragraph>
+      <rgrm-paragraph>
+        Default body paragraph (custom element). The quick brown fox jumps over the lazy dog while
+        typography scales with the design tokens.
+      </rgrm-paragraph>
+      <rgrm-paragraph size="small">
+        Small paragraph (custom element) for captions and fine print.
+      </rgrm-paragraph>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+/* Shared sandbox chrome — component styles come from DS packages. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--rgrm-theme-background);
+  color: var(--rgrm-theme-text);
+  font-family: var(--rgrm-typography-font-primary-family);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+::selection {
+  background: var(--rgrm-theme-selection-background);
+  color: var(--rgrm-theme-selection-text);
+}
+
+.sandbox-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--rgrm-viewport-space-3);
+  padding: var(--rgrm-viewport-space-3) var(--rgrm-viewport-site-margin);
+  background: var(--rgrm-theme-background-2);
+  border-bottom: var(--rgrm-default-border-width-main) solid var(--rgrm-theme-border);
+}
+
+.sandbox-bar__title {
+  font-weight: var(--rgrm-typography-font-primary-bold);
+}
+
+.sandbox-bar__themes {
+  display: flex;
+  gap: var(--rgrm-viewport-space-1);
+}
+
+.sandbox-bar__themes button {
+  padding: var(--rgrm-viewport-space-1) var(--rgrm-viewport-space-3);
+  border: var(--rgrm-default-border-width-main) solid var(--rgrm-theme-border);
+  border-radius: var(--rgrm-default-radius-small);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.sandbox-bar__themes button[aria-pressed='true'] {
+  background: var(--rgrm-theme-text);
+  color: var(--rgrm-theme-background);
+}
+
+.sandbox-main {
+  max-width: var(--rgrm-default-site-viewport-max);
+  margin-inline: auto;
+  padding: var(--rgrm-viewport-section-space-small) var(--rgrm-viewport-site-margin);
+  display: grid;
+  gap: var(--rgrm-viewport-section-space-small);
+}
+
+.sandbox-section {
+  display: grid;
+  gap: var(--rgrm-viewport-space-4);
+}
+
+.sandbox-demo {
+  display: grid;
+  gap: var(--rgrm-viewport-space-4);
+}
+
+.sandbox-section__label {
+  margin: 0;
+  font-size: var(--rgrm-viewport-font-size-small);
+  letter-spacing: var(--rgrm-typography-letter-spacing-normal);
+  text-transform: var(--rgrm-typography-text-transform-uppercase);
+  opacity: 0.6;
+}

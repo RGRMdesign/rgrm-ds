@@ -10,10 +10,15 @@
   },
   "scripts": {
     "dev": "turbo run dev",
+    "dev:css": "turbo run dev --filter=sandbox-css",
+    "dev:react": "turbo run dev --filter=sandbox-react",
+    "dev:element": "turbo run dev --filter=sandbox-element",
+    "storybook": "turbo run storybook --filter=storybook",
+    "build-storybook": "turbo run build-storybook --filter=storybook",
     "build": "turbo run build",
     "clean": "turbo run clean && rimraf node_modules/.cache .turbo",
-    "format": "prettier --write \"**/*.{css,js,ts,json,md,html,yaml,yml}\"",
-    "format:check": "prettier --check \"**/*.{css,js,ts,json,md,html,yaml,yml}\""
+    "format": "prettier --write \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\""
   },
   "devDependencies": {
     "prettier": "^3.8.3",

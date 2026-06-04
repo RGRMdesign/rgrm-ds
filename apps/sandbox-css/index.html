@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="root">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RGRM DS — sandbox-css</title>
+</head>
+
+<body>
+  <header class="sandbox-bar">
+    <span class="sandbox-bar__title">RGRM DS · sandbox-css</span>
+    <div class="sandbox-bar__themes" role="group" aria-label="Theme">
+      <button type="button" data-set-theme="root" aria-pressed="true">Root</button>
+      <button type="button" data-set-theme="dark" aria-pressed="false">Dark</button>
+      <button type="button" data-set-theme="brand" aria-pressed="false">Brand</button>
+    </div>
+  </header>
+
+  <main class="sandbox-main">
+    <section class="sandbox-section">
+      <p class="sandbox-section__label">@rgrmdesign/paragraph-css</p>
+
+      <p class="rgrm-paragraph rgrm-paragraph--large">
+        Large lead paragraph used to introduce a section with a little more presence than the
+        default body copy. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+      </p>
+      <p class="rgrm-paragraph">
+        Default body paragraph. The quick brown fox jumps over the lazy dog while the typography
+        scales fluidly between the minimum and maximum viewport widths defined in the design
+        tokens. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, totam neque vel accusantium placeat
+        quae voluptatum repudiandae autem deleniti expedita unde quos libero et soluta eligendi labore officiis est
+        inventore.
+      </p>
+      <p class="rgrm-paragraph rgrm-paragraph--small">
+        Small paragraph is used for captions, fine print and supporting details. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quisquam, quos.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

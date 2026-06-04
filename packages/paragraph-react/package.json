@@ -1,0 +1,48 @@
+{
+  "name": "@rgrmdesign/paragraph-react",
+  "version": "0.0.0",
+  "description": "React Paragraph component for the RGRM design system. Styles come from @rgrmdesign/paragraph-css.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "@rgrmdesign/paragraph-css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@rgrmdesign/paragraph-css": "workspace:*"
+  },
+  "peerDependencies": {
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.3.0",
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@rgrmdesign/rgrm-ds-tokens": "^0.3.0",
+    "@types/react": "^19.2.7",
+    "react": "^19.2.3",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "paragraph",
+    "typography"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
