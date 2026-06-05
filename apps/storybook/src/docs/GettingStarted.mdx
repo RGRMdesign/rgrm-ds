@@ -1,0 +1,69 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guides/Getting started" />
+
+# Getting started
+
+## Install
+
+Install the layer you need plus the tokens peer dependency. For React:
+
+<Source
+  language="bash"
+  code={`npm install @rgrmdesign/rgrm-ds-react @rgrmdesign/rgrm-ds-tokens`}
+/>
+
+For plain CSS or the Web component, swap `@rgrmdesign/rgrm-ds-react` for
+`@rgrmdesign/rgrm-ds-css` or `@rgrmdesign/rgrm-ds-elements`.
+
+## Setup
+
+Load the tokens once in your app entry so the CSS custom properties are defined. After
+that, importing a React or Web component automatically pulls in its styles from
+`@rgrmdesign/rgrm-ds-css`.
+
+<Source
+  language="tsx"
+  code={`// app entry
+import '@rgrmdesign/rgrm-ds-tokens';
+
+// then use components anywhere
+import { Heading } from '@rgrmdesign/rgrm-ds-react/heading';`}
+/>
+
+Using plain CSS? Import the stylesheet (whole bundle or a single component) and apply the
+BEM classes yourself:
+
+<Source
+  language="css"
+  code={`@import '@rgrmdesign/rgrm-ds-tokens';
+@import '@rgrmdesign/rgrm-ds-css';        /* or: @rgrmdesign/rgrm-ds-css/heading */`}
+/>
+
+## Theming
+
+Set `data-theme` on a wrapping element (typically `<html>`) to switch themes. The theme
+cascades to all content inside it:
+
+<Source language="html" code={`<html data-theme="dark"> … </html>`} />
+
+In Storybook, use the **Theme** toolbar (Root / Dark / Brand) to preview any story.
+
+## Local development
+
+The monorepo (pnpm + Turborepo) ships sandboxes for each layer:
+
+<Source
+  language="bash"
+  code={`pnpm install
+pnpm build        # build all packages first
+pnpm dev          # watch packages + run all sandboxes
+pnpm storybook    # this Storybook on port 6006`}
+/>
+
+| Sandbox           | URL                     | Purpose                            |
+| ----------------- | ----------------------- | ---------------------------------- |
+| `sandbox-css`     | `http://localhost:5173` | Vanilla HTML / CSS classes         |
+| `sandbox-react`   | `http://localhost:5174` | React components                   |
+| `sandbox-element` | `http://localhost:5175` | Web components (`<rgrm-heading>`)  |
+| `storybook`       | `http://localhost:6006` | Component docs                     |

@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# RGRM Design System
+
+A small, framework-agnostic design system. Layout and visual styles live in plain CSS
+(`@rgrmdesign/rgrm-ds-css`) that consumes the design tokens from
+`@rgrmdesign/rgrm-ds-tokens`. React and Web Component packages are thin wrappers that
+apply the exact same BEM classes — so every implementation looks and behaves the same.
+
+## Pick your implementation
+
+The system ships one package per layer, not per component. Choose the one that fits your
+stack:
+
+- **CSS** — `@rgrmdesign/rgrm-ds-css` — hand-written HTML or any stack without a wrapper.
+- **React** — `@rgrmdesign/rgrm-ds-react` — React apps (importing it also loads the CSS).
+- **Web component** — `@rgrmdesign/rgrm-ds-elements` — vanilla JS, server-rendered HTML,
+  or non-React frameworks.
+
+Tokens (`@rgrmdesign/rgrm-ds-tokens`) are a **peer dependency** so they load exactly once
+in the consuming app.
+
+## Under the hood: the Core package
+
+`@rgrmdesign/rgrm-ds-core` holds shared, framework-agnostic logic (BEM class-name
+builders and types) that the React and Web Component layers re-use, so that logic is never
+duplicated. It is published to npm because those wrappers depend on it at runtime, but
+most apps **never import it directly** — pick a layer above instead. Reach for `core`
+only when you build your own wrapper for another framework (e.g. Vue, Svelte) and want the
+class builders without React or custom elements.
+
+## Theming
+
+Themes are driven by `data-theme` on a wrapping element (usually `<html>`). The whole
+theme cascades to the content; background and text colours come from the token set.
+Storybook exposes **Root / Dark / Brand** via the toolbar so you can preview any story
+in every theme.
+
+## Where to go next
+
+- **Guides → Getting started** — install, setup, and the local sandboxes.
+- **Guides → Governance** — versioning, releases, scope, and accessibility.
+- **Typography** and **Wrappers** — the components, each with Overview, React, CSS, and
+  Web component pages.
+
+Every component page includes install steps, copy-paste examples, and all variants.

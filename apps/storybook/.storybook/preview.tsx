@@ -23,6 +23,9 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          'Introduction',
+          'Guides',
+          ['Getting started', 'Governance'],
           'Typography',
           [
             'Heading',

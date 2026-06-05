@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guides/Governance" />
+
+# Governance
+
+How the design system is structured, versioned, and extended.
+
+## Architecture principles
+
+- **One package per layer, not per component.** Adding a component never adds a package;
+  it lives inside the existing `css`, `react`, `elements`, and (optionally) `core`
+  packages.
+- **CSS is the single source of truth for visuals.** React and Web Component layers are
+  thin wrappers that apply the same BEM classes — never re-style on top.
+- **Tokens are a peer dependency.** Packages only _use_ token custom properties
+  (`var(--font-size-h1)`, …); the token set is loaded once by the consuming app.
+- **Tree-shakeable sub-path exports.** Each component is reachable via its own entry
+  (e.g. `@rgrmdesign/rgrm-ds-react/heading`) plus a barrel that re-exports everything.
+
+## Versioning & releases
+
+- Packages follow **semantic versioning** and are published under the `@rgrmdesign`
+  scope on npm.
+- The CSS, React, and Web Component packages are released together so a component is
+  available in every layer at the same version.
+- **Core is published too.** `@rgrmdesign/rgrm-ds-core` is a runtime dependency of the
+  React and Web Component packages (it is not bundled into them), so it must be available
+  on npm as a transitive dependency. Most apps never install it directly; release it in
+  lockstep with the wrappers that depend on it.
+- Design tokens live in a **separate repository** (generated from Figma variables) and
+  are consumed here as a peer dependency (`>=0.5.0`).
+- Storybook is the published reference and deploys from `main` to GitHub Pages:
+  **https://rgrmdesign.github.io/rgrm-ds/**
+
+## Definition of done for a component
+
+A component is considered complete when it exists across all relevant layers with
+matching docs:
+
+1. **Core** (optional) — framework-agnostic logic/types.
+2. **CSS** — `packages/css/src/<name>/index.css`, imported from the package barrel, with
+   a build step and a `./<name>` export.
+3. **React / Elements** — wrappers that re-use the core logic and CSS classes, each with
+   a `./<name>` sub-path export.
+4. **Sandboxes** — a demo in each matching sandbox app.
+5. **Storybook** — an Overview plus React, CSS, and Web component documentation page.
+
+## Accessibility
+
+- Use semantic HTML; wrappers expose the right element (e.g. heading levels map to
+  `<h1>`–`<h6>`).
+- Colour and contrast come from the token themes — verify new combinations meet WCAG AA.
+- Every theme (Root / Dark / Brand) must remain usable; preview all three via the
+  Storybook toolbar.
+
+## Contributing
+
+- Use **Node.js >= 22** and the pinned **pnpm** version (`packageManager` in the root
+  `package.json`).
+- Run `pnpm format` (Prettier) before committing.
+- Add or update the Storybook page and sandbox demo alongside any component change.
+- See the repository `README.md` for the full "Adding a new component" walkthrough.

@@ -29,9 +29,11 @@ Each package exposes one entry per component via **sub-path exports** (e.g.
 barrel (`.`) that re-exports everything, so consumers keep fine-grained tree-shaking.
 
 `core` holds shared, framework-agnostic logic (BEM class builders, types) so the React
-and Web Component layers never duplicate it. The packages only _use_ the token custom
-properties (`var(--font-size-h1)`, …); the tokens themselves are a **peer dependency**
-so they are loaded exactly once by the consuming app.
+and Web Component layers never duplicate it. It is **published to npm** because `react`
+and `elements` depend on it at runtime (it is not bundled into them), so it ships as a
+transitive dependency — most apps never install `core` directly. The packages only _use_
+the token custom properties (`var(--font-size-h1)`, …); the tokens themselves are a
+**peer dependency** so they are loaded exactly once by the consuming app.
 
 ## Requirements
 
