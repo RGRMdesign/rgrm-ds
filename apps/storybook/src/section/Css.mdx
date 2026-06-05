@@ -1,0 +1,58 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { sectionCssClassArgNames } from './fixtures';
+import * as CssStories from './Section.css.stories';
+import { sectionCssInstallSnippet, sectionCssSetupSnippet } from './snippets';
+
+<Meta of={CssStories} name="Documentation" />
+
+# CSS
+
+Vanilla HTML via `@rgrmdesign/rgrm-ds-css/section`. Apply `.rgrm-section` with spacing
+modifiers, set `data-theme` for the theme, and wrap content in
+`.rgrm-section__container`. Add `.rgrm-section__background` for full-bleed media.
+
+Use `@rgrmdesign/rgrm-ds-react` or `@rgrmdesign/rgrm-ds-elements` when you prefer a
+framework wrapper that applies these classes for you.
+
+## Install
+
+<Source language="bash" code={sectionCssInstallSnippet()} />
+
+## Setup
+
+Import tokens and the stylesheet once in your app entry.
+
+<Source language="tsx" code={sectionCssSetupSnippet()} />
+
+## Classes
+
+<ArgTypes of={CssStories} include={sectionCssClassArgNames} />
+
+## Default
+
+<Canvas of={CssStories.Default} />
+
+## Dark theme
+
+<Canvas of={CssStories.Dark} />
+
+## Brand theme
+
+<Canvas of={CssStories.Brand} />
+
+## Width: small
+
+<Canvas of={CssStories.WidthSmall} />
+
+## Width: full
+
+<Canvas of={CssStories.WidthFull} />
+
+## Spacing: page-top
+
+<Canvas of={CssStories.PageTop} />
+
+## Background media
+
+<Canvas of={CssStories.Background} />

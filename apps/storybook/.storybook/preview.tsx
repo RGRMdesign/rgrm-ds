@@ -46,6 +46,19 @@ const preview: Preview = {
               ['Documentation', '*'],
             ],
           ],
+          'Wrappers',
+          [
+            'Section',
+            [
+              'Overview',
+              'React',
+              ['Documentation', '*'],
+              'CSS',
+              ['Documentation', '*'],
+              'Element',
+              ['Documentation', '*'],
+            ],
+          ],
         ],
       },
     },
@@ -70,12 +83,13 @@ const preview: Preview = {
     theme: 'root',
   },
   decorators: [
-    (Story, { globals, viewMode }) => {
+    (Story, { globals, viewMode, parameters }) => {
       const theme = resolveTheme(globals.theme);
+      const isFullscreen = parameters.layout === 'fullscreen';
 
       if (viewMode === 'docs') {
         return (
-          <DocsThemeCanvas theme={theme}>
+          <DocsThemeCanvas theme={theme} fullWidth={isFullscreen}>
             <Story />
           </DocsThemeCanvas>
         );
@@ -84,7 +98,7 @@ const preview: Preview = {
       applyDocumentTheme(theme);
 
       return (
-        <div className="sb-story">
+        <div className={isFullscreen ? 'rgrm-story rgrm-story--full' : 'rgrm-story'}>
           <Story />
         </div>
       );

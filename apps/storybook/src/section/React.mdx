@@ -1,0 +1,54 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { sectionReactPropArgNames } from './fixtures';
+import * as ReactStories from './Section.react.stories';
+import { sectionReactInstallSnippet, sectionReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name="Documentation" />
+
+# React
+
+React wrapper via `@rgrmdesign/rgrm-ds-react`. Importing the package also loads
+`@rgrmdesign/rgrm-ds-css` — no separate stylesheet import is required.
+
+## Install
+
+<Source language="bash" code={sectionReactInstallSnippet()} />
+
+## Setup
+
+Import tokens once in your app entry, then the React wrappers (CSS loads automatically).
+
+<Source language="tsx" code={sectionReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={sectionReactPropArgNames} />
+
+## Default
+
+<Canvas of={ReactStories.Default} />
+
+## Dark theme
+
+<Canvas of={ReactStories.Dark} />
+
+## Brand theme
+
+<Canvas of={ReactStories.Brand} />
+
+## Width: small
+
+<Canvas of={ReactStories.WidthSmall} />
+
+## Width: full
+
+<Canvas of={ReactStories.WidthFull} />
+
+## Spacing: page-top
+
+<Canvas of={ReactStories.PageTop} />
+
+## Background media
+
+<Canvas of={ReactStories.Background} />

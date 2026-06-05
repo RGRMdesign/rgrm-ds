@@ -1,0 +1,58 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { sectionElementAttributeArgNames } from './fixtures';
+import * as ElementStories from './Section.element.stories';
+import { sectionElementInstallSnippet, sectionElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name="Documentation" />
+
+# Web component
+
+Custom element `<rgrm-section>` via `@rgrmdesign/rgrm-ds-elements/section`. Importing
+the package registers the element and loads `@rgrmdesign/rgrm-ds-css/section`.
+
+The element uses **light DOM**: content is wrapped in a `.rgrm-section__container`,
+and any child marked `slot="background"` is moved into the background layer, so
+design tokens from the document apply normally.
+
+## Install
+
+<Source language="bash" code={sectionElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the custom elements once in your app entry.
+
+<Source language="tsx" code={sectionElementSetupSnippet()} />
+
+## Attributes
+
+<ArgTypes of={ElementStories} include={sectionElementAttributeArgNames} />
+
+## Default
+
+<Canvas of={ElementStories.Default} />
+
+## Dark theme
+
+<Canvas of={ElementStories.Dark} />
+
+## Brand theme
+
+<Canvas of={ElementStories.Brand} />
+
+## Width: small
+
+<Canvas of={ElementStories.WidthSmall} />
+
+## Width: full
+
+<Canvas of={ElementStories.WidthFull} />
+
+## Spacing: page-top
+
+<Canvas of={ElementStories.PageTop} />
+
+## Background media
+
+<Canvas of={ElementStories.Background} />

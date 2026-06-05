@@ -16,6 +16,10 @@
     "./paragraph": {
       "types": "./dist/paragraph/index.d.ts",
       "import": "./dist/paragraph/index.js"
+    },
+    "./section": {
+      "types": "./dist/section/index.d.ts",
+      "import": "./dist/section/index.js"
     }
   },
   "files": [
@@ -25,7 +29,8 @@
     "@rgrmdesign/rgrm-ds-css",
     "./dist/index.js",
     "./dist/heading/index.js",
-    "./dist/paragraph/index.js"
+    "./dist/paragraph/index.js",
+    "./dist/section/index.js"
   ],
   "scripts": {
     "build": "tsup",

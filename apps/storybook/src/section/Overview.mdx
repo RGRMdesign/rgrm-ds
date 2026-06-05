@@ -1,0 +1,65 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+import * as CssStories from './Section.css.stories';
+
+<Meta title="Wrappers/Section/Overview" name="Overview" />
+
+# Section
+
+A section is a full-width band on a page. Layout and theming live in
+`@rgrmdesign/rgrm-ds-css`; React and the web component are thin wrappers that apply
+the same BEM classes and set `data-theme`.
+
+- **Theme** — set via `data-theme`; background and text colour come from the theme
+  tokens, and the whole theme cascades to the content.
+- **Container** — content sits in a centered, max-width wrapper
+  (`--rgrm-default-max-width-main` by default).
+- **Spacing** — top and bottom padding are set independently from the
+  `--rgrm-viewport-section-space-*` tokens.
+- **Background** — an optional full-bleed layer for an image or video behind the
+  content.
+
+Load `@rgrmdesign/rgrm-ds-tokens` once in your app so the CSS custom properties are
+defined.
+
+## Preview
+
+<Canvas of={CssStories.Default} sourceState="none" />
+
+## Themes
+
+### Dark
+
+<Canvas of={CssStories.Dark} sourceState="none" />
+
+### Brand
+
+<Canvas of={CssStories.Brand} sourceState="none" />
+
+## Container width
+
+### Small
+
+<Canvas of={CssStories.WidthSmall} sourceState="none" />
+
+### Full
+
+<Canvas of={CssStories.WidthFull} sourceState="none" />
+
+## Spacing
+
+### Page-top
+
+<Canvas of={CssStories.PageTop} sourceState="none" />
+
+## Background
+
+<Canvas of={CssStories.Background} sourceState="none" />
+
+## Choose an implementation
+
+Pick a page in the sidebar under **Wrappers → Section**, or jump directly:
+
+- **React** — [`@rgrmdesign/rgrm-ds-react`](?path=/docs/wrappers-section-react--documentation) for React apps
+- **CSS** — [`@rgrmdesign/rgrm-ds-css`](?path=/docs/wrappers-section-css--documentation) for hand-written HTML or any stack without a wrapper
+- **Web component** — [`@rgrmdesign/rgrm-ds-elements`](?path=/docs/wrappers-section-element--documentation) for vanilla JS, server-rendered HTML, or non-React frameworks

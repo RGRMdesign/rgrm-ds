@@ -7,9 +7,11 @@ const DOCS_CANVAS_SELECTORS = ['.sbdocs-preview', '.docs-story'] as const;
 /** Apply `data-theme` to Storybook’s docs preview shell (incl. padded canvas area). */
 export function DocsThemeCanvas({
   theme,
+  fullWidth = false,
   children,
 }: {
   theme: ThemeName;
+  fullWidth?: boolean;
   children: React.ReactNode;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -33,7 +35,12 @@ export function DocsThemeCanvas({
   }, [theme]);
 
   return (
-    <div ref={rootRef} className="sb-story sb-docs-canvas">
+    <div
+      ref={rootRef}
+      className={
+        fullWidth ? 'rgrm-story rgrm-story--full sb-docs-canvas' : 'rgrm-story sb-docs-canvas'
+      }
+    >
       {children}
     </div>
   );
