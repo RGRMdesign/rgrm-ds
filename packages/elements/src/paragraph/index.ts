@@ -1,6 +1,6 @@
-import '@rgrmdesign/paragraph-css';
+import '@rgrmdesign/rgrm-ds-css/paragraph';
 
-export { paragraphClassNames, type ParagraphSize } from './classNames.js';
+export { paragraphClassNames, type ParagraphSize } from '@rgrmdesign/rgrm-ds-core/paragraph';
 export {
   RGRM_PARAGRAPH_TAG,
   RgrmParagraphElement,

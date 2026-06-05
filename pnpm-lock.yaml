@@ -20,9 +20,9 @@ importers:
 
   apps/sandbox-css:
     dependencies:
-      '@rgrmdesign/paragraph-css':
+      '@rgrmdesign/rgrm-ds-css':
         specifier: workspace:*
-        version: link:../../packages/paragraph-css
+        version: link:../../packages/css
       '@rgrmdesign/rgrm-ds-tokens':
         specifier: ^0.3.0
         version: 0.3.0
@@ -39,9 +39,9 @@ importers:
 
   apps/sandbox-element:
     dependencies:
-      '@rgrmdesign/paragraph-element':
+      '@rgrmdesign/rgrm-ds-elements':
         specifier: workspace:*
-        version: link:../../packages/paragraph-element
+        version: link:../../packages/elements
       '@rgrmdesign/rgrm-ds-tokens':
         specifier: ^0.3.0
         version: 0.3.0
@@ -58,9 +58,9 @@ importers:
 
   apps/sandbox-react:
     dependencies:
-      '@rgrmdesign/paragraph-react':
+      '@rgrmdesign/rgrm-ds-react':
         specifier: workspace:*
-        version: link:../../packages/paragraph-react
+        version: link:../../packages/react
       '@rgrmdesign/rgrm-ds-tokens':
         specifier: ^0.3.0
         version: 0.3.0
@@ -86,15 +86,18 @@ importers:
 
   apps/storybook:
     dependencies:
-      '@rgrmdesign/paragraph-css':
+      '@rgrmdesign/rgrm-ds-core':
         specifier: workspace:*
-        version: link:../../packages/paragraph-css
-      '@rgrmdesign/paragraph-element':
+        version: link:../../packages/core
+      '@rgrmdesign/rgrm-ds-css':
         specifier: workspace:*
-        version: link:../../packages/paragraph-element
-      '@rgrmdesign/paragraph-react':
+        version: link:../../packages/css
+      '@rgrmdesign/rgrm-ds-elements':
         specifier: workspace:*
-        version: link:../../packages/paragraph-react
+        version: link:../../packages/elements
+      '@rgrmdesign/rgrm-ds-react':
+        specifier: workspace:*
+        version: link:../../packages/react
       '@rgrmdesign/rgrm-ds-tokens':
         specifier: ^0.3.0
         version: 0.3.0
@@ -130,7 +133,19 @@ importers:
         specifier: ^8.0.16
         version: 8.0.16(esbuild@0.27.7)
 
-  packages/paragraph-css:
+  packages/core:
+    devDependencies:
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.1.3
+      tsup:
+        specifier: ^8.5.1
+        version: 8.5.1(postcss@8.5.15)(typescript@5.9.3)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/css:
     dependencies:
       '@rgrmdesign/rgrm-ds-tokens':
         specifier: '>=0.3.0'
@@ -146,11 +161,14 @@ importers:
         specifier: ^6.0.1
         version: 6.1.3
 
-  packages/paragraph-element:
+  packages/elements:
     dependencies:
-      '@rgrmdesign/paragraph-css':
+      '@rgrmdesign/rgrm-ds-core':
         specifier: workspace:*
-        version: link:../paragraph-css
+        version: link:../core
+      '@rgrmdesign/rgrm-ds-css':
+        specifier: workspace:*
+        version: link:../css
     devDependencies:
       '@rgrmdesign/rgrm-ds-tokens':
         specifier: ^0.3.0
@@ -165,11 +183,14 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/paragraph-react:
+  packages/react:
     dependencies:
-      '@rgrmdesign/paragraph-css':
+      '@rgrmdesign/rgrm-ds-core':
         specifier: workspace:*
-        version: link:../paragraph-css
+        version: link:../core
+      '@rgrmdesign/rgrm-ds-css':
+        specifier: workspace:*
+        version: link:../css
     devDependencies:
       '@rgrmdesign/rgrm-ds-tokens':
         specifier: ^0.3.0

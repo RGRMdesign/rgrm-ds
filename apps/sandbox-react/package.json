@@ -10,7 +10,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@rgrmdesign/paragraph-react": "workspace:*",
+    "@rgrmdesign/rgrm-ds-react": "workspace:*",
     "@rgrmdesign/rgrm-ds-tokens": "^0.3.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

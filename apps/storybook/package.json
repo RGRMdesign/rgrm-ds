@@ -9,9 +9,10 @@
     "clean": "rimraf storybook-static"
   },
   "dependencies": {
-    "@rgrmdesign/paragraph-css": "workspace:*",
-    "@rgrmdesign/paragraph-element": "workspace:*",
-    "@rgrmdesign/paragraph-react": "workspace:*",
+    "@rgrmdesign/rgrm-ds-core": "workspace:*",
+    "@rgrmdesign/rgrm-ds-css": "workspace:*",
+    "@rgrmdesign/rgrm-ds-elements": "workspace:*",
+    "@rgrmdesign/rgrm-ds-react": "workspace:*",
     "@rgrmdesign/rgrm-ds-tokens": "^0.3.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"

@@ -10,7 +10,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@rgrmdesign/paragraph-element": "workspace:*",
+    "@rgrmdesign/rgrm-ds-elements": "workspace:*",
     "@rgrmdesign/rgrm-ds-tokens": "^0.3.0",
     "sandbox-shared": "workspace:*"
   },

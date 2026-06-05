@@ -1,4 +1,4 @@
-import { Paragraph } from '@rgrmdesign/paragraph-react';
+import { Paragraph } from '@rgrmdesign/rgrm-ds-react';
 
 export function ParagraphDemo() {
   return (

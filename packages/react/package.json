@@ -1,21 +1,24 @@
 {
-  "name": "@rgrmdesign/paragraph-element",
+  "name": "@rgrmdesign/rgrm-ds-react",
   "version": "0.0.0",
-  "description": "Web Component (<rgrm-paragraph>) for the RGRM design system. Styles come from @rgrmdesign/paragraph-css.",
+  "description": "React components for the RGRM design system. Styles come from @rgrmdesign/rgrm-ds-css.",
   "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./paragraph": {
+      "types": "./dist/paragraph/index.d.ts",
+      "import": "./dist/paragraph/index.js"
     }
   },
   "files": [
     "dist"
   ],
   "sideEffects": [
-    "@rgrmdesign/paragraph-css",
-    "./dist/index.js"
+    "@rgrmdesign/rgrm-ds-css"
   ],
   "scripts": {
     "build": "tsup",
@@ -23,23 +26,25 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@rgrmdesign/paragraph-css": "workspace:*"
+    "@rgrmdesign/rgrm-ds-core": "workspace:*",
+    "@rgrmdesign/rgrm-ds-css": "workspace:*"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.3.0"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.3.0",
+    "react": ">=18"
   },
   "devDependencies": {
     "@rgrmdesign/rgrm-ds-tokens": "^0.3.0",
+    "@types/react": "^19.2.7",
+    "react": "^19.2.3",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   },
   "keywords": [
-    "custom-elements",
     "design-system",
-    "paragraph",
-    "typography",
-    "web-components"
+    "react",
+    "typography"
   ],
   "publishConfig": {
     "access": "public"

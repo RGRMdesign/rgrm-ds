@@ -1,6 +1,6 @@
-import '@rgrmdesign/paragraph-css';
+import '@rgrmdesign/rgrm-ds-css/paragraph';
 
-import { paragraphClassNames } from '@rgrmdesign/paragraph-react';
+import { paragraphClassNames } from '@rgrmdesign/rgrm-ds-core/paragraph';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { paragraphArgTypes, paragraphCssClassArgTypes, paragraphFixtures, type ParagraphStoryArgs } from './fixtures';
@@ -12,7 +12,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Vanilla HTML via `@rgrmdesign/paragraph-css`. Apply `.rgrm-paragraph` and optional size modifiers. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
+          'Vanilla HTML via `@rgrmdesign/rgrm-ds-css/paragraph`. Apply `.rgrm-paragraph` and optional size modifiers. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
       },
       source: paragraphDocsSource(paragraphCssUsageSnippet),
     },

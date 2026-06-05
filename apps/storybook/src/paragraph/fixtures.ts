@@ -1,4 +1,4 @@
-import type { ParagraphSize } from '@rgrmdesign/paragraph-react';
+import type { ParagraphSize } from '@rgrmdesign/rgrm-ds-core/paragraph';
 
 export type ParagraphStoryArgs = {
   size?: ParagraphSize;
@@ -89,7 +89,7 @@ export const paragraphReactPropArgNames = [
   'children',
 ] as const;
 
-/** Docs-only rows for @rgrmdesign/paragraph-css (shown via `<ArgTypes include={...} />`). */
+/** Docs-only rows for @rgrmdesign/rgrm-ds-css (shown via `<ArgTypes include={...} />`). */
 export const paragraphCssClassArgTypes = {
   '.rgrm-paragraph': {
     control: false,

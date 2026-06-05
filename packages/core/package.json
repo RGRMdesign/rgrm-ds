@@ -1,0 +1,38 @@
+{
+  "name": "@rgrmdesign/rgrm-ds-core",
+  "version": "0.0.0",
+  "description": "Framework-agnostic logic (class name builders, shared types) for the RGRM design system.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./paragraph": {
+      "types": "./dist/paragraph/index.d.ts",
+      "import": "./dist/paragraph/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "design-system",
+    "core",
+    "typography"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

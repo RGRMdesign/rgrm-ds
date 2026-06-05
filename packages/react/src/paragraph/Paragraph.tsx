@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from 'react';
 
-import { paragraphClassNames, type ParagraphSize } from './classNames.js';
+import { paragraphClassNames, type ParagraphSize } from '@rgrmdesign/rgrm-ds-core/paragraph';
 
 export type ParagraphProps = HTMLAttributes<HTMLParagraphElement> & {
   /** Alternate typography scale. Omit for the default (main) body style. */

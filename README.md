@@ -1,7 +1,9 @@
 # RGRM Design System
 
-A pnpm + Turborepo monorepo for the RGRM design system. The component packages ship
-plain CSS that consumes the CSS custom properties from
+A pnpm + Turborepo monorepo for the RGRM design system. Packages are organised **per
+layer / framework** (not per component), so adding components does not multiply the
+number of packages. The CSS package ships plain CSS that consumes the CSS custom
+properties from
 [`@rgrmdesign/rgrm-ds-tokens`](https://www.npmjs.com/package/@rgrmdesign/rgrm-ds-tokens)
 (design tokens generated from Figma variables, maintained in a separate repository).
 
@@ -10,20 +12,26 @@ plain CSS that consumes the CSS custom properties from
 ```
 rgrm-ds/
 ├── apps/
-│   ├── sandbox-css/       # Vite preview for *-css packages (port 5173)
+│   ├── sandbox-css/       # Vite preview for the CSS package (port 5173)
 │   ├── sandbox-react/     # Vite + React preview (port 5174)
-│   ├── sandbox-element/   # Vite preview for *-element packages (port 5175)
+│   ├── sandbox-element/   # Vite preview for the Web Components (port 5175)
 │   └── storybook/         # Component docs (port 6006)
 └── packages/
     ├── sandbox-shared/    # Shared theme switcher + sandbox chrome styles
-    ├── paragraph-css/     # @rgrmdesign/paragraph-css — body typography (CSS)
-    ├── paragraph-react/   # @rgrmdesign/paragraph-react — React wrapper
-    └── paragraph-element/ # @rgrmdesign/paragraph-element — <rgrm-paragraph>
+    ├── core/              # @rgrmdesign/rgrm-ds-core — framework-agnostic logic + types
+    ├── css/               # @rgrmdesign/rgrm-ds-css — all component styles (CSS)
+    ├── react/             # @rgrmdesign/rgrm-ds-react — React components
+    └── elements/          # @rgrmdesign/rgrm-ds-elements — Web Components
 ```
 
-Each package only _uses_ the token custom properties (`var(--font-size-h1)`, …); the
-tokens themselves are a **peer dependency** so they are loaded exactly once by the
-consuming app.
+Each package exposes one entry per component via **sub-path exports** (e.g.
+`@rgrmdesign/rgrm-ds-react/paragraph`, `@rgrmdesign/rgrm-ds-css/paragraph`) plus a
+barrel (`.`) that re-exports everything, so consumers keep fine-grained tree-shaking.
+
+`core` holds shared, framework-agnostic logic (BEM class builders, types) so the React
+and Web Component layers never duplicate it. The packages only _use_ the token custom
+properties (`var(--font-size-h1)`, …); the tokens themselves are a **peer dependency**
+so they are loaded exactly once by the consuming app.
 
 ## Requirements
 
@@ -87,9 +95,16 @@ Production builds use `base: '/rgrm-ds/'` in `apps/storybook/.storybook/main.ts`
 | `pnpm clean`                   | Removes build output and caches.                                      |
 | `pnpm format` / `format:check` | Prettier across the repo.                                             |
 
-## Adding a new component package
+## Adding a new component
 
-1. Create `packages/<name>-css/` with styles that consume token custom properties.
-2. Add optional `packages/<name>-react/` and/or `packages/<name>-element/` adapters.
-3. Reuse the `build` / `dev` / `clean` scripts from an existing package.
-4. Add demos to the matching sandbox app(s).
+Components live _inside_ the existing layer packages — you do **not** create new
+packages per component.
+
+1. **Core** (optional): add `packages/core/src/<name>/` for any framework-agnostic
+   logic/types and register `src/<name>/index.ts` as a tsup entry.
+2. **CSS**: add `packages/css/src/<name>/index.css`, `@import` it from
+   `packages/css/src/index.css`, and add a build step + `./<name>` export.
+3. **React / Elements**: add `packages/<react|elements>/src/<name>/`, re-export it from
+   `src/index.ts`, register `src/<name>/index.ts` as a tsup entry, and add a `./<name>`
+   sub-path export.
+4. Add demos to the matching sandbox app(s) and a Storybook page.

@@ -1,16 +1,16 @@
-import { paragraphClassNames } from '@rgrmdesign/paragraph-react';
+import { paragraphClassNames } from '@rgrmdesign/rgrm-ds-core/paragraph';
 
 import type { ParagraphStoryArgs } from './fixtures';
 
 const TOKENS_IMPORT = "import '@rgrmdesign/rgrm-ds-tokens';";
 
 export function paragraphReactInstallSnippet(): string {
-  return 'pnpm add @rgrmdesign/paragraph-react @rgrmdesign/rgrm-ds-tokens react';
+  return 'pnpm add @rgrmdesign/rgrm-ds-react @rgrmdesign/rgrm-ds-tokens react';
 }
 
 export function paragraphReactSetupSnippet(): string {
   return `${TOKENS_IMPORT}
-import { Paragraph } from '@rgrmdesign/paragraph-react';`;
+import { Paragraph } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
 export function paragraphReactUsageSnippet({
@@ -22,12 +22,12 @@ export function paragraphReactUsageSnippet({
 }
 
 export function paragraphCssInstallSnippet(): string {
-  return 'pnpm add @rgrmdesign/paragraph-css @rgrmdesign/rgrm-ds-tokens';
+  return 'pnpm add @rgrmdesign/rgrm-ds-css @rgrmdesign/rgrm-ds-tokens';
 }
 
 export function paragraphCssSetupSnippet(): string {
   return `${TOKENS_IMPORT}
-import '@rgrmdesign/paragraph-css';`;
+import '@rgrmdesign/rgrm-ds-css/paragraph';`;
 }
 
 export function paragraphCssUsageSnippet({
@@ -39,12 +39,12 @@ export function paragraphCssUsageSnippet({
 }
 
 export function paragraphElementInstallSnippet(): string {
-  return 'pnpm add @rgrmdesign/paragraph-element @rgrmdesign/rgrm-ds-tokens';
+  return 'pnpm add @rgrmdesign/rgrm-ds-elements @rgrmdesign/rgrm-ds-tokens';
 }
 
 export function paragraphElementSetupSnippet(): string {
   return `${TOKENS_IMPORT}
-import '@rgrmdesign/paragraph-element';`;
+import '@rgrmdesign/rgrm-ds-elements/paragraph';`;
 }
 
 export function paragraphElementUsageSnippet({

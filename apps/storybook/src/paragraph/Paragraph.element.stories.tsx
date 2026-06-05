@@ -1,4 +1,4 @@
-import '@rgrmdesign/paragraph-element';
+import '@rgrmdesign/rgrm-ds-elements/paragraph';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
@@ -12,7 +12,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Web component via `@rgrmdesign/paragraph-element` (`<rgrm-paragraph>`). Loads `@rgrmdesign/paragraph-css` on import. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
+          'Web component via `@rgrmdesign/rgrm-ds-elements/paragraph` (`<rgrm-paragraph>`). Loads `@rgrmdesign/rgrm-ds-css/paragraph` on import. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
       },
       source: paragraphDocsSource(paragraphElementUsageSnippet),
     },

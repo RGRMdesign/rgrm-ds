@@ -1,4 +1,4 @@
-import { paragraphClassNames, type ParagraphSize } from './classNames.js';
+import { paragraphClassNames, type ParagraphSize } from '@rgrmdesign/rgrm-ds-core/paragraph';
 
 export const RGRM_PARAGRAPH_TAG = 'rgrm-paragraph';
 

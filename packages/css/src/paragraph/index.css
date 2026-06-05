@@ -1,9 +1,6 @@
 /**
- * @rgrmdesign/paragraph-css
- *
- * Body / paragraph typography for the RGRM design system.
+ * Paragraph / body typography for the RGRM design system.
  * Consumes CSS custom properties from @rgrmdesign/rgrm-ds-tokens.
- * Load the tokens stylesheet once in your app before this file.
  */
 
 .rgrm-paragraph {

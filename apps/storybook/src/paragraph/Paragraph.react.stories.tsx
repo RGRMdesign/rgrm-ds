@@ -1,4 +1,4 @@
-import { Paragraph } from '@rgrmdesign/paragraph-react';
+import { Paragraph } from '@rgrmdesign/rgrm-ds-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { disableDocgenExtractArgTypes, paragraphFixtures, paragraphReactArgTypes } from './fixtures';
@@ -11,7 +11,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'React wrapper via `@rgrmdesign/paragraph-react`. Loads `@rgrmdesign/paragraph-css` automatically. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
+          'React wrapper via `@rgrmdesign/rgrm-ds-react`. Loads `@rgrmdesign/rgrm-ds-css` automatically. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
       },
       source: paragraphDocsSource(paragraphReactUsageSnippet),
       extractArgTypes: disableDocgenExtractArgTypes,

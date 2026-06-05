@@ -1,5 +1,5 @@
 import '@rgrmdesign/rgrm-ds-tokens';
-import '@rgrmdesign/paragraph-element';
+import '@rgrmdesign/rgrm-ds-elements';
 import 'sandbox-shared/chrome.css';
 import { initThemeSwitcher } from 'sandbox-shared/theme.js';
 

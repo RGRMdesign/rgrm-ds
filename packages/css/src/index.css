@@ -1,0 +1,12 @@
+/**
+ * @rgrmdesign/rgrm-ds-css
+ *
+ * Barrel stylesheet for the RGRM design system. Imports every component's CSS.
+ * Consumes CSS custom properties from @rgrmdesign/rgrm-ds-tokens — load the tokens
+ * stylesheet once in your app before this file.
+ *
+ * For a single component, import the sub-path instead, e.g.
+ * `@rgrmdesign/rgrm-ds-css/paragraph`.
+ */
+
+@import './paragraph/index.css';
