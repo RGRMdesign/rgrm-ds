@@ -16,11 +16,17 @@
     "storybook": "turbo run storybook --filter=storybook",
     "build-storybook": "turbo run build-storybook --filter=storybook",
     "build": "turbo run build",
+    "build:packages": "turbo run build --filter=\"./packages/*\"",
     "clean": "turbo run clean && rimraf node_modules/.cache .turbo",
     "format": "prettier --write \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\"",
-    "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\""
+    "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build:packages && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.7.0",
+    "@changesets/cli": "^2.31.0",
     "prettier": "^3.8.3",
     "rimraf": "^6.0.1",
     "turbo": "^2.9.16"

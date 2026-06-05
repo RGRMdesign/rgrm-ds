@@ -94,8 +94,66 @@ Production builds use `base: '/rgrm-ds/'` in `apps/storybook/.storybook/main.ts`
 | `pnpm storybook`               | Storybook dev server (`apps/storybook`, port 6006). |
 | `pnpm build-storybook`         | Static Storybook build.                             |
 | `pnpm build`                   | Builds every package and all sandboxes.             |
+| `pnpm build:packages`          | Builds only the publishable `packages/*`.           |
 | `pnpm clean`                   | Removes build output and caches.                    |
 | `pnpm format` / `format:check` | Prettier across the repo.                           |
+| `pnpm changeset`               | Record a changeset for the next release.            |
+| `pnpm version-packages`        | Apply changesets: bump versions + changelogs.       |
+| `pnpm release`                 | Build packages then `changeset publish` to npm.     |
+
+## Publishing to npm (Changesets)
+
+Versioning and publishing run via [Changesets](https://github.com/changesets/changesets).
+The published packages are `@rgrmdesign/rgrm-ds-core`, `-css`, `-react` and
+`-elements`. The apps and `sandbox-shared` are `private` and are never published.
+
+### Workflow
+
+1. **Add a changeset** for every change that should ship (run on your feature branch):
+
+   ```bash
+   pnpm changeset
+   ```
+
+   Pick the affected packages, the bump type (`patch` / `minor` / `major`), and write a
+   short summary. This creates a markdown file in `.changeset/` — commit it with your PR.
+
+2. **Merge to `main`.** The [`release` workflow](.github/workflows/release.yml) picks up
+   the changesets and opens a **"Release packages"** PR that bumps versions and updates
+   the changelogs.
+
+3. **Merge the Release PR.** When it lands on `main`, the same workflow builds the
+   packages and runs `changeset publish` to push the new versions to npm.
+
+Internal `workspace:*` dependencies are rewritten to real version ranges automatically at
+publish time, so consumers get correct semver ranges.
+
+### One-time setup
+
+- **npm token**: create an automation token (`npm token create`) on an account that can
+  publish to the `@rgrmdesign` scope, and add it as the `NPM_TOKEN`
+  [repository secret](https://github.com/RGRMdesign/rgrm-ds/settings/secrets/actions) in GitHub.
+- **Workflow permissions**: in **Settings → Actions → General → Workflow permissions**,
+  enable **Read and write permissions** and **Allow GitHub Actions to create and approve
+  pull requests** (needed for the Release PR).
+- All four packages already declare `"publishConfig": { "access": "public" }`, so the
+  scoped packages publish publicly.
+
+### Manual / local publish (fallback)
+
+If you ever need to publish without CI:
+
+```bash
+pnpm changeset            # record the change(s)
+pnpm version-packages     # bump versions + changelogs locally
+git commit -am "chore: release packages"
+npm login                 # must have access to the @rgrmdesign scope
+pnpm release              # builds packages, then `changeset publish`
+git push --follow-tags
+```
+
+> First release: packages start at `0.0.0`. A `minor` changeset publishes them as
+> `0.1.0`; choose `major` if you want to start at `1.0.0`.
 
 ## Adding a new component
 
