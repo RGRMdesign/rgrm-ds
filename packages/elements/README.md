@@ -25,14 +25,28 @@ Or register a single component via its sub-path export:
 
 ```js
 import '@rgrmdesign/rgrm-ds-tokens';
+import '@rgrmdesign/rgrm-ds-elements/heading';
 import '@rgrmdesign/rgrm-ds-elements/paragraph';
 ```
 
 ```html
+<rgrm-heading level="display">Hero title.</rgrm-heading>
+<rgrm-heading level="1">Page title.</rgrm-heading>
+<rgrm-heading level="2">Section title.</rgrm-heading>
+
 <rgrm-paragraph size="large">Lead paragraph.</rgrm-paragraph>
 <rgrm-paragraph>Default body copy.</rgrm-paragraph>
 <rgrm-paragraph size="small">Caption or fine print.</rgrm-paragraph>
 ```
+
+## Heading (`<rgrm-heading>`)
+
+| Attribute | Values                 | Description                                           |
+| --------- | ---------------------- | ----------------------------------------------------- |
+| `level`   | `1` … `6` \| `display` | Sets the scale (def. 2). `display` renders an `<h1>`. |
+
+Also exported: `RgrmHeadingElement` (class), `RGRM_HEADING_TAG`
+(`'rgrm-heading'`), and `headingClassNames(level, className?)`.
 
 ## Paragraph (`<rgrm-paragraph>`)
 

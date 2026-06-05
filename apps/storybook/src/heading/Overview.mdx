@@ -1,0 +1,57 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+import * as CssStories from './Heading.css.stories';
+
+<Meta title="Typography/Heading/Overview" name="Overview" />
+
+# Heading
+
+Heading typography for the RGRM design system. Visual styles live in
+`@rgrmdesign/rgrm-ds-css`; React and the web component are thin wrappers that apply
+the same BEM classes.
+
+Load `@rgrmdesign/rgrm-ds-tokens` once in your app so the CSS custom properties are
+defined.
+
+## Preview
+
+Display heading (largest, hero scale).
+
+<Canvas of={CssStories.Display} sourceState="none" />
+
+## Variants
+
+### Level 1
+
+<Canvas of={CssStories.H1} sourceState="none" />
+
+### Level 2
+
+<Canvas of={CssStories.H2} sourceState="none" />
+
+### Level 3
+
+<Canvas of={CssStories.H3} sourceState="none" />
+
+### Level 4
+
+<Canvas of={CssStories.H4} sourceState="none" />
+
+### Level 5
+
+<Canvas of={CssStories.H5} sourceState="none" />
+
+### Level 6
+
+<Canvas of={CssStories.H6} sourceState="none" />
+
+## Choose an implementation
+
+Pick a page in the sidebar under **Typography → Heading**, or jump directly:
+
+- **React** — [`@rgrmdesign/rgrm-ds-react`](?path=/docs/typography-heading-react--documentation) for React apps
+- **CSS** — [`@rgrmdesign/rgrm-ds-css`](?path=/docs/typography-heading-css--documentation) for hand-written HTML or any stack without a wrapper
+- **Web component** — [`@rgrmdesign/rgrm-ds-elements`](?path=/docs/typography-heading-element--documentation) for vanilla JS, server-rendered HTML, or non-React frameworks
+
+Each documentation page includes install steps, copy-paste examples, and all level
+variants.

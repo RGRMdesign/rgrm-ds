@@ -25,6 +25,16 @@ const preview: Preview = {
         order: [
           'Typography',
           [
+            'Heading',
+            [
+              'Overview',
+              'React',
+              ['Documentation', '*'],
+              'CSS',
+              ['Documentation', '*'],
+              'Element',
+              ['Documentation', '*'],
+            ],
             'Paragraph',
             [
               'Overview',

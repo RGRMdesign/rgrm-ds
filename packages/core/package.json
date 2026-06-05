@@ -9,6 +9,10 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./heading": {
+      "types": "./dist/heading/index.d.ts",
+      "import": "./dist/heading/index.js"
+    },
     "./paragraph": {
       "types": "./dist/paragraph/index.d.ts",
       "import": "./dist/paragraph/index.js"

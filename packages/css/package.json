@@ -9,6 +9,8 @@
   "exports": {
     ".": "./dist/index.css",
     "./index.css": "./dist/index.css",
+    "./heading": "./dist/heading.css",
+    "./heading.css": "./dist/heading.css",
     "./paragraph": "./dist/paragraph.css",
     "./paragraph.css": "./dist/paragraph.css",
     "./source": "./src/index.css"
@@ -21,12 +23,12 @@
     "src"
   ],
   "scripts": {
-    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && lightningcss --minify --bundle --targets \">= 0.25%\" src/index.css -o dist/index.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/paragraph/index.css -o dist/paragraph.css",
+    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && lightningcss --minify --bundle --targets \">= 0.25%\" src/index.css -o dist/index.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/heading/index.css -o dist/heading.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/paragraph/index.css -o dist/paragraph.css",
     "dev": "chokidar \"src/**/*.css\" -c \"pnpm run build\" --initial",
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.4.0"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.5.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",

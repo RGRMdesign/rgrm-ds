@@ -1,0 +1,57 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { headingElementAttributeArgNames } from './fixtures';
+import * as ElementStories from './Heading.element.stories';
+import { headingElementInstallSnippet, headingElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name="Documentation" />
+
+# Web component
+
+Custom element `<rgrm-heading>` via `@rgrmdesign/rgrm-ds-elements/heading`. Importing
+the package registers the element and loads `@rgrmdesign/rgrm-ds-css/heading`.
+
+The element uses **light DOM** (an inner `<h1>`–`<h6>` with BEM classes) so design
+tokens from the document apply normally.
+
+## Install
+
+<Source language="bash" code={headingElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the custom element once in your app entry.
+
+<Source language="tsx" code={headingElementSetupSnippet()} />
+
+## Attributes
+
+<ArgTypes of={ElementStories} include={headingElementAttributeArgNames} />
+
+## Display
+
+<Canvas of={ElementStories.Display} />
+
+## Level 1
+
+<Canvas of={ElementStories.H1} />
+
+## Level 2
+
+<Canvas of={ElementStories.H2} />
+
+## Level 3
+
+<Canvas of={ElementStories.H3} />
+
+## Level 4
+
+<Canvas of={ElementStories.H4} />
+
+## Level 5
+
+<Canvas of={ElementStories.H5} />
+
+## Level 6
+
+<Canvas of={ElementStories.H6} />

@@ -9,4 +9,5 @@
  * `@rgrmdesign/rgrm-ds-css/paragraph`.
  */
 
+@import './heading/index.css';
 @import './paragraph/index.css';

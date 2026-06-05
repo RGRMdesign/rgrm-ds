@@ -25,10 +25,15 @@ import '@rgrmdesign/rgrm-ds-css';
 Or import a single component's styles via its sub-path export:
 
 ```js
+import '@rgrmdesign/rgrm-ds-css/heading';
 import '@rgrmdesign/rgrm-ds-css/paragraph';
 ```
 
 ```html
+<h1 class="rgrm-heading rgrm-heading--display">Hero title</h1>
+<h1 class="rgrm-heading rgrm-heading--h1">Page title</h1>
+<h2 class="rgrm-heading rgrm-heading--h2">Section title</h2>
+
 <p class="rgrm-paragraph rgrm-paragraph--large">A larger lead paragraph.</p>
 <p class="rgrm-paragraph">Body copy at the default scale.</p>
 <p class="rgrm-paragraph rgrm-paragraph--small">Fine print / captions.</p>
@@ -42,6 +47,7 @@ wrappers that apply these classes and load the stylesheet automatically.
 
 ## Components
 
-| Sub-path     | Classes                                                            |
-| ------------ | ------------------------------------------------------------------ |
-| `/paragraph` | `.rgrm-paragraph`, `.rgrm-paragraph--small`, `.rgrm-paragraph--large` |
+| Sub-path     | Classes                                                                              |
+| ------------ | ------------------------------------------------------------------------------------ |
+| `/heading`   | `.rgrm-heading`, `.rgrm-heading--display`, `.rgrm-heading--h1` … `.rgrm-heading--h6` |
+| `/paragraph` | `.rgrm-paragraph`, `.rgrm-paragraph--small`, `.rgrm-paragraph--large`                |

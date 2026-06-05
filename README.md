@@ -46,12 +46,12 @@ pnpm build      # build all packages (CSS bundled + minified via Lightning CSS)
 pnpm dev        # watch packages + run all sandboxes
 ```
 
-| Sandbox          | URL                      | Purpose                          |
-| ---------------- | ------------------------ | -------------------------------- |
-| `sandbox-css`    | http://localhost:5173    | Vanilla HTML / CSS classes       |
-| `sandbox-react`  | http://localhost:5174    | React components                 |
-| `sandbox-element`| http://localhost:5175    | Web Components (`<rgrm-paragraph>`) |
-| `storybook`      | http://localhost:6006    | Storybook (component docs)          |
+| Sandbox           | URL                   | Purpose                             |
+| ----------------- | --------------------- | ----------------------------------- |
+| `sandbox-css`     | http://localhost:5173 | Vanilla HTML / CSS classes          |
+| `sandbox-react`   | http://localhost:5174 | React components                    |
+| `sandbox-element` | http://localhost:5175 | Web Components (`<rgrm-paragraph>`) |
+| `storybook`       | http://localhost:6006 | Storybook (component docs)          |
 
 All sandboxes include a Root / Dark / Brand theme switch that toggles `data-theme` on `<html>`.
 Storybook exposes the same themes via the toolbar (globals).
@@ -83,17 +83,17 @@ Production builds use `base: '/rgrm-ds/'` in `apps/storybook/.storybook/main.ts`
 
 ## Scripts
 
-| Script                         | Description                                                           |
-| ------------------------------ | --------------------------------------------------------------------- |
-| `pnpm dev`                     | Turbo: package watch builds + all sandboxes.                          |
-| `pnpm dev:css`                 | Only `sandbox-css`.                                                   |
-| `pnpm dev:react`               | Only `sandbox-react`.                                                 |
-| `pnpm dev:element`             | Only `sandbox-element`.                                               |
-| `pnpm storybook`               | Storybook dev server (`apps/storybook`, port 6006).                   |
-| `pnpm build-storybook`         | Static Storybook build.                                               |
-| `pnpm build`                   | Builds every package and all sandboxes.                               |
-| `pnpm clean`                   | Removes build output and caches.                                      |
-| `pnpm format` / `format:check` | Prettier across the repo.                                             |
+| Script                         | Description                                         |
+| ------------------------------ | --------------------------------------------------- |
+| `pnpm dev`                     | Turbo: package watch builds + all sandboxes.        |
+| `pnpm dev:css`                 | Only `sandbox-css`.                                 |
+| `pnpm dev:react`               | Only `sandbox-react`.                               |
+| `pnpm dev:element`             | Only `sandbox-element`.                             |
+| `pnpm storybook`               | Storybook dev server (`apps/storybook`, port 6006). |
+| `pnpm build-storybook`         | Static Storybook build.                             |
+| `pnpm build`                   | Builds every package and all sandboxes.             |
+| `pnpm clean`                   | Removes build output and caches.                    |
+| `pnpm format` / `format:check` | Prettier across the repo.                           |
 
 ## Adding a new component
 

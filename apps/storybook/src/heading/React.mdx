@@ -1,0 +1,54 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { headingReactPropArgNames } from './fixtures';
+import * as ReactStories from './Heading.react.stories';
+import { headingReactInstallSnippet, headingReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name="Documentation" />
+
+# React
+
+React wrapper via `@rgrmdesign/rgrm-ds-react`. Importing the package also loads
+`@rgrmdesign/rgrm-ds-css` — no separate stylesheet import is required.
+
+## Install
+
+<Source language="bash" code={headingReactInstallSnippet()} />
+
+## Setup
+
+Import tokens once in your app entry, then the React wrapper (CSS loads automatically).
+
+<Source language="tsx" code={headingReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={headingReactPropArgNames} />
+
+## Display
+
+<Canvas of={ReactStories.Display} />
+
+## Level 1
+
+<Canvas of={ReactStories.H1} />
+
+## Level 2
+
+<Canvas of={ReactStories.H2} />
+
+## Level 3
+
+<Canvas of={ReactStories.H3} />
+
+## Level 4
+
+<Canvas of={ReactStories.H4} />
+
+## Level 5
+
+<Canvas of={ReactStories.H5} />
+
+## Level 6
+
+<Canvas of={ReactStories.H6} />

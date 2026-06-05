@@ -13,7 +13,7 @@
     "@rgrmdesign/rgrm-ds-css": "workspace:*",
     "@rgrmdesign/rgrm-ds-elements": "workspace:*",
     "@rgrmdesign/rgrm-ds-react": "workspace:*",
-    "@rgrmdesign/rgrm-ds-tokens": "^0.4.0",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.5.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
