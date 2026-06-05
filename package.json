@@ -13,15 +13,15 @@
     "dev:css": "turbo run dev --filter=sandbox-css",
     "dev:react": "turbo run dev --filter=sandbox-react",
     "dev:element": "turbo run dev --filter=sandbox-element",
-    "storybook": "turbo run storybook --filter=storybook",
-    "build-storybook": "turbo run build-storybook --filter=storybook",
+    "storybook": "turbo run storybook --filter=rgrm-ds-storybook",
+    "build-storybook": "turbo run build-storybook --filter=rgrm-ds-storybook",
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=\"./packages/*\"",
     "clean": "turbo run clean && rimraf node_modules/.cache .turbo",
     "format": "prettier --write \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\"",
     "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "version-packages": "changeset version && pnpm install --lockfile-only",
     "release": "pnpm build:packages && changeset publish"
   },
   "devDependencies": {
