@@ -1,5 +1,11 @@
 # @rgrmdesign/rgrm-ds-core
 
+## 0.1.1
+
+### Patch Changes
+
+- [`b1c2c6b`](https://github.com/RGRMdesign/rgrm-ds/commit/b1c2c6b0798b9ed92ec0000072c96c4d706f80e0) Thanks [@RGRMdesign](https://github.com/RGRMdesign)! - Test for release workflow
+
 ## 0.1.0
 
 ### Minor Changes
