@@ -1,5 +1,15 @@
 # @rgrmdesign/rgrm-ds-css
 
+## 0.3.0
+
+### Minor Changes
+
+- [`b40a1ab`](https://github.com/RGRMdesign/rgrm-ds/commit/b40a1ab4bf5b5ea7e224c286b5437e6e8eb44db1) Thanks [@RGRMdesign](https://github.com/RGRMdesign)! - Heading: split semantic `level` (h1–h6) from visual `appearance` (h1–h6 | display).
+
+  **Breaking:** `level="display"` is removed. Use `level={1} appearance="display"` (React) or `level="1" appearance="display"` (element). `HeadingLevel` no longer includes `'display'`; use `HeadingAppearance` for the visual scale. `headingClassNames()` now takes `appearance` as its first argument.
+
+  CSS class names are unchanged; the CSS package is released in lockstep with no functional stylesheet changes.
+
 ## 0.2.1
 
 ### Patch Changes
