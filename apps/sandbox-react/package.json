@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@rgrmdesign/rgrm-ds-react": "workspace:*",
-    "@rgrmdesign/rgrm-ds-tokens": "^0.6.1",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.7.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "sandbox-shared": "workspace:*"
