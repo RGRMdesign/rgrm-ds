@@ -7,6 +7,29 @@ properties from
 [`@rgrmdesign/rgrm-ds-tokens`](https://www.npmjs.com/package/@rgrmdesign/rgrm-ds-tokens)
 (design tokens generated from Figma variables, maintained in a separate repository).
 
+## Roadmap
+
+The design system is in early development. The architecture (monorepo, per-layer
+packages, design tokens) is in place; the component library is still small and growing.
+
+**Available now**
+
+- Heading
+- Paragraph
+- Section
+
+**Next**
+
+- Expand the component library (e.g. Button, Link, List, …)
+
+**Later**
+
+- Broader theming, accessibility audit, and automated tests
+
+Phases (Now / Next / Later) are intentionally used instead of dates or versions so the
+roadmap stays accurate during rapid iteration. The **Available now** list is the source
+of truth for what actually ships today.
+
 ## Structure
 
 ```

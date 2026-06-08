@@ -1,0 +1,107 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guides/Design principles" />
+
+# Design principles
+
+The handful of ideas that shape every decision in this design system. They explain _why_
+the packages are split the way they are, and what "done" looks like for any new component.
+
+## 1. CSS is the single source of truth
+
+All layout and visual styling lives in plain CSS (`@rgrmdesign/rgrm-ds-css`). The React
+and Web Component packages are **thin wrappers** that apply the exact same BEM classes —
+they never re-style on top. One stylesheet means every implementation looks and behaves
+identically, and there is only ever one place to change a visual.
+
+<Source
+  language="css"
+  code={`/* The visual lives here, once. */
+.rgrm-paragraph {
+  font-size: var(--rgrm-paragraph-main-font-size);
+  line-height: var(--rgrm-typography-line-height-huge);
+}`}
+/>
+
+## 2. Token-driven, never hard-coded
+
+Components only ever reference **design tokens** (CSS custom properties), never raw
+colours, sizes, or fonts. Tokens are generated from Figma variables and shipped as a
+separate package (`@rgrmdesign/rgrm-ds-tokens`), loaded once as a peer dependency.
+
+Tokens are layered: **primitive** values feed **semantic** tokens, and components consume
+the semantic ones. That indirection is what makes theming and rescaling possible without
+touching a single component.
+
+<Source
+  language="css"
+  code={`--rgrm-default-swatch-dark-900: #05102E;          /* primitive */
+--rgrm-theme-text: var(--rgrm-default-swatch-dark-900);  /* semantic */
+/* components only ever use --rgrm-theme-text */`}
+/>
+
+## 3. Framework-agnostic by default
+
+The same component is available as plain CSS, a React component, and a Web component —
+each with matching props/classes and identical output. Pick the layer that fits your
+stack; the result is the same.
+
+| Layer         | Package                        | Use when…                              |
+| ------------- | ------------------------------ | -------------------------------------- |
+| CSS           | `@rgrmdesign/rgrm-ds-css`      | hand-written HTML or any stack         |
+| React         | `@rgrmdesign/rgrm-ds-react`    | a React app                            |
+| Web component | `@rgrmdesign/rgrm-ds-elements` | vanilla JS or non-React frameworks     |
+
+Shared, framework-agnostic logic (BEM class-name builders) lives in
+`@rgrmdesign/rgrm-ds-core` so it is never duplicated between wrappers.
+
+## 4. Consistent, predictable naming
+
+Everything is namespaced with the `rgrm-` prefix and follows one convention per domain, so
+class names, tokens, and elements are predictable across the whole system.
+
+| Domain         | Convention                | Example                       |
+| -------------- | ------------------------- | ----------------------------- |
+| CSS classes    | BEM with `rgrm-` prefix   | `.rgrm-paragraph--large`      |
+| Tokens         | `--rgrm-{group}-{name}`   | `--rgrm-theme-background`     |
+| Web components | `rgrm-{component}`        | `<rgrm-heading>`              |
+
+## 5. Semantic & accessible
+
+Markup carries meaning: heading levels map to real `<h1>`–`<h6>` elements, and wrappers
+expose the right semantic element rather than a styled `<div>`. Colour and contrast come
+from the token themes — new combinations are verified against **WCAG AA**, and every theme
+must stay usable.
+
+## 6. Themeable from the outside
+
+Themes are switched by setting `data-theme` on a wrapping element (usually `<html>`); the
+theme cascades to everything inside it. Components don't know which theme they're in — they
+just read semantic tokens that the theme redefines. Three themes ship today: **Root**,
+**Dark**, and **Brand** (preview any story in all three via the Storybook toolbar).
+
+<Source language="html" code={`<html data-theme="dark"> … </html>`} />
+
+## 7. Fluid & responsive
+
+Type and spacing scale smoothly with the viewport using `clamp()`-based fluid tokens, so
+there are no hard breakpoints to manage for sizing — text and rhythm grow between a minimum
+and maximum viewport automatically.
+
+<Source
+  language="css"
+  code={`--rgrm-viewport-font-size-h1: clamp(3rem, 2.4286rem + 2.8571vw, 5rem);
+--rgrm-viewport-space-6: clamp(2rem, …, 2.5rem);`}
+/>
+
+## 8. Small, tree-shakeable surface
+
+Each component is reachable through its own sub-path export
+(e.g. `@rgrmdesign/rgrm-ds-react/heading`) alongside a barrel that re-exports everything.
+Apps pull in only what they use, keeping bundles lean.
+
+---
+
+These principles are enforced by the [Governance](?path=/docs/guides-governance--docs)
+"definition of done": a component isn't finished until it exists across CSS, React, and Web
+component layers, uses only tokens, ships matching docs, and works in every theme.
