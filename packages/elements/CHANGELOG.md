@@ -1,5 +1,15 @@
 # @rgrmdesign/rgrm-ds-elements
 
+## 0.2.1
+
+### Patch Changes
+
+- [`4de0384`](https://github.com/RGRMdesign/rgrm-ds/commit/4de0384682ced563a53ebf8828d245663f2717f7) Thanks [@RGRMdesign](https://github.com/RGRMdesign)! - Update ds-tokens dependency
+
+- Updated dependencies [[`4de0384`](https://github.com/RGRMdesign/rgrm-ds/commit/4de0384682ced563a53ebf8828d245663f2717f7)]:
+  - @rgrmdesign/rgrm-ds-core@0.2.1
+  - @rgrmdesign/rgrm-ds-css@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes
