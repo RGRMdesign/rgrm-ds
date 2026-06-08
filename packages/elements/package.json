@@ -1,6 +1,6 @@
 {
   "name": "@rgrmdesign/rgrm-ds-elements",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Web Components for the RGRM design system. Styles come from @rgrmdesign/rgrm-ds-css.",
   "license": "MIT",
   "type": "module",
