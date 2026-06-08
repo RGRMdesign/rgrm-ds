@@ -7,6 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { ButtonDemo } from './ButtonDemo.jsx';
 import { HeadingDemo } from './HeadingDemo.jsx';
 import { ParagraphDemo } from './ParagraphDemo.jsx';
+import { SectionDemo } from './SectionDemo.jsx';
 
 initThemeSwitcher();
 
@@ -19,4 +20,9 @@ if (root) {
       <ButtonDemo />
     </>,
   );
+}
+
+const sections = document.getElementById('sections');
+if (sections) {
+  createRoot(sections).render(<SectionDemo />);
 }

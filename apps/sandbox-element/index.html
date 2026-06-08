@@ -44,6 +44,39 @@
           <rgrm-button variant="primary">Primary button</rgrm-button>
         </div>
       </section>
+
+      <rgrm-section spacing-top="small" spacing-bottom="small">
+        <rgrm-heading level="2">Root theme</rgrm-heading>
+        <rgrm-paragraph>
+          Themed section using the default root theme. Background and text colour come from the theme
+          tokens that cascade onto the section content.
+        </rgrm-paragraph>
+        <div class="sandbox-row">
+          <rgrm-button variant="primary">Primary button</rgrm-button>
+        </div>
+      </rgrm-section>
+
+      <rgrm-section theme="dark" spacing-top="small" spacing-bottom="small">
+        <rgrm-heading level="2">Dark theme</rgrm-heading>
+        <rgrm-paragraph>
+          The same section with theme="dark". The heading, paragraph and button all inherit the dark
+          theme tokens.
+        </rgrm-paragraph>
+        <div class="sandbox-row">
+          <rgrm-button variant="primary">Primary button</rgrm-button>
+        </div>
+      </rgrm-section>
+
+      <rgrm-section theme="brand" spacing-top="small" spacing-bottom="small">
+        <rgrm-heading level="2">Brand theme</rgrm-heading>
+        <rgrm-paragraph>
+          The same section with theme="brand". Themed sections let you switch the palette per band
+          without touching the content.
+        </rgrm-paragraph>
+        <div class="sandbox-row">
+          <rgrm-button variant="primary">Primary button</rgrm-button>
+        </div>
+      </rgrm-section>
     </main>
 
     <script type="module" src="/src/main.js"></script>

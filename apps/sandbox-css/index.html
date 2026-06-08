@@ -51,41 +51,45 @@
       </section>
 
 
-      <section class="rgrm-section">
+      <section class="rgrm-section rgrm-section--space-top-small rgrm-section--space-bottom-small">
         <div class="rgrm-section__container">
+          <h2 class="rgrm-heading rgrm-heading--h2">Root theme</h2>
           <p class="rgrm-paragraph">
-            Default body paragraph. The quick brown fox jumps over the lazy dog while the typography
-            scales fluidly between the minimum and maximum viewport widths defined in the design
-            tokens. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, totam neque vel
-            accusantium placeat quae voluptatum repudiandae autem deleniti expedita unde quos libero
-            et soluta eligendi labore officiis est inventore.
+            Themed section using the default <code>root</code> theme. Background and text colour come
+            from the theme tokens that cascade onto the section content. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.
           </p>
+          <div class="sandbox-row">
+            <button type="button" class="rgrm-button rgrm-button--primary">Primary button</button>
+          </div>
         </div>
       </section>
 
-      <section class="rgrm-section">
-        <div class="rgrm-section__container rgrm-section__container--small">
+      <section class="rgrm-section rgrm-section--space-top-small rgrm-section--space-bottom-small" data-theme="dark">
+        <div class="rgrm-section__container">
+          <h2 class="rgrm-heading rgrm-heading--h2">Dark theme</h2>
           <p class="rgrm-paragraph">
-            Small container. The quick brown fox jumps over the lazy dog while the typography
-            scales fluidly between the minimum and maximum viewport widths defined in the design
-            tokens. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, totam neque vel
-            accusantium placeat quae voluptatum repudiandae autem deleniti expedita unde quos libero
-            et soluta eligendi labore officiis est inventore.
+            The same section markup with <code>data-theme="dark"</code>. The heading, paragraph and
+            button all inherit the dark theme tokens. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.
           </p>
-        </div>
-        <div class="rgrm-section__background">
-          <img src="https://placehold.co/600x400" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="sandbox-row">
+            <button type="button" class="rgrm-button rgrm-button--primary">Primary button</button>
+          </div>
         </div>
       </section>
-      <section class="rgrm-section">
-        <div class="rgrm-section__container rgrm-section__container--full">
+
+      <section class="rgrm-section rgrm-section--space-top-small rgrm-section--space-bottom-small" data-theme="brand">
+        <div class="rgrm-section__container">
+          <h2 class="rgrm-heading rgrm-heading--h2">Brand theme</h2>
           <p class="rgrm-paragraph">
-            Full container. The quick brown fox jumps over the lazy dog while the typography
-            scales fluidly between the minimum and maximum viewport widths defined in the design
-            tokens. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, totam neque vel
-            accusantium placeat quae voluptatum repudiandae autem deleniti expedita unde quos libero
-            et soluta eligendi labore officiis est inventore.
+            The same section markup with <code>data-theme="brand"</code>. Themed sections let you
+            switch the palette per band without touching the content. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.
           </p>
+          <div class="sandbox-row">
+            <button type="button" class="rgrm-button rgrm-button--primary">Primary button</button>
+          </div>
         </div>
       </section>
     </main>
