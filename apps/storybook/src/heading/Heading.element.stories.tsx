@@ -18,8 +18,15 @@ const meta = {
     },
   },
   argTypes: headingElementArgTypes,
-  render: ({ level, children }: HeadingStoryArgs) =>
-    createElement('rgrm-heading', level ? { level } : {}, children),
+  render: ({ level, appearance, children }: HeadingStoryArgs) =>
+    createElement(
+      'rgrm-heading',
+      {
+        ...(level ? { level } : {}),
+        ...(appearance ? { appearance } : {}),
+      },
+      children,
+    ),
 } satisfies Meta<HeadingStoryArgs>;
 
 export default meta;
@@ -32,31 +39,31 @@ export const Display: Story = {
 };
 
 export const H1: Story = {
-  name: 'Heading 1',
+  name: 'Appearance 1',
   args: headingFixtures.h1,
 };
 
 export const H2: Story = {
-  name: 'Heading 2',
+  name: 'Appearance 2',
   args: headingFixtures.h2,
 };
 
 export const H3: Story = {
-  name: 'Heading 3',
+  name: 'Appearance 3',
   args: headingFixtures.h3,
 };
 
 export const H4: Story = {
-  name: 'Heading 4',
+  name: 'Appearance 4',
   args: headingFixtures.h4,
 };
 
 export const H5: Story = {
-  name: 'Heading 5',
+  name: 'Appearance 5',
   args: headingFixtures.h5,
 };
 
 export const H6: Story = {
-  name: 'Heading 6',
+  name: 'Appearance 6',
   args: headingFixtures.h6,
 };

@@ -1,21 +1,35 @@
-import { headingClassNames, type HeadingLevel } from '@rgrmdesign/rgrm-ds-core/heading';
+import {
+  headingClassNames,
+  type HeadingAppearance,
+  type HeadingLevel,
+} from '@rgrmdesign/rgrm-ds-core/heading';
 
 export const RGRM_HEADING_TAG = 'rgrm-heading';
 
 const DEFAULT_LEVEL: HeadingLevel = 2;
 
 function parseLevelAttribute(value: string | null): HeadingLevel {
-  if (value === 'display') {
-    return 'display';
-  }
   const level = Number(value);
   return Number.isInteger(level) && level >= 1 && level <= 6
     ? (level as HeadingLevel)
     : DEFAULT_LEVEL;
 }
 
+function parseAppearanceAttribute(value: string | null): HeadingAppearance | undefined {
+  if (value === null) {
+    return undefined;
+  }
+  if (value === 'display') {
+    return 'display';
+  }
+  const appearance = Number(value);
+  return Number.isInteger(appearance) && appearance >= 1 && appearance <= 6
+    ? (appearance as HeadingAppearance)
+    : undefined;
+}
+
 export class RgrmHeadingElement extends HTMLElement {
-  static readonly observedAttributes = ['level'];
+  static readonly observedAttributes = ['level', 'appearance'];
 
   #inner: HTMLHeadingElement = document.createElement('h2');
 
@@ -24,14 +38,15 @@ export class RgrmHeadingElement extends HTMLElement {
   }
 
   attributeChangedCallback(name: string): void {
-    if (name === 'level') {
+    if (name === 'level' || name === 'appearance') {
       this.#render();
     }
   }
 
   #render(): void {
     const level = parseLevelAttribute(this.getAttribute('level'));
-    const tagName = level === 'display' ? 'h1' : `h${level}`;
+    const appearance = parseAppearanceAttribute(this.getAttribute('appearance')) ?? level;
+    const tagName = `h${level}`;
 
     if (this.#inner.localName !== tagName) {
       const next = document.createElement(tagName) as HTMLHeadingElement;
@@ -45,7 +60,7 @@ export class RgrmHeadingElement extends HTMLElement {
     }
 
     this.#mountInner();
-    this.#inner.className = headingClassNames(level);
+    this.#inner.className = headingClassNames(appearance);
   }
 
   #mountInner(): void {

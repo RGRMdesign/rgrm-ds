@@ -22,7 +22,11 @@ paragraphClassNames('large'); // "rgrm-paragraph rgrm-paragraph--large"
 ```
 
 ```ts
-import { headingClassNames, type HeadingLevel } from '@rgrmdesign/rgrm-ds-core/heading';
+import {
+  headingClassNames,
+  type HeadingAppearance,
+  type HeadingLevel,
+} from '@rgrmdesign/rgrm-ds-core/heading';
 
 headingClassNames(1); // "rgrm-heading rgrm-heading--h1"
 headingClassNames('display'); // "rgrm-heading rgrm-heading--display"

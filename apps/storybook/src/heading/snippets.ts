@@ -4,6 +4,17 @@ import type { HeadingStoryArgs } from './fixtures';
 
 const TOKENS_IMPORT = "import '@rgrmdesign/rgrm-ds-tokens';";
 
+function formatLevelProp(level?: HeadingStoryArgs['level']): string {
+  return level ? ` level={${level}}` : '';
+}
+
+function formatAppearanceProp(appearance?: HeadingStoryArgs['appearance'], level?: HeadingStoryArgs['level']): string {
+  if (appearance === undefined || appearance === level) {
+    return '';
+  }
+  return appearance === 'display' ? ' appearance="display"' : ` appearance={${appearance}}`;
+}
+
 export function headingReactInstallSnippet(): string {
   return 'pnpm add @rgrmdesign/rgrm-ds-react @rgrmdesign/rgrm-ds-tokens react';
 }
@@ -13,9 +24,10 @@ export function headingReactSetupSnippet(): string {
 import { Heading } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
-export function headingReactUsageSnippet({ level, children }: HeadingStoryArgs): string {
-  const levelProp = level === 'display' ? ' level="display"' : level ? ` level={${level}}` : '';
-  return `<Heading${levelProp}>${children}</Heading>`;
+export function headingReactUsageSnippet({ level, appearance, children }: HeadingStoryArgs): string {
+  const levelProp = formatLevelProp(level);
+  const appearanceProp = formatAppearanceProp(appearance, level);
+  return `<Heading${levelProp}${appearanceProp}>${children}</Heading>`;
 }
 
 export function headingCssInstallSnippet(): string {
@@ -27,9 +39,10 @@ export function headingCssSetupSnippet(): string {
 import '@rgrmdesign/rgrm-ds-css/heading';`;
 }
 
-export function headingCssUsageSnippet({ level, children }: HeadingStoryArgs): string {
-  const tag = level === 'display' ? 'h1' : `h${level ?? 2}`;
-  const className = headingClassNames(level);
+export function headingCssUsageSnippet({ level, appearance, children }: HeadingStoryArgs): string {
+  const tag = `h${level ?? 2}`;
+  const resolvedAppearance = appearance ?? level ?? 2;
+  const className = headingClassNames(resolvedAppearance);
   return `<${tag} class="${className}">${children}</${tag}>`;
 }
 
@@ -42,9 +55,21 @@ export function headingElementSetupSnippet(): string {
 import '@rgrmdesign/rgrm-ds-elements/heading';`;
 }
 
-export function headingElementUsageSnippet({ level, children }: HeadingStoryArgs): string {
-  const levelAttr = level ? ` level="${level}"` : '';
-  return `<rgrm-heading${levelAttr}>${children}</rgrm-heading>`;
+function formatLevelAttr(level?: HeadingStoryArgs['level']): string {
+  return level ? ` level="${level}"` : '';
+}
+
+function formatAppearanceAttr(appearance?: HeadingStoryArgs['appearance'], level?: HeadingStoryArgs['level']): string {
+  if (appearance === undefined || appearance === level) {
+    return '';
+  }
+  return ` appearance="${appearance}"`;
+}
+
+export function headingElementUsageSnippet({ level, appearance, children }: HeadingStoryArgs): string {
+  const levelAttr = formatLevelAttr(level);
+  const appearanceAttr = formatAppearanceAttr(appearance, level);
+  return `<rgrm-heading${levelAttr}${appearanceAttr}>${children}</rgrm-heading>`;
 }
 
 export function headingDocsSource(snippet: (args: HeadingStoryArgs) => string): {

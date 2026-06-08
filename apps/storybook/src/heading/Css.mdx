@@ -9,7 +9,9 @@ import { headingCssInstallSnippet, headingCssSetupSnippet } from './snippets';
 # CSS
 
 Vanilla HTML via `@rgrmdesign/rgrm-ds-css/heading`. Apply `.rgrm-heading` together with
-a level modifier (`.rgrm-heading--h1` … `.rgrm-heading--h6`).
+an appearance modifier (`.rgrm-heading--h1` … `.rgrm-heading--h6`, or
+`.rgrm-heading--display`). Pick the semantic `<h1>`–`<h6>` element independently of the
+appearance class.
 
 Use `@rgrmdesign/rgrm-ds-react` or `@rgrmdesign/rgrm-ds-elements` when you prefer a
 framework wrapper that applies these classes for you.
@@ -32,26 +34,26 @@ Import tokens and the stylesheet once in your app entry.
 
 <Canvas of={CssStories.Display} />
 
-## Level 1
+## Appearance 1
 
 <Canvas of={CssStories.H1} />
 
-## Level 2
+## Appearance 2
 
 <Canvas of={CssStories.H2} />
 
-## Level 3
+## Appearance 3
 
 <Canvas of={CssStories.H3} />
 
-## Level 4
+## Appearance 4
 
 <Canvas of={CssStories.H4} />
 
-## Level 5
+## Appearance 5
 
 <Canvas of={CssStories.H5} />
 
-## Level 6
+## Appearance 6
 
 <Canvas of={CssStories.H6} />

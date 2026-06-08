@@ -1,19 +1,24 @@
 import type { HTMLAttributes } from 'react';
 
-import { headingClassNames, type HeadingLevel } from '@rgrmdesign/rgrm-ds-core/heading';
+import {
+  headingClassNames,
+  type HeadingAppearance,
+  type HeadingLevel,
+} from '@rgrmdesign/rgrm-ds-core/heading';
 
 export type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
-  /**
-   * Heading level (1–6) or `'display'`. Sets the typography scale; `'display'`
-   * renders an `<h1>`.
-   */
+  /** Semantic heading level; sets the rendered `<h1>`–`<h6>` element. Defaults to 2. */
   level?: HeadingLevel;
+  /** Visual scale; defaults to `level` when omitted. */
+  appearance?: HeadingAppearance;
 };
 
-export function Heading({ level = 2, className, children, ...rest }: HeadingProps) {
-  const Tag = level === 'display' ? 'h1' : (`h${level}` as const);
+export function Heading({ level = 2, appearance, className, children, ...rest }: HeadingProps) {
+  const Tag = `h${level}` as const;
+  const resolvedAppearance = appearance ?? level;
+
   return (
-    <Tag className={headingClassNames(level, className)} {...rest}>
+    <Tag className={headingClassNames(resolvedAppearance, className)} {...rest}>
       {children}
     </Tag>
   );

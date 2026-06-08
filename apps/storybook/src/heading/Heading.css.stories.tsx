@@ -18,7 +18,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Vanilla HTML via `@rgrmdesign/rgrm-ds-css/heading`. Apply `.rgrm-heading` plus a level modifier. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
+          'Vanilla HTML via `@rgrmdesign/rgrm-ds-css/heading`. Apply `.rgrm-heading` plus an appearance modifier; pick the semantic `<h1>`–`<h6>` element separately. Requires `@rgrmdesign/rgrm-ds-tokens` in the app (or Storybook preview).',
       },
       source: headingDocsSource(headingCssUsageSnippet),
     },
@@ -27,10 +27,10 @@ const meta = {
     ...headingArgTypes,
     ...headingCssClassArgTypes,
   },
-  render: ({ level, children }: HeadingStoryArgs) =>
+  render: ({ level, appearance, children }: HeadingStoryArgs) =>
     createElement(
-      level === 'display' ? 'h1' : `h${level ?? 2}`,
-      { className: headingClassNames(level) },
+      `h${level ?? 2}`,
+      { className: headingClassNames(appearance ?? level ?? 2) },
       children,
     ),
 } satisfies Meta<HeadingStoryArgs>;
@@ -45,31 +45,31 @@ export const Display: Story = {
 };
 
 export const H1: Story = {
-  name: 'Heading 1',
+  name: 'Appearance 1',
   args: headingFixtures.h1,
 };
 
 export const H2: Story = {
-  name: 'Heading 2',
+  name: 'Appearance 2',
   args: headingFixtures.h2,
 };
 
 export const H3: Story = {
-  name: 'Heading 3',
+  name: 'Appearance 3',
   args: headingFixtures.h3,
 };
 
 export const H4: Story = {
-  name: 'Heading 4',
+  name: 'Appearance 4',
   args: headingFixtures.h4,
 };
 
 export const H5: Story = {
-  name: 'Heading 5',
+  name: 'Appearance 5',
   args: headingFixtures.h5,
 };
 
 export const H6: Story = {
-  name: 'Heading 6',
+  name: 'Appearance 6',
   args: headingFixtures.h6,
 };

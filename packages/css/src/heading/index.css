@@ -1,7 +1,9 @@
 /**
  * Heading typography for the RGRM design system.
  * Consumes CSS custom properties from @rgrmdesign/rgrm-ds-tokens. Each level reads its
- * own semantic heading tokens (`--rgrm-heading-h{n}-*`).
+ * own semantic heading tokens (`--rgrm-heading-h{n}-*`). Appearance modifiers
+ * (`.rgrm-heading--h1` … `.rgrm-heading--display`) control the visual scale
+ * independently of the semantic `<h1>`–`<h6>` element.
  */
 
 .rgrm-heading {

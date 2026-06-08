@@ -30,7 +30,7 @@ import '@rgrmdesign/rgrm-ds-elements/paragraph';
 ```
 
 ```html
-<rgrm-heading level="display">Hero title.</rgrm-heading>
+<rgrm-heading level="1" appearance="display">Hero title.</rgrm-heading>
 <rgrm-heading level="1">Page title.</rgrm-heading>
 <rgrm-heading level="2">Section title.</rgrm-heading>
 
@@ -41,12 +41,13 @@ import '@rgrmdesign/rgrm-ds-elements/paragraph';
 
 ## Heading (`<rgrm-heading>`)
 
-| Attribute | Values                 | Description                                           |
-| --------- | ---------------------- | ----------------------------------------------------- |
-| `level`   | `1` … `6` \| `display` | Sets the scale (def. 2). `display` renders an `<h1>`. |
+| Attribute    | Values                 | Description                                              |
+| ------------ | ---------------------- | -------------------------------------------------------- |
+| `level`      | `1` … `6`              | Semantic heading level; sets inner `<h1>`–`<h6>` (def. 2). |
+| `appearance` | `1` … `6` \| `display` | Visual scale; defaults to `level` when omitted.          |
 
 Also exported: `RgrmHeadingElement` (class), `RGRM_HEADING_TAG`
-(`'rgrm-heading'`), and `headingClassNames(level, className?)`.
+(`'rgrm-heading'`), and `headingClassNames(appearance, className?)`.
 
 ## Paragraph (`<rgrm-paragraph>`)
 

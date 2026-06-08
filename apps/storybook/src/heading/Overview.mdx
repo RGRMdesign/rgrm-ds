@@ -13,35 +13,47 @@ the same BEM classes.
 Load `@rgrmdesign/rgrm-ds-tokens` once in your app so the CSS custom properties are
 defined.
 
+## Level and appearance
+
+Headings separate **semantic level** from **visual appearance**:
+
+- **Level** — the `<h1>`–`<h6>` element that is rendered. This drives the document
+  outline and accessibility.
+- **Appearance** — the typography scale applied via a BEM modifier (`.rgrm-heading--h1`
+  … `.rgrm-heading--h6`, or `.rgrm-heading--display`).
+
+When `appearance` is omitted, it defaults to `level`. You can combine them freely — for
+example, render an `<h2>` with the visual scale of appearance 4.
+
 ## Preview
 
-Display heading (largest, hero scale).
+Display appearance (largest, hero scale) on an `<h1>`.
 
 <Canvas of={CssStories.Display} sourceState="none" />
 
-## Variants
+## Appearances
 
-### Level 1
+### Appearance 1
 
 <Canvas of={CssStories.H1} sourceState="none" />
 
-### Level 2
+### Appearance 2
 
 <Canvas of={CssStories.H2} sourceState="none" />
 
-### Level 3
+### Appearance 3
 
 <Canvas of={CssStories.H3} sourceState="none" />
 
-### Level 4
+### Appearance 4
 
 <Canvas of={CssStories.H4} sourceState="none" />
 
-### Level 5
+### Appearance 5
 
 <Canvas of={CssStories.H5} sourceState="none" />
 
-### Level 6
+### Appearance 6
 
 <Canvas of={CssStories.H6} sourceState="none" />
 
@@ -53,5 +65,5 @@ Pick a page in the sidebar under **Typography → Heading**, or jump directly:
 - **CSS** — [`@rgrmdesign/rgrm-ds-css`](?path=/docs/typography-heading-css--documentation) for hand-written HTML or any stack without a wrapper
 - **Web component** — [`@rgrmdesign/rgrm-ds-elements`](?path=/docs/typography-heading-element--documentation) for vanilla JS, server-rendered HTML, or non-React frameworks
 
-Each documentation page includes install steps, copy-paste examples, and all level
+Each documentation page includes install steps, copy-paste examples, and all appearance
 variants.

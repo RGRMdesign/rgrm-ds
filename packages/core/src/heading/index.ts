@@ -1,1 +1,5 @@
-export { headingClassNames, type HeadingLevel } from './classNames.js';
+export {
+  headingClassNames,
+  type HeadingAppearance,
+  type HeadingLevel,
+} from './classNames.js';
