@@ -1,0 +1,33 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { buttonElementAttributeArgNames } from './fixtures';
+import * as ElementStories from './Button.element.stories';
+import { buttonElementInstallSnippet, buttonElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name="Documentation" />
+
+# Web component
+
+Custom element `<rgrm-button>` via `@rgrmdesign/rgrm-ds-elements/button`. Importing
+the package registers the element and loads `@rgrmdesign/rgrm-ds-css/button`.
+
+The element uses **light DOM** (inner `<button>` with BEM classes) so design tokens
+from the document apply normally.
+
+## Install
+
+<Source language="bash" code={buttonElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the custom element once in your app entry.
+
+<Source language="tsx" code={buttonElementSetupSnippet()} />
+
+## Attributes
+
+<ArgTypes of={ElementStories} include={buttonElementAttributeArgNames} />
+
+## Primary
+
+<Canvas of={ElementStories.Primary} />

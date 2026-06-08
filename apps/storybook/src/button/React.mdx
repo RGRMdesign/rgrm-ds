@@ -1,0 +1,32 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { buttonReactPropArgNames } from './fixtures';
+import * as ReactStories from './Button.react.stories';
+import { buttonReactInstallSnippet, buttonReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name="Documentation" />
+
+# React
+
+React wrapper via `@rgrmdesign/rgrm-ds-react`. Importing the package also loads
+`@rgrmdesign/rgrm-ds-css` — no separate stylesheet import is required. The
+component renders a native `<button>` and forwards all standard button props
+(`onClick`, `type`, …).
+
+## Install
+
+<Source language="bash" code={buttonReactInstallSnippet()} />
+
+## Setup
+
+Import tokens once in your app entry, then the React wrapper (CSS loads automatically).
+
+<Source language="tsx" code={buttonReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={buttonReactPropArgNames} />
+
+## Primary
+
+<Canvas of={ReactStories.Primary} />

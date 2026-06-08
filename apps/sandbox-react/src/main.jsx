@@ -4,6 +4,7 @@ import { initThemeSwitcher } from 'sandbox-shared/theme.js';
 
 import { createRoot } from 'react-dom/client';
 
+import { ButtonDemo } from './ButtonDemo.jsx';
 import { HeadingDemo } from './HeadingDemo.jsx';
 import { ParagraphDemo } from './ParagraphDemo.jsx';
 
@@ -15,6 +16,7 @@ if (root) {
     <>
       <HeadingDemo />
       <ParagraphDemo />
+      <ButtonDemo />
     </>,
   );
 }

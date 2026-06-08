@@ -1,0 +1,57 @@
+/**
+ * Button for the RGRM design system.
+ * Consumes CSS custom properties from @rgrmdesign/rgrm-ds-tokens. Each variant reads
+ * its own semantic button tokens (`--rgrm-button-{variant}-*`), including the
+ * interaction states `hover`, `active` and `focus-visible`.
+ */
+
+.rgrm-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: var(--rgrm-viewport-font-size-main);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.rgrm-button--primary {
+  border-radius: var(--rgrm-button-primary-border-radius, 0);
+  padding-block: var(--rgrm-button-primary-padding-block-start, 0)
+    var(--rgrm-button-primary-padding-block-end, 0);
+  padding-inline: var(--rgrm-button-primary-padding-inline-start, 0)
+    var(--rgrm-button-primary-padding-inline-end, 0);
+  background-color: var(--rgrm-button-primary-background-color, transparent);
+  border-color: var(--rgrm-button-primary-border-color, transparent);
+  color: var(--rgrm-button-primary-color, inherit);
+}
+
+.rgrm-button--primary:hover {
+  background-color: var(--rgrm-button-primary-background-color-hover, inherit);
+  border-color: var(--rgrm-button-primary-border-color-hover, inherit);
+  color: var(--rgrm-button-primary-color-hover, inherit);
+}
+
+.rgrm-button--primary:active {
+  background-color: var(--rgrm-button-primary-background-color-active, inherit);
+  border-color: var(--rgrm-button-primary-border-color-active, inherit);
+  color: var(--rgrm-button-primary-color-active, inherit);
+}
+
+.rgrm-button--primary:focus-visible {
+  background-color: var(--rgrm-button-primary-background-color-focus-visible, inherit);
+  border-color: var(--rgrm-button-primary-border-color-focus-visible, inherit);
+  color: var(--rgrm-button-primary-color-focus-visible, inherit);
+  outline: 2px solid var(--rgrm-button-primary-color-focus-visible, currentColor);
+  outline-offset: 2px;
+}

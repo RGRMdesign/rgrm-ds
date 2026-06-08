@@ -1,0 +1,33 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+import * as CssStories from './Button.css.stories';
+
+<Meta title="Actions/Button/Overview" name="Overview" />
+
+# Button
+
+Action trigger for the RGRM design system. Visual styles live in
+`@rgrmdesign/rgrm-ds-css`; React and the web component are thin wrappers that apply
+the same BEM classes.
+
+Load `@rgrmdesign/rgrm-ds-tokens` (>= 0.6.0) once in your app so the button CSS
+custom properties are defined.
+
+## Preview
+
+Primary variant — colours, padding and radius come from the
+`--rgrm-button-primary-*` tokens, including the `hover`, `active` and
+`focus-visible` interaction states.
+
+<Canvas of={CssStories.Primary} sourceState="none" />
+
+## Choose an implementation
+
+Pick a page in the sidebar under **Actions → Button**, or jump directly:
+
+- **React** — [`@rgrmdesign/rgrm-ds-react`](?path=/docs/actions-button-react--documentation) for React apps
+- **CSS** — [`@rgrmdesign/rgrm-ds-css`](?path=/docs/actions-button-css--documentation) for hand-written HTML or any stack without a wrapper
+- **Web component** — [`@rgrmdesign/rgrm-ds-elements`](?path=/docs/actions-button-element--documentation) for vanilla JS, server-rendered HTML, or non-React frameworks
+
+Each documentation page includes install steps, copy-paste examples, and all
+variants.

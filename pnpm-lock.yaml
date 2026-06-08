@@ -30,8 +30,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/css
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.1
+        version: 0.6.1
       sandbox-shared:
         specifier: workspace:*
         version: link:../../packages/sandbox-shared
@@ -49,8 +49,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/elements
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.1
+        version: 0.6.1
       sandbox-shared:
         specifier: workspace:*
         version: link:../../packages/sandbox-shared
@@ -68,8 +68,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/react
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.1
+        version: 0.6.1
       react:
         specifier: ^19.2.3
         version: 19.2.7
@@ -105,8 +105,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/react
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.1
+        version: 0.6.1
       react:
         specifier: ^19.2.3
         version: 19.2.7
@@ -180,8 +180,8 @@ importers:
         version: link:../css
     devDependencies:
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.1
+        version: 0.6.1
       rimraf:
         specifier: ^6.0.1
         version: 6.1.3
@@ -202,8 +202,8 @@ importers:
         version: link:../css
     devDependencies:
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.1
+        version: 0.6.1
       '@types/react':
         specifier: ^19.2.7
         version: 19.2.16
@@ -848,6 +848,10 @@ packages:
 
   '@rgrmdesign/rgrm-ds-tokens@0.5.0':
     resolution: {integrity: sha512-npSYj9RRuq6e3oPA52GpfSoqYNtMwgL6HVA24wvZxkyV0QRi9wOtgevxzSvTjBqojQxXvWjIlRvLbN0vJwH1RQ==}
+    engines: {node: '>=22.13'}
+
+  '@rgrmdesign/rgrm-ds-tokens@0.6.1':
+    resolution: {integrity: sha512-BD/ssHjKNHgtFoqYB832uLXNt0IgXP8FM4p4zrnmOjFMVyyMQI4BzM6FZAUyxJ/p/9+GL7WiX4ls0MdNcQUIRQ==}
     engines: {node: '>=22.13'}
 
   '@rolldown/binding-android-arm64@1.0.3':
@@ -3292,6 +3296,8 @@ snapshots:
     optional: true
 
   '@rgrmdesign/rgrm-ds-tokens@0.5.0': {}
+
+  '@rgrmdesign/rgrm-ds-tokens@0.6.1': {}
 
   '@rolldown/binding-android-arm64@1.0.3':
     optional: true

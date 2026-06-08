@@ -69,6 +69,13 @@ body {
   gap: var(--rgrm-viewport-space-4);
 }
 
+.sandbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--rgrm-viewport-space-3);
+}
+
 .sandbox-section__label {
   margin: 0;
   font-size: var(--rgrm-viewport-font-size-small);

@@ -14,6 +14,10 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./button": {
+      "types": "./dist/button/index.d.ts",
+      "import": "./dist/button/index.js"
+    },
     "./heading": {
       "types": "./dist/heading/index.d.ts",
       "import": "./dist/heading/index.js"
@@ -33,6 +37,7 @@
   "sideEffects": [
     "@rgrmdesign/rgrm-ds-css",
     "./dist/index.js",
+    "./dist/button/index.js",
     "./dist/heading/index.js",
     "./dist/paragraph/index.js",
     "./dist/section/index.js"
@@ -47,10 +52,10 @@
     "@rgrmdesign/rgrm-ds-css": "workspace:*"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.5.0"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.6.0"
   },
   "devDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": "^0.5.0",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.6.1",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"

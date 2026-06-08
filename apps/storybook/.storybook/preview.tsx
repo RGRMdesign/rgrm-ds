@@ -49,6 +49,19 @@ const preview: Preview = {
               ['Documentation', '*'],
             ],
           ],
+          'Actions',
+          [
+            'Button',
+            [
+              'Overview',
+              'React',
+              ['Documentation', '*'],
+              'CSS',
+              ['Documentation', '*'],
+              'Element',
+              ['Documentation', '*'],
+            ],
+          ],
           'Wrappers',
           [
             'Section',

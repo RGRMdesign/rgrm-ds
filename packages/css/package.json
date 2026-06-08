@@ -14,6 +14,8 @@
   "exports": {
     ".": "./dist/index.css",
     "./index.css": "./dist/index.css",
+    "./button": "./dist/button.css",
+    "./button.css": "./dist/button.css",
     "./heading": "./dist/heading.css",
     "./heading.css": "./dist/heading.css",
     "./paragraph": "./dist/paragraph.css",
@@ -30,12 +32,12 @@
     "src"
   ],
   "scripts": {
-    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && lightningcss --minify --bundle --targets \">= 0.25%\" src/index.css -o dist/index.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/heading/index.css -o dist/heading.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/paragraph/index.css -o dist/paragraph.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/section/index.css -o dist/section.css",
+    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && lightningcss --minify --bundle --targets \">= 0.25%\" src/index.css -o dist/index.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/button/index.css -o dist/button.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/heading/index.css -o dist/heading.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/paragraph/index.css -o dist/paragraph.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/section/index.css -o dist/section.css",
     "dev": "chokidar \"src/**/*.css\" -c \"pnpm run build\" --initial",
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.5.0"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.6.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",

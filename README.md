@@ -17,10 +17,11 @@ packages, design tokens) is in place; the component library is still small and g
 - Heading
 - Paragraph
 - Section
+- Button
 
 **Next**
 
-- Expand the component library (e.g. Button, Link, List, …)
+- Expand the component library (e.g. Link, List, …)
 
 **Later**
 
