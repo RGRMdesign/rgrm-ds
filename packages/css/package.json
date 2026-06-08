@@ -4,6 +4,11 @@
   "description": "Component styles for the RGRM design system, built on @rgrmdesign/rgrm-ds-tokens.",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RGRMdesign/rgrm-ds.git",
+    "directory": "packages/css"
+  },
   "main": "dist/index.css",
   "style": "dist/index.css",
   "exports": {

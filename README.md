@@ -37,7 +37,7 @@ the token custom properties (`var(--font-size-h1)`, …); the tokens themselves 
 
 ## Requirements
 
-- Node.js >= 22
+- Node.js 24.x (pinned in [`.nvmrc`](.nvmrc); run `nvm use` or `fnm use` locally)
 - pnpm (this repo pins `pnpm@10.33.0` via `packageManager`)
 
 ## Getting started

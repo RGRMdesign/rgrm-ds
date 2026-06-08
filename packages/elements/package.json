@@ -4,6 +4,11 @@
   "description": "Web Components for the RGRM design system. Styles come from @rgrmdesign/rgrm-ds-css.",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RGRMdesign/rgrm-ds.git",
+    "directory": "packages/elements"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
