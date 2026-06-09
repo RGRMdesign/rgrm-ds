@@ -1,5 +1,16 @@
 # @rgrmdesign/rgrm-ds-elements
 
+## 0.5.1
+
+### Patch Changes
+
+- [`89501e2`](https://github.com/RGRMdesign/rgrm-ds/commit/89501e29bc18f56641fbac6bc8ad737ce0fbe36b) Thanks [@RGRMdesign](https://github.com/RGRMdesign)! - Add `::selection` styles to Root via `--rgrm-root-selection-background-color` and `--rgrm-root-selection-color` (`@rgrmdesign/rgrm-ds-tokens` >= 0.10.0).
+  - `@rgrmdesign/rgrm-ds-css/root` — document-wide text selection colours on `html.rgrm-root ::selection`
+  - `@rgrmdesign/rgrm-ds-react` and `@rgrmdesign/rgrm-ds-elements` — peer dependency bumped to `@rgrmdesign/rgrm-ds-tokens` >= 0.10.0
+
+- Updated dependencies [[`89501e2`](https://github.com/RGRMdesign/rgrm-ds/commit/89501e29bc18f56641fbac6bc8ad737ce0fbe36b)]:
+  - @rgrmdesign/rgrm-ds-css@0.5.1
+
 ## 0.5.0
 
 ### Minor Changes
