@@ -1,5 +1,16 @@
 # @rgrmdesign/rgrm-ds-elements
 
+## 0.4.1
+
+### Patch Changes
+
+- [`00e7b36`](https://github.com/RGRMdesign/rgrm-ds/commit/00e7b367bb3285eeb0ec142a63839ed9e8836806) Thanks [@RGRMdesign](https://github.com/RGRMdesign)! - Fix `/fonts` so it no longer overrides `--rgrm-typography-font-primary-family`. Register `@font-face` under `Geist` (matching the token) using Fontsource files directly, instead of importing Fontsource CSS that registers `Geist Sans`.
+
+  React and Elements are republished so `/fonts` re-exports pick up the css fix for consumers on strict package managers.
+
+- Updated dependencies [[`00e7b36`](https://github.com/RGRMdesign/rgrm-ds/commit/00e7b367bb3285eeb0ec142a63839ed9e8836806)]:
+  - @rgrmdesign/rgrm-ds-css@0.4.1
+
 ## 0.4.0
 
 ### Minor Changes
