@@ -1,6 +1,6 @@
 {
   "name": "@rgrmdesign/rgrm-ds-css",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Component styles for the RGRM design system, built on @rgrmdesign/rgrm-ds-tokens.",
   "license": "MIT",
   "type": "module",
