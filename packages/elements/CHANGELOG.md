@@ -1,5 +1,12 @@
 # @rgrmdesign/rgrm-ds-elements
 
+## 0.5.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @rgrmdesign/rgrm-ds-css@0.5.3
+
 ## 0.5.2
 
 ### Patch Changes
