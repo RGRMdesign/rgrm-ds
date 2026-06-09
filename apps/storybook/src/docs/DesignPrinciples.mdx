@@ -1,5 +1,7 @@
 import { Meta, Source } from '@storybook/addon-docs/blocks';
 
+import { FIGMA_LIBRARY_URL } from './links';
+
 <Meta title="Guides/Design principles" />
 
 # Design principles
@@ -27,7 +29,9 @@ identically, and there is only ever one place to change a visual.
 
 Components only ever reference **design tokens** (CSS custom properties), never raw
 colours, sizes, or fonts. Tokens are generated from Figma variables and shipped as a
-separate package (`@rgrmdesign/rgrm-ds-tokens`), loaded once as a peer dependency.
+separate package (`@rgrmdesign/rgrm-ds-tokens`), loaded once as a peer dependency. The
+variable definitions that feed those tokens live in the
+<a href={FIGMA_LIBRARY_URL}>RGRM Design System Figma library</a>.
 
 Tokens are layered: **primitive** values feed **semantic** tokens, and components consume
 the semantic ones. That indirection is what makes theming and rescaling possible without

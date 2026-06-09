@@ -1,5 +1,7 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
+import { FIGMA_LIBRARY_URL } from './links';
+
 <Meta title="Introduction" />
 
 # RGRM Design System
@@ -21,6 +23,13 @@ stack:
 
 Tokens (`@rgrmdesign/rgrm-ds-tokens`) are a **peer dependency** so they load exactly once
 in the consuming app.
+
+## Design resources
+
+Visual specs, components, and Figma variables live in the
+<a href={FIGMA_LIBRARY_URL}>RGRM Design System Figma library</a>. This Storybook is the
+coded reference — use Figma for design exploration and variables, Storybook for
+implementation, variants, and theming.
 
 ## Under the hood: the Core package
 
