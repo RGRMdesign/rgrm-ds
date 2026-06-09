@@ -1,4 +1,5 @@
 import '@rgrmdesign/rgrm-ds-tokens';
+import '@rgrmdesign/rgrm-ds-react/fonts';
 import 'sandbox-shared/chrome.css';
 import { initThemeSwitcher } from 'sandbox-shared/theme.js';
 

@@ -1,4 +1,5 @@
 import '@rgrmdesign/rgrm-ds-tokens';
+import '@rgrmdesign/rgrm-ds-css/fonts';
 
 import type { Preview } from '@storybook/react-vite';
 import React from 'react';

@@ -18,18 +18,23 @@ For plain CSS or the Web component, swap `@rgrmdesign/rgrm-ds-react` for
 
 ## Setup
 
-Load the tokens once in your app entry so the CSS custom properties are defined. After
-that, importing a React or Web component automatically pulls in its styles from
-`@rgrmdesign/rgrm-ds-css`.
+Load the tokens once in your app entry so the CSS custom properties are defined. Load
+the fonts entry so Geist Sans is available (via Fontsource, bundled in
+`@rgrmdesign/rgrm-ds-css`). After that, importing a React or Web component automatically
+pulls in its styles from `@rgrmdesign/rgrm-ds-css`.
 
 <Source
   language="tsx"
   code={`// app entry
 import '@rgrmdesign/rgrm-ds-tokens';
+import '@rgrmdesign/rgrm-ds-react/fonts';
 
 // then use components anywhere
 import { Heading } from '@rgrmdesign/rgrm-ds-react/heading';`}
 />
+
+Prefer to manage fonts yourself? Install `@fontsource/geist-sans` and import the weights
+you need (400, 500, 700) instead of the `/fonts` entry on your layer package.
 
 Using plain CSS? Import the stylesheet (whole bundle or a single component) and apply the
 BEM classes yourself:
@@ -37,6 +42,7 @@ BEM classes yourself:
 <Source
   language="css"
   code={`@import '@rgrmdesign/rgrm-ds-tokens';
+@import '@rgrmdesign/rgrm-ds-css/fonts';
 @import '@rgrmdesign/rgrm-ds-css';        /* or: @rgrmdesign/rgrm-ds-css/heading */`}
 />
 

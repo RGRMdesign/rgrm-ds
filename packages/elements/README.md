@@ -18,6 +18,7 @@ Import everything (registers all elements):
 
 ```js
 import '@rgrmdesign/rgrm-ds-tokens';
+import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements';
 ```
 
@@ -25,6 +26,7 @@ Or register a single component via its sub-path export:
 
 ```js
 import '@rgrmdesign/rgrm-ds-tokens';
+import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements/heading';
 import '@rgrmdesign/rgrm-ds-elements/paragraph';
 ```

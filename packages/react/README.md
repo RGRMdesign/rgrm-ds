@@ -16,6 +16,7 @@ your app.
 
 ```tsx
 import '@rgrmdesign/rgrm-ds-tokens';
+import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Heading, Paragraph } from '@rgrmdesign/rgrm-ds-react';
 
 export function Example() {

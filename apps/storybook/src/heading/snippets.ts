@@ -21,6 +21,7 @@ export function headingReactInstallSnippet(): string {
 
 export function headingReactSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Heading } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
@@ -36,6 +37,7 @@ export function headingCssInstallSnippet(): string {
 
 export function headingCssSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-css/fonts';
 import '@rgrmdesign/rgrm-ds-css/heading';`;
 }
 
@@ -52,6 +54,7 @@ export function headingElementInstallSnippet(): string {
 
 export function headingElementSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements/heading';`;
 }
 

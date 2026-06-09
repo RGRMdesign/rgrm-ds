@@ -22,6 +22,8 @@
     "./paragraph.css": "./dist/paragraph.css",
     "./section": "./dist/section.css",
     "./section.css": "./dist/section.css",
+    "./fonts": "./src/fonts/index.css",
+    "./fonts.css": "./src/fonts/index.css",
     "./source": "./src/index.css"
   },
   "sideEffects": [
@@ -37,7 +39,7 @@
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.7.0"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.8.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
@@ -51,5 +53,8 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@fontsource/geist-sans": "^5.2.5"
   }
 }

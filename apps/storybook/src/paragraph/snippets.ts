@@ -10,6 +10,7 @@ export function paragraphReactInstallSnippet(): string {
 
 export function paragraphReactSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Paragraph } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
@@ -27,6 +28,7 @@ export function paragraphCssInstallSnippet(): string {
 
 export function paragraphCssSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-css/fonts';
 import '@rgrmdesign/rgrm-ds-css/paragraph';`;
 }
 
@@ -44,6 +46,7 @@ export function paragraphElementInstallSnippet(): string {
 
 export function paragraphElementSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements/paragraph';`;
 }
 

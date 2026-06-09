@@ -29,6 +29,9 @@
     "./section": {
       "types": "./dist/section/index.d.ts",
       "import": "./dist/section/index.js"
+    },
+    "./fonts": {
+      "import": "./dist/fonts.js"
     }
   },
   "files": [
@@ -36,6 +39,7 @@
   ],
   "sideEffects": [
     "@rgrmdesign/rgrm-ds-css",
+    "./dist/fonts.js",
     "./dist/index.js",
     "./dist/button/index.js",
     "./dist/heading/index.js",
@@ -52,10 +56,10 @@
     "@rgrmdesign/rgrm-ds-css": "workspace:*"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.7.0"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.8.0"
   },
   "devDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": "^0.7.0",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.8.0",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"

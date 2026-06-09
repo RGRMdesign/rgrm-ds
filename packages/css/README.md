@@ -15,12 +15,16 @@ required custom properties are defined.
 
 ## Usage
 
-Import everything:
+Import tokens, fonts, and component styles:
 
 ```js
-import '@rgrmdesign/rgrm-ds-tokens'; // defines the design tokens (once, app-wide)
+import '@rgrmdesign/rgrm-ds-tokens'; // design tokens (once, app-wide)
+import '@rgrmdesign/rgrm-ds-css/fonts'; // Geist Sans via Fontsource (400, 500, 700)
 import '@rgrmdesign/rgrm-ds-css';
 ```
+
+The `/fonts` entry loads `@fontsource/geist-sans` and aligns the primary font-family token
+with Fontsource’s registered name (`Geist Sans`). Skip it if you load Geist yourself.
 
 Or import a single component's styles via its sub-path export:
 
@@ -49,5 +53,6 @@ wrappers that apply these classes and load the stylesheet automatically.
 
 | Sub-path     | Classes                                                                              |
 | ------------ | ------------------------------------------------------------------------------------ |
+| `/fonts`     | `@font-face` for Geist Sans (optional; load once in app entry)                       |
 | `/heading`   | `.rgrm-heading`, `.rgrm-heading--display`, `.rgrm-heading--h1` … `.rgrm-heading--h6` |
 | `/paragraph` | `.rgrm-paragraph`, `.rgrm-paragraph--small`, `.rgrm-paragraph--large`                |

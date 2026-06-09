@@ -1,0 +1,18 @@
+/**
+ * @rgrmdesign/rgrm-ds-css/fonts
+ *
+ * Loads Geist Sans via Fontsource for the weights used by design tokens
+ * (regular 400, medium 500, bold 700). Import once in your app entry, after
+ * `@rgrmdesign/rgrm-ds-tokens`.
+ *
+ * Fontsource registers the family as "Geist Sans"; tokens name it "Geist".
+ * This entry aligns the token so @font-face matches component styles.
+ */
+
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/700.css';
+
+:root {
+  --rgrm-typography-font-primary-family: 'Geist Sans', sans-serif;
+}

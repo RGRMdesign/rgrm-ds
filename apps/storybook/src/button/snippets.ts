@@ -10,6 +10,7 @@ export function buttonReactInstallSnippet(): string {
 
 export function buttonReactSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Button } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
@@ -27,6 +28,7 @@ export function buttonCssInstallSnippet(): string {
 
 export function buttonCssSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-css/fonts';
 import '@rgrmdesign/rgrm-ds-css/button';`;
 }
 
@@ -44,6 +46,7 @@ export function buttonElementInstallSnippet(): string {
 
 export function buttonElementSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements/button';`;
 }
 

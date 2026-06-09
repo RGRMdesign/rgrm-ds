@@ -10,6 +10,7 @@ export function sectionReactInstallSnippet(): string {
 
 export function sectionReactSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Section, Heading, Paragraph } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
@@ -41,6 +42,7 @@ export function sectionCssInstallSnippet(): string {
 
 export function sectionCssSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-css/fonts';
 import '@rgrmdesign/rgrm-ds-css/section';`;
 }
 
@@ -73,6 +75,7 @@ export function sectionElementInstallSnippet(): string {
 
 export function sectionElementSetupSnippet(): string {
   return `${TOKENS_IMPORT}
+import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements/section';
 import '@rgrmdesign/rgrm-ds-elements/heading';
 import '@rgrmdesign/rgrm-ds-elements/paragraph';`;

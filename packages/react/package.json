@@ -29,13 +29,17 @@
     "./section": {
       "types": "./dist/section/index.d.ts",
       "import": "./dist/section/index.js"
+    },
+    "./fonts": {
+      "import": "./dist/fonts.js"
     }
   },
   "files": [
     "dist"
   ],
   "sideEffects": [
-    "@rgrmdesign/rgrm-ds-css"
+    "@rgrmdesign/rgrm-ds-css",
+    "./dist/fonts.js"
   ],
   "scripts": {
     "build": "tsup",
@@ -47,11 +51,11 @@
     "@rgrmdesign/rgrm-ds-css": "workspace:*"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.7.0",
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.8.0",
     "react": ">=18"
   },
   "devDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": "^0.7.0",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.8.0",
     "@types/react": "^19.2.7",
     "react": "^19.2.3",
     "rimraf": "^6.0.1",

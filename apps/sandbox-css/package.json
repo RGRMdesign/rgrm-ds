@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@rgrmdesign/rgrm-ds-css": "workspace:*",
-    "@rgrmdesign/rgrm-ds-tokens": "^0.7.0",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.8.0",
     "sandbox-shared": "workspace:*"
   },
   "devDependencies": {
