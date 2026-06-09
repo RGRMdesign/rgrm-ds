@@ -35,7 +35,8 @@ export const rootReactArgTypes = {
 export const rootCssClassArgTypes = {
   'html.rgrm-root': {
     control: false,
-    description: 'Sets `font-size` from `--rgrm-root-font-size` (rem basis).',
+    description:
+      'Sets `font-size` from `--rgrm-root-font-size` and `box-sizing: border-box` (inherited by descendants).',
     table: {
       type: { summary: 'class on `<html>`', required: true },
       defaultValue: { summary: null },
@@ -44,7 +45,7 @@ export const rootCssClassArgTypes = {
   'body.rgrm-root': {
     control: false,
     description:
-      'Sets colour, background, and inherited typography from `--rgrm-root-*` tokens.',
+      'Sets colour, background, typography, `margin: 0`, and `min-height: 100dvh` from `--rgrm-root-*` tokens and document baseline rules.',
     table: {
       type: { summary: 'class on `<body>`', required: true },
       defaultValue: { summary: null },

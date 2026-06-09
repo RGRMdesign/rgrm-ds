@@ -11,11 +11,12 @@ Root applies document-level design tokens to `<html>` and `<body>`. Unlike other
 components, it does not render visible UI — it activates global styles via the
 `rgrm-root` class.
 
-- **`html`** — `font-size` from `--rgrm-root-font-size` (sets the rem basis)
+- **`html`** — `font-size` from `--rgrm-root-font-size` (rem basis) and
+  `box-sizing: border-box` (inherited by descendants)
 - **`html ::selection`** — `background-color` and `color` from
   `--rgrm-root-selection-background-color` and `--rgrm-root-selection-color`
-- **`body`** — `background-color`, `color`, `font-family`, `font-weight`,
-  `line-height`, and `letter-spacing` from `--rgrm-root-*`
+- **`body`** — token-driven colour, background, and typography; plus `margin: 0`
+  and `min-height: 100dvh` (with `100vh` fallback)
 
 Load `@rgrmdesign/rgrm-ds-tokens` once in your app. Theme switching via
 `data-theme` on `<html>` continues to work — root tokens reference the active theme.

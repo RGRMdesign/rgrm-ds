@@ -6,15 +6,22 @@
  * `@rgrmdesign/rgrm-ds-core/root`, React `<Root>`, or `<rgrm-root>`).
  *
  * Property split (web best practice):
- * - `html` — `font-size` only (sets the rem basis for the document)
+ * - `html` — `font-size`, `box-sizing` (rem basis + border-box inheritance)
  * - `html` — `::selection` for text highlight colours (document-wide)
- * - `body` — color, background, and inherited typography tokens
+ * - `body` — colour, background, typography, `margin: 0`, and `min-height`
  */
 
 html.rgrm-root {
   --_root-font-size: var(--rgrm-root-font-size, 100%);
 
+  box-sizing: border-box;
   font-size: var(--_root-font-size);
+}
+
+html.rgrm-root *,
+html.rgrm-root *::before,
+html.rgrm-root *::after {
+  box-sizing: inherit;
 }
 
 html.rgrm-root ::selection {
@@ -33,11 +40,13 @@ body.rgrm-root {
   --_root-line-height: var(--rgrm-root-line-height, inherit);
   --_root-letter-spacing: var(--rgrm-root-letter-spacing, inherit);
 
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--_root-background-color);
   color: var(--_root-color);
   font-family: var(--_root-font-family);
   font-weight: var(--_root-font-weight);
   line-height: var(--_root-line-height);
   letter-spacing: var(--_root-letter-spacing);
-  margin: 0;
 }
