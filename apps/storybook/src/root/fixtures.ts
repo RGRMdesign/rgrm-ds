@@ -50,8 +50,21 @@ export const rootCssClassArgTypes = {
       defaultValue: { summary: null },
     },
   },
+  'html.rgrm-root ::selection': {
+    control: false,
+    description:
+      'Sets text selection colours from `--rgrm-root-selection-background-color` and `--rgrm-root-selection-color`.',
+    table: {
+      type: { summary: 'pseudo-element (document-wide)' },
+      defaultValue: { summary: null },
+    },
+  },
 };
 
-export const rootCssClassArgNames = ['html.rgrm-root', 'body.rgrm-root'] as const;
+export const rootCssClassArgNames = [
+  'html.rgrm-root',
+  'body.rgrm-root',
+  'html.rgrm-root ::selection',
+] as const;
 
 export const disableDocgenExtractArgTypes = () => ({});

@@ -14,11 +14,6 @@ body {
     color 0.2s ease;
 }
 
-::selection {
-  background: var(--rgrm-theme-selection-background);
-  color: var(--rgrm-theme-selection-text);
-}
-
 .sandbox-bar {
   position: sticky;
   top: 0;
