@@ -39,4 +39,5 @@ body.rgrm-root {
   font-weight: var(--_root-font-weight);
   line-height: var(--_root-line-height);
   letter-spacing: var(--_root-letter-spacing);
+  margin: 0;
 }
