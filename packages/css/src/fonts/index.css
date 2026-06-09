@@ -1,18 +1,39 @@
 /**
  * @rgrmdesign/rgrm-ds-css/fonts
  *
- * Loads Geist Sans via Fontsource for the weights used by design tokens
- * (regular 400, medium 500, bold 700). Import once in your app entry, after
- * `@rgrmdesign/rgrm-ds-tokens`.
+ * Registers @font-face for the primary family. Import once in your app entry,
+ * after `@rgrmdesign/rgrm-ds-tokens`.
  *
- * Fontsource registers the family as "Geist Sans"; tokens name it "Geist".
- * This entry aligns the token so @font-face matches component styles.
+ * PRIMARY_FONT_FAMILY must match --rgrm-typography-font-primary-family from tokens.
+ * Font files come from @fontsource/geist-sans (weights 400, 500, 700).
  */
 
-@import '@fontsource/geist-sans/400.css';
-@import '@fontsource/geist-sans/500.css';
-@import '@fontsource/geist-sans/700.css';
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url('@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff2') format('woff2'),
+    url('@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff') format('woff');
+}
 
-:root {
-  --rgrm-typography-font-primary-family: 'Geist Sans', sans-serif;
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url('@fontsource/geist-sans/files/geist-sans-latin-500-normal.woff2') format('woff2'),
+    url('@fontsource/geist-sans/files/geist-sans-latin-500-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url('@fontsource/geist-sans/files/geist-sans-latin-700-normal.woff2') format('woff2'),
+    url('@fontsource/geist-sans/files/geist-sans-latin-700-normal.woff') format('woff');
 }

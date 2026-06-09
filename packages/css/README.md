@@ -23,8 +23,10 @@ import '@rgrmdesign/rgrm-ds-css/fonts'; // Geist Sans via Fontsource (400, 500, 
 import '@rgrmdesign/rgrm-ds-css';
 ```
 
-The `/fonts` entry loads `@fontsource/geist-sans` and aligns the primary font-family token
-with Fontsource’s registered name (`Geist Sans`). Skip it if you load Geist yourself.
+The `/fonts` entry registers `@font-face` under the same family name as
+`--rgrm-typography-font-primary-family` in tokens (`Geist`), using files from
+`@fontsource/geist-sans`. It does not override token variables. Skip it if you load Geist
+yourself — keep the `@font-face` family name in sync with the token.
 
 Or import a single component's styles via its sub-path export:
 
@@ -53,6 +55,6 @@ wrappers that apply these classes and load the stylesheet automatically.
 
 | Sub-path     | Classes                                                                              |
 | ------------ | ------------------------------------------------------------------------------------ |
-| `/fonts`     | `@font-face` for Geist Sans (optional; load once in app entry)                       |
+| `/fonts`     | `@font-face` for Geist (optional; load once in app entry)                            |
 | `/heading`   | `.rgrm-heading`, `.rgrm-heading--display`, `.rgrm-heading--h1` … `.rgrm-heading--h6` |
 | `/paragraph` | `.rgrm-paragraph`, `.rgrm-paragraph--small`, `.rgrm-paragraph--large`                |
