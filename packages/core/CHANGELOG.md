@@ -1,5 +1,11 @@
 # @rgrmdesign/rgrm-ds-core
 
+## 0.4.1
+
+### Patch Changes
+
+- [`b99d7cd`](https://github.com/RGRMdesign/rgrm-ds/commit/b99d7cdf58c5ee57f44b451df3ed9d4a7693fbf8) Thanks [@RGRMdesign](https://github.com/RGRMdesign)! - Add margin: 0 to body
+
 ## 0.4.0
 
 ### Minor Changes
