@@ -1,5 +1,7 @@
 import '@rgrmdesign/rgrm-ds-tokens';
 import '@rgrmdesign/rgrm-ds-css/fonts';
+import { applyRootDocumentClasses } from '@rgrmdesign/rgrm-ds-core/root';
+import '@rgrmdesign/rgrm-ds-css/root';
 
 import type { Preview } from '@storybook/react-vite';
 import React from 'react';
@@ -9,6 +11,7 @@ import { DocsThemeCanvas } from './DocsThemeCanvas';
 import { setupThemeSync } from './themeSync';
 import './preview.css';
 
+applyRootDocumentClasses();
 setupThemeSync();
 
 const preview: Preview = {
@@ -53,6 +56,19 @@ const preview: Preview = {
           'Actions',
           [
             'Button',
+            [
+              'Overview',
+              'React',
+              ['Documentation', '*'],
+              'CSS',
+              ['Documentation', '*'],
+              'Element',
+              ['Documentation', '*'],
+            ],
+          ],
+          'Foundations',
+          [
+            'Root',
             [
               'Overview',
               'React',

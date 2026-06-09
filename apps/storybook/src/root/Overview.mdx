@@ -1,0 +1,36 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+import { FIGMA_LIBRARY_URL } from '../docs/links';
+import * as CssStories from './Root.css.stories';
+
+<Meta title="Foundations/Root/Overview" name="Overview" />
+
+# Root
+
+Root applies document-level design tokens to `<html>` and `<body>`. Unlike other
+components, it does not render visible UI — it activates global styles via the
+`rgrm-root` class.
+
+- **`html`** — `font-size` from `--rgrm-root-font-size` (sets the rem basis)
+- **`body`** — `background-color`, `color`, `font-family`, `font-weight`,
+  `line-height`, and `letter-spacing` from `--rgrm-root-*`
+
+Load `@rgrmdesign/rgrm-ds-tokens` once in your app. Theme switching via
+`data-theme` on `<html>` continues to work — root tokens reference the active theme.
+
+**Note:** Root (this component) is not the same as the **Root theme** (`data-theme`
+omitted / `theme="root"` on Section), which means the default palette.
+
+**Design spec** — <a href={FIGMA_LIBRARY_URL}>View in Figma</a> for tokens and usage.
+
+## Preview
+
+<Canvas of={CssStories.Default} sourceState="none" />
+
+## Choose an implementation
+
+Pick a page in the sidebar under **Foundations → Root**, or jump directly:
+
+- **React** — [`@rgrmdesign/rgrm-ds-react`](?path=/docs/foundations-root-react--documentation) — wrap your app in `<Root>`
+- **CSS** — [`@rgrmdesign/rgrm-ds-css`](?path=/docs/foundations-root-css--documentation) — import root CSS and call `applyRootDocumentClasses()`
+- **Web component** — [`@rgrmdesign/rgrm-ds-elements`](?path=/docs/foundations-root-element--documentation) — place `<rgrm-root>` once in the document

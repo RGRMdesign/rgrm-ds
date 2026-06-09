@@ -26,6 +26,10 @@
       "types": "./dist/paragraph/index.d.ts",
       "import": "./dist/paragraph/index.js"
     },
+    "./root": {
+      "types": "./dist/root/index.d.ts",
+      "import": "./dist/root/index.js"
+    },
     "./section": {
       "types": "./dist/section/index.d.ts",
       "import": "./dist/section/index.js"

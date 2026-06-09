@@ -1,0 +1,33 @@
+/**
+ * Document-level root styles for the RGRM design system.
+ * Consumes CSS custom properties from @rgrmdesign/rgrm-ds-tokens.
+ *
+ * Activation: add class `rgrm-root` to both `<html>` and `<body>` (via
+ * `@rgrmdesign/rgrm-ds-core/root`, React `<Root>`, or `<rgrm-root>`).
+ *
+ * Property split (web best practice):
+ * - `html` — `font-size` only (sets the rem basis for the document)
+ * - `body` — color, background, and inherited typography tokens
+ */
+
+html.rgrm-root {
+  --_root-font-size: var(--rgrm-root-font-size, 100%);
+
+  font-size: var(--_root-font-size);
+}
+
+body.rgrm-root {
+  --_root-background-color: var(--rgrm-root-background-color, transparent);
+  --_root-color: var(--rgrm-root-color, inherit);
+  --_root-font-family: var(--rgrm-root-font-family, inherit);
+  --_root-font-weight: var(--rgrm-root-font-weight, inherit);
+  --_root-line-height: var(--rgrm-root-line-height, inherit);
+  --_root-letter-spacing: var(--rgrm-root-letter-spacing, inherit);
+
+  background-color: var(--_root-background-color);
+  color: var(--_root-color);
+  font-family: var(--_root-font-family);
+  font-weight: var(--_root-font-weight);
+  line-height: var(--_root-line-height);
+  letter-spacing: var(--_root-letter-spacing);
+}

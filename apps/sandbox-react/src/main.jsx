@@ -1,4 +1,5 @@
 import '@rgrmdesign/rgrm-ds-tokens';
+import { Root } from '@rgrmdesign/rgrm-ds-react/root';
 import '@rgrmdesign/rgrm-ds-react/fonts';
 import 'sandbox-shared/chrome.css';
 import { initThemeSwitcher } from 'sandbox-shared/theme.js';
@@ -15,15 +16,19 @@ initThemeSwitcher();
 const root = document.getElementById('root');
 if (root) {
   createRoot(root).render(
-    <>
+    <Root>
       <HeadingDemo />
       <ParagraphDemo />
       <ButtonDemo />
-    </>,
+    </Root>,
   );
 }
 
 const sections = document.getElementById('sections');
 if (sections) {
-  createRoot(sections).render(<SectionDemo />);
+  createRoot(sections).render(
+    <Root>
+      <SectionDemo />
+    </Root>,
+  );
 }

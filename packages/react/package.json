@@ -26,6 +26,10 @@
       "types": "./dist/paragraph/index.d.ts",
       "import": "./dist/paragraph/index.js"
     },
+    "./root": {
+      "types": "./dist/root/index.d.ts",
+      "import": "./dist/root/index.js"
+    },
     "./section": {
       "types": "./dist/section/index.d.ts",
       "import": "./dist/section/index.js"
@@ -51,11 +55,11 @@
     "@rgrmdesign/rgrm-ds-css": "workspace:*"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.8.0",
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.9.0",
     "react": ">=18"
   },
   "devDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": "^0.8.0",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.9.0",
     "@types/react": "^19.2.7",
     "react": "^19.2.3",
     "rimraf": "^6.0.1",
