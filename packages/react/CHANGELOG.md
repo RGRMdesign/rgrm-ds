@@ -1,5 +1,21 @@
 # @rgrmdesign/rgrm-ds-react
 
+## 0.5.6
+
+### Patch Changes
+
+- [`9f83a53`](https://github.com/RGRMdesign/rgrm-ds/commit/9f83a53ce9d1e19777f37f48a47fc34f1c83b3ff) - Add `text-box-trim` for tighter typographic rhythm and refactor button labels.
+  - `@rgrmdesign/rgrm-ds-css/heading` and `/paragraph` — `text-box-trim: trim-both` and `text-box-edge: cap alphabetic` on base classes
+  - `@rgrmdesign/rgrm-ds-css/button` — new `.rgrm-button__label` element with text-box trim; layout and padding stay on `.rgrm-button`
+  - `@rgrmdesign/rgrm-ds-core/button` — export `BUTTON_LABEL_CLASS`
+  - `@rgrmdesign/rgrm-ds-react` and `@rgrmdesign/rgrm-ds-elements` — wrap string/text children in `.rgrm-button__label` automatically
+
+  Vanilla HTML: wrap button text in `<span class="rgrm-button__label">`. For icon + text, keep icons outside the label span.
+
+- Updated dependencies [[`9f83a53`](https://github.com/RGRMdesign/rgrm-ds/commit/9f83a53ce9d1e19777f37f48a47fc34f1c83b3ff)]:
+  - @rgrmdesign/rgrm-ds-core@0.4.2
+  - @rgrmdesign/rgrm-ds-css@0.5.6
+
 ## 0.5.5
 
 ### Patch Changes
