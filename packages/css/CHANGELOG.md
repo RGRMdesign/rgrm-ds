@@ -1,5 +1,15 @@
 # @rgrmdesign/rgrm-ds-css
 
+## 0.5.5
+
+### Patch Changes
+
+- [`edb5371`](https://github.com/RGRMdesign/rgrm-ds/commit/edb5371a271f73ffebcc694f2811aff44cdbc1cd) - Split Root font-size responsibilities to avoid double fluid scaling.
+  - `html.rgrm-root` — `font-size: 100%` (stable rem basis; respects user font settings)
+  - `body.rgrm-root` — default text `font-size` from `--rgrm-root-font-size`
+
+  Update Storybook Root docs to match.
+
 ## 0.5.4
 
 ### Patch Changes

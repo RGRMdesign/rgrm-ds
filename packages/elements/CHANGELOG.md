@@ -1,5 +1,12 @@
 # @rgrmdesign/rgrm-ds-elements
 
+## 0.5.5
+
+### Patch Changes
+
+- Updated dependencies [[`edb5371`](https://github.com/RGRMdesign/rgrm-ds/commit/edb5371a271f73ffebcc694f2811aff44cdbc1cd)]:
+  - @rgrmdesign/rgrm-ds-css@0.5.5
+
 ## 0.5.4
 
 ### Patch Changes
