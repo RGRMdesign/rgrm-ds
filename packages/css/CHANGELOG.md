@@ -1,5 +1,11 @@
 # @rgrmdesign/rgrm-ds-css
 
+## 0.5.4
+
+### Patch Changes
+
+- [`07092ed`](https://github.com/RGRMdesign/rgrm-ds/commit/07092edda3daf9d71f0624e2501cef9ffb5c6e8d) - Require `@rgrmdesign/rgrm-ds-tokens` >= 0.11.0 and update direct references to renamed primitive tokens (`--rgrm-core-*`, `--rgrm-scale-*`).
+
 ## 0.5.3
 
 ### Patch Changes
