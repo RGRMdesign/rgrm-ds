@@ -36,7 +36,7 @@ export const rootCssClassArgTypes = {
   'html.rgrm-root': {
     control: false,
     description:
-      'Sets `font-size` from `--rgrm-root-font-size` and `box-sizing: border-box` (inherited by descendants).',
+      'Sets `font-size: 100%` (stable rem basis) and `box-sizing: border-box` (inherited by descendants).',
     table: {
       type: { summary: 'class on `<html>`', required: true },
       defaultValue: { summary: null },
@@ -45,7 +45,7 @@ export const rootCssClassArgTypes = {
   'body.rgrm-root': {
     control: false,
     description:
-      'Sets colour, background, typography, `margin: 0`, and `min-height: 100dvh` from `--rgrm-root-*` tokens and document baseline rules.',
+      'Sets default text `font-size` from `--rgrm-root-font-size`, plus colour, background, typography, `margin: 0`, and `min-height: 100dvh` from `--rgrm-root-*` tokens.',
     table: {
       type: { summary: 'class on `<body>`', required: true },
       defaultValue: { summary: null },
