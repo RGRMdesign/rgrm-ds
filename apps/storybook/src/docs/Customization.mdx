@@ -16,9 +16,10 @@ packages — no extra tooling required.
 
 Tokens are layered (see [Design principles](?path=/docs/guides-design-principles--documentation)):
 
-1. **Primitives** — raw palette, spacing bounds, radii (`--rgrm-default-*`)
-2. **Semantic** — theme roles such as background and text (`--rgrm-theme-*`)
-3. **Component** — per-component mappings (`--rgrm-button-primary-*`, …)
+1. **Core** — raw palette, typography, radii (`--rgrm-core-*`)
+2. **Scale** — fluid viewport spacing and type (`--rgrm-scale-*`)
+3. **Semantic** — theme roles such as background and text (`--rgrm-theme-*`)
+4. **Component** — per-component mappings (`--rgrm-button-primary-*`, …)
 
 Component CSS in `@rgrmdesign/rgrm-ds-css` only ever uses `var(--rgrm-…)`. When you
 redefine a token, every component that references it updates automatically.
@@ -101,7 +102,7 @@ Override the font family token and load the faces yourself:
 <Source
   language="css"
   code={`:root {
-  --rgrm-typography-font-primary-family: "Your Font", system-ui, sans-serif;
+  --rgrm-core-font-primary-family: "Your Font", system-ui, sans-serif;
 }`}
 />
 
@@ -118,7 +119,7 @@ palette or a single component tweak:
   language="css"
   code={`/* Remap a primitive swatch used by semantic aliases */
 :root {
-  --rgrm-default-swatch-dark-900: #0a1628;
+  --rgrm-core-swatch-dark-900: #0a1628;
 }
 
 /* Or override one component token directly */
@@ -127,7 +128,7 @@ palette or a single component tweak:
 }`}
 />
 
-Changing primitives or viewport tokens (`--rgrm-viewport-*`) affects fluid `clamp()`
+Changing core or scale tokens (`--rgrm-core-*`, `--rgrm-scale-*`) affects fluid `clamp()`
 scales across the system. Prefer semantic overrides unless you intend to rescale the
 whole system.
 

@@ -4,7 +4,7 @@
  * Registers @font-face for the primary family. Import once in your app entry,
  * after `@rgrmdesign/rgrm-ds-tokens`.
  *
- * PRIMARY_FONT_FAMILY must match --rgrm-typography-font-primary-family from tokens.
+ * PRIMARY_FONT_FAMILY must match --rgrm-core-font-primary-family from tokens.
  * Font files come from @fontsource/geist-sans (weights 400, 500, 700).
  */
 

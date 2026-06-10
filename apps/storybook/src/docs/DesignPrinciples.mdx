@@ -21,7 +21,7 @@ identically, and there is only ever one place to change a visual.
   code={`/* The visual lives here, once. */
 .rgrm-paragraph {
   font-size: var(--rgrm-paragraph-main-font-size);
-  line-height: var(--rgrm-typography-line-height-huge);
+  line-height: var(--rgrm-core-line-height-huge);
 }`}
 />
 
@@ -39,8 +39,8 @@ touching a single component.
 
 <Source
   language="css"
-  code={`--rgrm-default-swatch-dark-900: #05102E;          /* primitive */
---rgrm-theme-text: var(--rgrm-default-swatch-dark-900);  /* semantic */
+  code={`--rgrm-core-swatch-dark-900: #05102E;          /* primitive */
+--rgrm-theme-text: var(--rgrm-core-swatch-dark-900);  /* semantic */
 /* components only ever use --rgrm-theme-text */`}
 />
 
@@ -96,8 +96,8 @@ and maximum viewport automatically.
 
 <Source
   language="css"
-  code={`--rgrm-viewport-font-size-h1: clamp(3rem, 2.4286rem + 2.8571vw, 5rem);
---rgrm-viewport-space-6: clamp(2rem, …, 2.5rem);`}
+  code={`--rgrm-scale-font-size-h1: clamp(3rem, 2.4286rem + 2.8571vw, 5rem);
+--rgrm-scale-space-6: clamp(2rem, …, 2.5rem);`}
 />
 
 ## 8. Small, tree-shakeable surface

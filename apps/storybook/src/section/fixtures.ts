@@ -127,7 +127,7 @@ export const sectionArgTypes = {
   },
   spacingTop: {
     ...spacingControl,
-    description: 'Top padding scale (`--rgrm-viewport-section-space-*`).',
+    description: 'Top padding scale (`--rgrm-scale-section-space-*`).',
     table: {
       type: {
         summary: 'SectionSpacing',
@@ -138,7 +138,7 @@ export const sectionArgTypes = {
   },
   spacingBottom: {
     ...spacingControl,
-    description: 'Bottom padding scale (`--rgrm-viewport-section-space-*`).',
+    description: 'Bottom padding scale (`--rgrm-scale-section-space-*`).',
     table: {
       type: {
         summary: 'SectionSpacing',

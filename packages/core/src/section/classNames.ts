@@ -3,9 +3,9 @@ export type SectionSpacing = 'none' | 'small' | 'main' | 'large' | 'page-top';
 export type SectionWidth = 'small' | 'main' | 'full';
 
 export interface SectionClassNamesOptions {
-  /** Top padding token (`--rgrm-viewport-section-space-*`). Defaults to `'main'`. */
+  /** Top padding token (`--rgrm-scale-section-space-*`). Defaults to `'main'`. */
   spacingTop?: SectionSpacing;
-  /** Bottom padding token (`--rgrm-viewport-section-space-*`). Defaults to `'main'`. */
+  /** Bottom padding token (`--rgrm-scale-section-space-*`). Defaults to `'main'`. */
   spacingBottom?: SectionSpacing;
 }
 

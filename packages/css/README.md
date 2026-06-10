@@ -24,7 +24,7 @@ import '@rgrmdesign/rgrm-ds-css';
 ```
 
 The `/fonts` entry registers `@font-face` under the same family name as
-`--rgrm-typography-font-primary-family` in tokens (`Geist`), using files from
+`--rgrm-core-font-primary-family` in tokens (`Geist`), using files from
 `@fontsource/geist-sans`. It does not override token variables. Skip it if you load Geist
 yourself — keep the `@font-face` family name in sync with the token.
 
