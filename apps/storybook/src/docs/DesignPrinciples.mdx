@@ -83,6 +83,8 @@ Themes are switched by setting `data-theme` on a wrapping element (usually `<htm
 theme cascades to everything inside it. Components don't know which theme they're in — they
 just read semantic tokens that the theme redefines. Three themes ship today: **Root**,
 **Dark**, and **Brand** (preview any story in all three via the Storybook toolbar).
+Consumers can redefine those token values for their own brand without changing component
+code — see [Customization](?path=/docs/guides-customization--documentation).
 
 <Source language="html" code={`<html data-theme="dark"> … </html>`} />
 
@@ -106,6 +108,6 @@ Apps pull in only what they use, keeping bundles lean.
 
 ---
 
-These principles are enforced by the [Governance](?path=/docs/guides-governance--docs)
+These principles are enforced by the [Governance](?path=/docs/guides-governance--documentation)
 "definition of done": a component isn't finished until it exists across CSS, React, and Web
 component layers, uses only tokens, ships matching docs, and works in every theme.

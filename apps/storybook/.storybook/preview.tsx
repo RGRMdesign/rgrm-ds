@@ -29,7 +29,7 @@ const preview: Preview = {
         order: [
           'Introduction',
           'Guides',
-          ['Getting started', 'Design principles', 'Governance'],
+          ['Getting started', 'Design principles', 'Customization', 'Governance'],
           'Typography',
           [
             'Heading',

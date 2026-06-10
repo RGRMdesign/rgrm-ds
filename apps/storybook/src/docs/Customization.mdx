@@ -1,0 +1,201 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guides/Customization" />
+
+# Customization
+
+Adapt the design system to your brand **without forking packages or changing component
+code**. Components only read design tokens (CSS custom properties); you supply the values
+by loading the default token set and overriding the variables you need in your own
+stylesheet.
+
+This is the lowest-threshold customization path. It works today with the published
+packages — no extra tooling required.
+
+## How it works
+
+Tokens are layered (see [Design principles](?path=/docs/guides-design-principles--documentation)):
+
+1. **Primitives** — raw palette, spacing bounds, radii (`--rgrm-default-*`)
+2. **Semantic** — theme roles such as background and text (`--rgrm-theme-*`)
+3. **Component** — per-component mappings (`--rgrm-button-primary-*`, …)
+
+Component CSS in `@rgrmdesign/rgrm-ds-css` only ever uses `var(--rgrm-…)`. When you
+redefine a token, every component that references it updates automatically.
+
+For a first brand pass, **override the semantic layer only**. That is usually enough for
+colours, borders, and interactive states. Reach for primitives or component tokens only
+when you need to change the full palette or a specific component detail.
+
+## Quick start
+
+Load the default tokens, then your overrides **before** (or immediately after) component
+styles. Set a theme on a wrapper element so semantic tokens apply.
+
+<Source
+  language="tsx"
+  code={`// app entry
+import '@rgrmdesign/rgrm-ds-tokens';
+import './custom-brand.css';           // your overrides
+import '@rgrmdesign/rgrm-ds-react/fonts';
+
+import { Heading } from '@rgrmdesign/rgrm-ds-react/heading';`}
+/>
+
+<Source
+  language="css"
+  code={`/* custom-brand.css */
+
+/* Option A — replace the default (root) theme globally */
+:root {
+  --rgrm-theme-background: #ffffff;
+  --rgrm-theme-text: #111111;
+  --rgrm-theme-border: #e0e0e0;
+  --rgrm-theme-button-primary-background: #0066cc;
+  --rgrm-theme-button-primary-background-hover: #0052a3;
+  --rgrm-theme-button-primary-color: #ffffff;
+}
+
+/* Option B — customize only the built-in Brand theme */
+[data-theme="brand"] {
+  --rgrm-theme-background: #f5f0ff;
+  --rgrm-theme-text: #1a0033;
+  --rgrm-theme-button-primary-background: #6b21a8;
+}`}
+/>
+
+<Source language="html" code={`<html data-theme="brand"> … </html>`} />
+
+Use the **Theme** toolbar in Storybook (Root / Dark / Brand) to check components in each
+built-in theme after you add overrides.
+
+## What to customize
+
+### Semantic theme tokens (recommended)
+
+These are the main levers for brand colours and surfaces. Common variables:
+
+| Token | Role |
+| ----- | ---- |
+| `--rgrm-theme-background` | Page / section background |
+| `--rgrm-theme-text` | Primary text colour |
+| `--rgrm-theme-border` | Borders and dividers |
+| `--rgrm-theme-button-primary-background` | Primary button fill |
+| `--rgrm-theme-button-primary-background-hover` | Primary button hover |
+| `--rgrm-theme-button-primary-color` | Primary button label |
+| `--rgrm-theme-link-color` | Inline links |
+| `--rgrm-theme-selection-background` | Text selection highlight |
+
+The full set lives in `@rgrmdesign/rgrm-ds-tokens` (generated from Figma). Inspect
+`dist/css/root.css` and `dist/css/theme-brand.css` in the tokens package for every
+`--rgrm-theme-*` name.
+
+Component tokens (e.g. `--rgrm-button-primary-background-color`) are wired to semantic
+tokens inside the token bundle. Overriding `--rgrm-theme-*` is enough for buttons and
+most other components.
+
+### Typography and fonts
+
+Override the font family token and load the faces yourself:
+
+<Source
+  language="css"
+  code={`:root {
+  --rgrm-typography-font-primary-family: "Your Font", system-ui, sans-serif;
+}`}
+/>
+
+Skip `@rgrmdesign/rgrm-ds-css/fonts` (or the `/fonts` entry on React / Elements) if you
+manage `@font-face` or Fontsource imports yourself. The family name in your font files
+must match the token value.
+
+### Primitives and component tokens (advanced)
+
+Use when semantic overrides are not enough — for example a completely different colour
+palette or a single component tweak:
+
+<Source
+  language="css"
+  code={`/* Remap a primitive swatch used by semantic aliases */
+:root {
+  --rgrm-default-swatch-dark-900: #0a1628;
+}
+
+/* Or override one component token directly */
+:root {
+  --rgrm-button-primary-border-radius: 999px;
+}`}
+/>
+
+Changing primitives or viewport tokens (`--rgrm-viewport-*`) affects fluid `clamp()`
+scales across the system. Prefer semantic overrides unless you intend to rescale the
+whole system.
+
+## Scopes
+
+### Global theme
+
+Set `data-theme` on `<html>` (or override `:root`) so the whole app picks up your tokens.
+This matches the setup in [Getting started](?path=/docs/guides-getting-started--documentation).
+
+### Built-in themes
+
+Three themes ship with the token package: **root** (default), **dark**, and **brand**.
+You can:
+
+- Override `:root` to replace the default look.
+- Override `[data-theme="dark"]` or `[data-theme="brand"]` to tailor a built-in theme
+  while keeping the others unchanged.
+
+### Per-section theme
+
+`<Section theme="dark">` (React) or a section with `data-theme="dark"` applies theme
+tokens only inside that block. Useful for alternating bands on one page.
+
+<Source
+  language="tsx"
+  code={`<Section theme="brand">
+  <Heading level={2}>Brand band</Heading>
+  <Paragraph>Uses --rgrm-theme-* from the brand theme.</Paragraph>
+</Section>`}
+/>
+
+## Plain CSS setup
+
+Same pattern with `@import`:
+
+<Source
+  language="css"
+  code={`@import '@rgrmdesign/rgrm-ds-tokens';
+@import './custom-brand.css';
+@import '@rgrmdesign/rgrm-ds-css/fonts';
+@import '@rgrmdesign/rgrm-ds-css';`}
+/>
+
+Import order matters: **tokens first**, then **your overrides**, then **component CSS**.
+
+## Checklist
+
+1. Install `@rgrmdesign/rgrm-ds-tokens` plus your layer package (`css`, `react`, or
+   `elements`).
+2. Import tokens once in the app entry.
+3. Add a stylesheet that overrides `--rgrm-theme-*` (and fonts if needed).
+4. Set `data-theme` on `<html>` or per `<Section>` / section element.
+5. Preview all three built-in themes in Storybook and verify contrast (WCAG AA).
+
+## Limitations
+
+- **Built-in theme names** — `root`, `dark`, and `brand` are the themes defined in the
+  token package and exposed in Storybook. Customization redefines their *values*, not
+  their names.
+- **`<rgrm-section theme="…">`** — the Web Component only accepts `root`, `dark`, and
+  `brand` on the `theme` attribute. Unknown values fall back to `root`. For a custom
+  theme name, set `data-theme` on a plain `<section class="rgrm-section" …>` or use
+  React `<Section>` with a type assertion until custom theme names are supported in types.
+- **No validation yet** — nothing checks that your overrides define every required token.
+  Start with semantic tokens; if something looks unstyled, inspect which `--rgrm-*`
+  variable the component reads and add it to your stylesheet.
+
+For heavier customization (separate npm token package, multi-brand presets, or CI
+validation), see the roadmap item **Broader theming** in the
+[repository README](https://github.com/RGRMdesign/rgrm-ds#roadmap).
