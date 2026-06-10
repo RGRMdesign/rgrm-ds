@@ -25,12 +25,15 @@
     color 0.15s ease;
 }
 
+.rgrm-button__label {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
 .rgrm-button--primary {
   border-radius: var(--rgrm-button-primary-border-radius, 0);
-  padding-block: var(--rgrm-button-primary-padding-block-start, 0)
-    var(--rgrm-button-primary-padding-block-end, 0);
-  padding-inline: var(--rgrm-button-primary-padding-inline-start, 0)
-    var(--rgrm-button-primary-padding-inline-end, 0);
+  padding-block: var(--rgrm-button-primary-padding-block-start, 0) var(--rgrm-button-primary-padding-block-end, 0);
+  padding-inline: var(--rgrm-button-primary-padding-inline-start, 0) var(--rgrm-button-primary-padding-inline-end, 0);
   background-color: var(--rgrm-button-primary-background-color, transparent);
   border-color: var(--rgrm-button-primary-border-color, transparent);
   color: var(--rgrm-button-primary-color, inherit);

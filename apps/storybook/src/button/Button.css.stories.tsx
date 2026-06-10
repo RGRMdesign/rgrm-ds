@@ -1,6 +1,6 @@
 import '@rgrmdesign/rgrm-ds-css/button';
 
-import { buttonClassNames } from '@rgrmdesign/rgrm-ds-core/button';
+import { BUTTON_LABEL_CLASS, buttonClassNames } from '@rgrmdesign/rgrm-ds-core/button';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
@@ -28,7 +28,7 @@ const meta = {
   },
   render: ({ variant, children }: ButtonStoryArgs) => (
     <button type="button" className={buttonClassNames(variant)}>
-      {children}
+      <span className={BUTTON_LABEL_CLASS}>{children}</span>
     </button>
   ),
 } satisfies Meta<ButtonStoryArgs>;

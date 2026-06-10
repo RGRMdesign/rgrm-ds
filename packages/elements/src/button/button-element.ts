@@ -1,4 +1,8 @@
-import { buttonClassNames, type ButtonVariant } from '@rgrmdesign/rgrm-ds-core/button';
+import {
+  BUTTON_LABEL_CLASS,
+  buttonClassNames,
+  type ButtonVariant,
+} from '@rgrmdesign/rgrm-ds-core/button';
 
 export const RGRM_BUTTON_TAG = 'rgrm-button';
 
@@ -36,7 +40,29 @@ export class RgrmButtonElement extends HTMLElement {
       this.#inner.appendChild(this.firstChild);
     }
 
+    this.#wrapLabelIfNeeded(this.#inner);
     this.appendChild(this.#inner);
+  }
+
+  #wrapLabelIfNeeded(container: HTMLElement): void {
+    if (container.querySelector(`.${BUTTON_LABEL_CLASS}`)) {
+      return;
+    }
+
+    const { childNodes } = container;
+
+    if (childNodes.length !== 1 || childNodes[0]?.nodeType !== Node.TEXT_NODE) {
+      return;
+    }
+
+    const text = container.textContent ?? '';
+
+    container.textContent = '';
+
+    const label = document.createElement('span');
+    label.className = BUTTON_LABEL_CLASS;
+    label.textContent = text;
+    container.appendChild(label);
   }
 
   #render(): void {

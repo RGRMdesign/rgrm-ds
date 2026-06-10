@@ -1,5 +1,7 @@
 export type ButtonVariant = 'primary';
 
+export const BUTTON_LABEL_CLASS = 'rgrm-button__label';
+
 export function buttonClassNames(
   variant: ButtonVariant = 'primary',
   className?: string,

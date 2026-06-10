@@ -98,6 +98,14 @@ export const buttonCssClassArgTypes = {
       ...tableNoDefault,
     },
   },
+  '.rgrm-button__label': {
+    control: false,
+    description: 'Button label (typography + text-box trim). Wrap text in this span.',
+    table: {
+      type: { summary: 'class' },
+      ...tableNoDefault,
+    },
+  },
 };
 
 const buttonElementVariantArgType = {
@@ -126,6 +134,7 @@ export const buttonElementArgTypes = {
 export const buttonCssClassArgNames = [
   '.rgrm-button',
   '.rgrm-button--primary',
+  '.rgrm-button__label',
 ] as const;
 
 export const buttonElementAttributeArgNames = ['variant'] as const;

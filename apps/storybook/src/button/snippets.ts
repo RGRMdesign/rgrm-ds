@@ -1,4 +1,4 @@
-import { buttonClassNames } from '@rgrmdesign/rgrm-ds-core/button';
+import { BUTTON_LABEL_CLASS, buttonClassNames } from '@rgrmdesign/rgrm-ds-core/button';
 
 import type { ButtonStoryArgs } from './fixtures';
 
@@ -37,7 +37,7 @@ export function buttonCssUsageSnippet({
   children,
 }: ButtonStoryArgs): string {
   const className = buttonClassNames(variant);
-  return `<button type="button" class="${className}">${children}</button>`;
+  return `<button type="button" class="${className}"><span class="${BUTTON_LABEL_CLASS}">${children}</span></button>`;
 }
 
 export function buttonElementInstallSnippet(): string {

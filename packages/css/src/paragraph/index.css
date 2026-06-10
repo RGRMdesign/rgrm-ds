@@ -12,6 +12,8 @@
   letter-spacing: var(--rgrm-paragraph-main-letter-spacing, inherit);
   text-transform: var(--rgrm-paragraph-main-text-transform, inherit );
   text-wrap: var(--rgrm-paragraph-main-text-wrap, inherit);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 .rgrm-paragraph--small {
