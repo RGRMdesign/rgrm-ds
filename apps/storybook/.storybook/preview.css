@@ -11,14 +11,6 @@ body:has(.sbdocs-wrapper) {
   transition: none;
 }
 
-.rgrm-story {
-  max-width: 42rem;
-}
-
-.rgrm-story--full {
-  max-width: none;
-}
-
 /* Full docs canvas block (preview chrome + padded .docs-story area). */
 .sbdocs-preview[data-theme],
 .docs-story[data-theme] {

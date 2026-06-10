@@ -116,13 +116,12 @@ const preview: Preview = {
     theme: 'root',
   },
   decorators: [
-    (Story, { globals, viewMode, parameters }) => {
+    (Story, { globals, viewMode }) => {
       const theme = resolveTheme(globals.theme);
-      const isFullscreen = parameters.layout === 'fullscreen';
 
       if (viewMode === 'docs') {
         return (
-          <DocsThemeCanvas theme={theme} fullWidth={isFullscreen}>
+          <DocsThemeCanvas theme={theme}>
             <Story />
           </DocsThemeCanvas>
         );
@@ -130,11 +129,7 @@ const preview: Preview = {
 
       applyDocumentTheme(theme);
 
-      return (
-        <div className={isFullscreen ? 'rgrm-story rgrm-story--full' : 'rgrm-story'}>
-          <Story />
-        </div>
-      );
+      return <Story />;
     },
   ],
 };
