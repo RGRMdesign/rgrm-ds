@@ -8,12 +8,12 @@ disclosure.
 
 This policy covers the packages published from this repository:
 
-| Package | Description |
-| ------- | ----------- |
-| `@rgrmdesign/rgrm-ds-core` | Shared logic and types |
-| `@rgrmdesign/rgrm-ds-css` | Component styles (CSS) |
-| `@rgrmdesign/rgrm-ds-react` | React components |
-| `@rgrmdesign/rgrm-ds-elements` | Web Components |
+| Package                        | Description            |
+| ------------------------------ | ---------------------- |
+| `@rgrmdesign/rgrm-ds-core`     | Shared logic and types |
+| `@rgrmdesign/rgrm-ds-css`      | Component styles (CSS) |
+| `@rgrmdesign/rgrm-ds-react`    | React components       |
+| `@rgrmdesign/rgrm-ds-elements` | Web Components         |
 
 Design tokens live in a separate repository
 ([`@rgrmdesign/rgrm-ds-tokens`](https://www.npmjs.com/package/@rgrmdesign/rgrm-ds-tokens)).
@@ -48,11 +48,11 @@ Include as much detail as possible:
 
 ## What to expect
 
-| Step | Target |
-| ---- | ------ |
-| Acknowledgement | Within 48 hours |
-| Initial assessment | Within 7 business days |
-| Fix and advisory | Depends on severity; critical issues are prioritised |
+| Step               | Target                                               |
+| ------------------ | ---------------------------------------------------- |
+| Acknowledgement    | Within 48 hours                                      |
+| Initial assessment | Within 7 business days                               |
+| Fix and advisory   | Depends on severity; critical issues are prioritised |
 
 We follow **coordinated disclosure**. Please allow reasonable time for a fix before
 public disclosure. We will credit reporters in the advisory unless you prefer to remain
