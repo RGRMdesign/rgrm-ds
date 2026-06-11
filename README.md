@@ -105,7 +105,23 @@ Storybook is deployed from `main` via [`.github/workflows/deploy-storybook.yml`]
 
 One-time setup in the GitHub repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
-Production builds use `base: '/rgrm-ds/'` in `apps/storybook/.storybook/main.ts` (local `pnpm storybook` is unchanged).
+Production builds use `base: '/rgrm-ds/'` in `apps/storybook/.storybook/main.ts` (local `pnpm storybook` is unchanged). Chromatic builds set `CHROMATIC=true` so assets load from `/` instead.
+
+### Visual regression (Chromatic)
+
+Storybook snapshots run on every pull request via [`.github/workflows/chromatic.yml`](.github/workflows/chromatic.yml).
+
+**One-time setup**
+
+1. Create a project at [chromatic.com](https://www.chromatic.com/) and link this repository.
+2. Add the project token as a GitHub secret: **Settings → Secrets and variables → Actions → `CHROMATIC_PROJECT_TOKEN`**.
+3. Merge to `main` or run locally to establish the baseline:
+
+   ```bash
+   CHROMATIC_PROJECT_TOKEN=xxx pnpm chromatic
+   ```
+
+On pull requests, Chromatic posts a visual diff; accept or deny changes in the Chromatic UI. Changes merged to `main` are auto-accepted as the new baseline.
 
 ## Scripts
 
@@ -117,6 +133,7 @@ Production builds use `base: '/rgrm-ds/'` in `apps/storybook/.storybook/main.ts`
 | `pnpm dev:element`             | Only `sandbox-element`.                             |
 | `pnpm storybook`               | Storybook dev server (`apps/storybook`, port 6006). |
 | `pnpm build-storybook`         | Static Storybook build.                             |
+| `pnpm chromatic`               | Publish Storybook snapshots to Chromatic (local).   |
 | `pnpm build`                   | Builds every package and all sandboxes.             |
 | `pnpm build:packages`          | Builds only the publishable `packages/*`.           |
 | `pnpm clean`                   | Removes build output and caches.                    |

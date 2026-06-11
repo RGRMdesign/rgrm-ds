@@ -15,6 +15,7 @@
     "dev:element": "turbo run dev --filter=sandbox-element",
     "storybook": "turbo run storybook --filter=rgrm-ds-storybook",
     "build-storybook": "turbo run build-storybook --filter=rgrm-ds-storybook",
+    "chromatic": "turbo run chromatic --filter=rgrm-ds-storybook",
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=\"./packages/*\"",
     "clean": "turbo run clean && rimraf node_modules/.cache .turbo",

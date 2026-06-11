@@ -6,6 +6,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o storybook-static",
+    "chromatic": "chromatic --exit-zero-on-changes",
     "clean": "rimraf storybook-static"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "@storybook/react-vite": "^10.4.2",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "chromatic": "^17.4.0",
     "remark-gfm": "^4.0.1",
     "rimraf": "^6.0.1",
     "storybook": "^10.4.2",

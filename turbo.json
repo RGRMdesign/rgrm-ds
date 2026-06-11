@@ -24,6 +24,10 @@
       "dependsOn": ["^build"],
       "inputs": ["src/**", ".storybook/**", "package.json"],
       "outputs": ["storybook-static/**"]
+    },
+    "chromatic": {
+      "dependsOn": ["^build"],
+      "cache": false
     }
   }
 }

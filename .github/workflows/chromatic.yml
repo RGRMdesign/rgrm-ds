@@ -1,0 +1,41 @@
+name: Chromatic
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: chromatic-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build Storybook for Chromatic
+        run: pnpm build-storybook
+        env:
+          CHROMATIC: 'true'
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v13
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: apps/storybook/storybook-static
+          autoAcceptChanges: main
