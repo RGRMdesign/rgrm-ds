@@ -43,10 +43,10 @@ import '@rgrmdesign/rgrm-ds-elements/paragraph';
 
 ## Heading (`<rgrm-heading>`)
 
-| Attribute    | Values                 | Description                                              |
-| ------------ | ---------------------- | -------------------------------------------------------- |
+| Attribute    | Values                 | Description                                                |
+| ------------ | ---------------------- | ---------------------------------------------------------- |
 | `level`      | `1` … `6`              | Semantic heading level; sets inner `<h1>`–`<h6>` (def. 2). |
-| `appearance` | `1` … `6` \| `display` | Visual scale; defaults to `level` when omitted.          |
+| `appearance` | `1` … `6` \| `display` | Visual scale; defaults to `level` when omitted.            |
 
 Also exported: `RgrmHeadingElement` (class), `RGRM_HEADING_TAG`
 (`'rgrm-heading'`), and `headingClassNames(appearance, className?)`.

@@ -14,10 +14,7 @@ import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Paragraph } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
-export function paragraphReactUsageSnippet({
-  size,
-  children,
-}: ParagraphStoryArgs): string {
+export function paragraphReactUsageSnippet({ size, children }: ParagraphStoryArgs): string {
   const sizeProp = size ? ` size="${size}"` : '';
   return `<Paragraph${sizeProp}>${children}</Paragraph>`;
 }
@@ -32,10 +29,7 @@ import '@rgrmdesign/rgrm-ds-css/fonts';
 import '@rgrmdesign/rgrm-ds-css/paragraph';`;
 }
 
-export function paragraphCssUsageSnippet({
-  size,
-  children,
-}: ParagraphStoryArgs): string {
+export function paragraphCssUsageSnippet({ size, children }: ParagraphStoryArgs): string {
   const className = paragraphClassNames(size);
   return `<p class="${className}">${children}</p>`;
 }
@@ -50,17 +44,12 @@ import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements/paragraph';`;
 }
 
-export function paragraphElementUsageSnippet({
-  size,
-  children,
-}: ParagraphStoryArgs): string {
+export function paragraphElementUsageSnippet({ size, children }: ParagraphStoryArgs): string {
   const sizeAttr = size ? ` size="${size}"` : '';
   return `<rgrm-paragraph${sizeAttr}>${children}</rgrm-paragraph>`;
 }
 
-export function paragraphDocsSource(
-  snippet: (args: ParagraphStoryArgs) => string,
-): {
+export function paragraphDocsSource(snippet: (args: ParagraphStoryArgs) => string): {
   transform: (_code: string, context: { args: ParagraphStoryArgs }) => string;
 } {
   return {

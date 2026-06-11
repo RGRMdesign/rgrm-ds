@@ -22,13 +22,13 @@ import { Heading, Paragraph } from '@rgrmdesign/rgrm-ds-react';
 export function Example() {
   return (
     <>
-      <Heading level={1} appearance="display">
+      <Heading level={1} appearance='display'>
         Hero title.
       </Heading>
       <Heading level={1}>Page title.</Heading>
-      <Paragraph size="large">Lead paragraph.</Paragraph>
+      <Paragraph size='large'>Lead paragraph.</Paragraph>
       <Paragraph>Default body copy.</Paragraph>
-      <Paragraph size="small">Caption or fine print.</Paragraph>
+      <Paragraph size='small'>Caption or fine print.</Paragraph>
     </>
   );
 }
@@ -43,12 +43,12 @@ import { Paragraph } from '@rgrmdesign/rgrm-ds-react/paragraph';
 
 ## Heading
 
-| Prop         | Type                            | Description                                                    |
-| ------------ | ------------------------------- | -------------------------------------------------------------- |
-| `level`      | `1` \| `2` … `6`                | Semantic heading level; sets `<h1>`–`<h6>` (def. 2).           |
-| `appearance` | `1` \| `2` … `6` \| `'display'` | Visual scale; defaults to `level` when omitted.                  |
-| `className`  | `string`                        | Extra classes merged after the appearance modifier.              |
-| …rest        | `<h1>`–`<h6>` HTML attrs        | Passed to the underlying element.                              |
+| Prop         | Type                            | Description                                          |
+| ------------ | ------------------------------- | ---------------------------------------------------- |
+| `level`      | `1` \| `2` … `6`                | Semantic heading level; sets `<h1>`–`<h6>` (def. 2). |
+| `appearance` | `1` \| `2` … `6` \| `'display'` | Visual scale; defaults to `level` when omitted.      |
+| `className`  | `string`                        | Extra classes merged after the appearance modifier.  |
+| …rest        | `<h1>`–`<h6>` HTML attrs        | Passed to the underlying element.                    |
 
 You can also use `headingClassNames(appearance, className)` if you need the class string
 without the component.

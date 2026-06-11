@@ -3,7 +3,12 @@ import '@rgrmdesign/rgrm-ds-css/paragraph';
 import { paragraphClassNames } from '@rgrmdesign/rgrm-ds-core/paragraph';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { paragraphArgTypes, paragraphCssClassArgTypes, paragraphFixtures, type ParagraphStoryArgs } from './fixtures';
+import {
+  paragraphArgTypes,
+  paragraphCssClassArgTypes,
+  paragraphFixtures,
+  type ParagraphStoryArgs,
+} from './fixtures';
 import { paragraphCssUsageSnippet, paragraphDocsSource } from './snippets';
 
 const meta = {

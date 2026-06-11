@@ -1,7 +1,4 @@
-import {
-  applyRootDocumentClasses,
-  removeRootDocumentClasses,
-} from '@rgrmdesign/rgrm-ds-core/root';
+import { applyRootDocumentClasses, removeRootDocumentClasses } from '@rgrmdesign/rgrm-ds-core/root';
 
 export const RGRM_ROOT_TAG = 'rgrm-root';
 

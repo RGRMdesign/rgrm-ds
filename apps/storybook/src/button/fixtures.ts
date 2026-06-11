@@ -74,11 +74,7 @@ export const buttonReactArgTypes = {
   },
 };
 
-export const buttonReactPropArgNames = [
-  'variant',
-  'className',
-  'children',
-] as const;
+export const buttonReactPropArgNames = ['variant', 'className', 'children'] as const;
 
 /** Docs-only rows for @rgrmdesign/rgrm-ds-css (shown via `<ArgTypes include={...} />`). */
 export const buttonCssClassArgTypes = {

@@ -66,8 +66,6 @@ export class RgrmButtonElement extends HTMLElement {
   }
 
   #render(): void {
-    this.#inner.className = buttonClassNames(
-      parseVariantAttribute(this.getAttribute('variant')),
-    );
+    this.#inner.className = buttonClassNames(parseVariantAttribute(this.getAttribute('variant')));
   }
 }

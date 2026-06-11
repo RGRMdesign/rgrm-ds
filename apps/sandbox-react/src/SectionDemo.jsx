@@ -22,11 +22,11 @@ export function SectionDemo() {
   return (
     <>
       {THEMES.map(({ theme, title, body }) => (
-        <Section key={theme} theme={theme} spacingTop="small" spacingBottom="small">
+        <Section key={theme} theme={theme} spacingTop='small' spacingBottom='small'>
           <Heading level={2}>{title}</Heading>
           <Paragraph>{body}</Paragraph>
-          <div className="sandbox-row">
-            <Button variant="primary">Primary button</Button>
+          <div className='sandbox-row'>
+            <Button variant='primary'>Primary button</Button>
           </div>
         </Section>
       ))}

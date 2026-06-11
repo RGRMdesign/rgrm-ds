@@ -5,11 +5,7 @@ import {
 } from 'storybook/internal/core-events';
 import { addons } from 'storybook/preview-api';
 
-import {
-  applyDocumentTheme,
-  isDocsViewMode,
-  resetDocumentTheme,
-} from './applyTheme';
+import { applyDocumentTheme, isDocsViewMode, resetDocumentTheme } from './applyTheme';
 
 let lastTheme: unknown = 'root';
 

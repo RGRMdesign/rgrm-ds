@@ -18,8 +18,8 @@
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=\"./packages/*\"",
     "clean": "turbo run clean && rimraf node_modules/.cache .turbo",
-    "format": "prettier --write \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\"",
-    "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,html,yaml,yml}\"",
+    "format": "prettier --write \"**/*.{css,js,jsx,ts,tsx,json,md,mdx,html,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,mdx,html,yaml,yml}\"",
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install --lockfile-only",
     "release": "pnpm build:packages && changeset publish"

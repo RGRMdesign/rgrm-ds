@@ -1,7 +1,11 @@
 import { Paragraph } from '@rgrmdesign/rgrm-ds-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { disableDocgenExtractArgTypes, paragraphFixtures, paragraphReactArgTypes } from './fixtures';
+import {
+  disableDocgenExtractArgTypes,
+  paragraphFixtures,
+  paragraphReactArgTypes,
+} from './fixtures';
 import { paragraphDocsSource, paragraphReactUsageSnippet } from './snippets';
 
 const meta = {

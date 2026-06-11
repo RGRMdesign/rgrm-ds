@@ -35,8 +35,6 @@ export class RgrmParagraphElement extends HTMLElement {
   }
 
   #applyClasses(): void {
-    this.#inner.className = paragraphClassNames(
-      parseSizeAttribute(this.getAttribute('size')),
-    );
+    this.#inner.className = paragraphClassNames(parseSizeAttribute(this.getAttribute('size')));
   }
 }

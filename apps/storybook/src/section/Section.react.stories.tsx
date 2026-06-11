@@ -38,7 +38,7 @@ const meta = {
       spacingTop={spacingTop}
       spacingBottom={spacingBottom}
       width={width}
-      background={withBackground ? <img src={SECTION_BACKGROUND_SRC} alt="" /> : undefined}
+      background={withBackground ? <img src={SECTION_BACKGROUND_SRC} alt='' /> : undefined}
     >
       <Heading level={2}>{heading}</Heading>
       <Paragraph>{body}</Paragraph>

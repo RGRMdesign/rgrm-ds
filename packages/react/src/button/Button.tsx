@@ -19,7 +19,13 @@ function buttonContent(children: ReactNode): ReactNode {
   return children;
 }
 
-export function Button({ variant = 'primary', type = 'button', className, children, ...rest }: ButtonProps) {
+export function Button({
+  variant = 'primary',
+  type = 'button',
+  className,
+  children,
+  ...rest
+}: ButtonProps) {
   return (
     <button type={type} className={buttonClassNames(variant, className)} {...rest}>
       {buttonContent(children)}

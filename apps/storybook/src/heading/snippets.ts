@@ -8,7 +8,10 @@ function formatLevelProp(level?: HeadingStoryArgs['level']): string {
   return level ? ` level={${level}}` : '';
 }
 
-function formatAppearanceProp(appearance?: HeadingStoryArgs['appearance'], level?: HeadingStoryArgs['level']): string {
+function formatAppearanceProp(
+  appearance?: HeadingStoryArgs['appearance'],
+  level?: HeadingStoryArgs['level'],
+): string {
   if (appearance === undefined || appearance === level) {
     return '';
   }
@@ -25,7 +28,11 @@ import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Heading } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
-export function headingReactUsageSnippet({ level, appearance, children }: HeadingStoryArgs): string {
+export function headingReactUsageSnippet({
+  level,
+  appearance,
+  children,
+}: HeadingStoryArgs): string {
   const levelProp = formatLevelProp(level);
   const appearanceProp = formatAppearanceProp(appearance, level);
   return `<Heading${levelProp}${appearanceProp}>${children}</Heading>`;
@@ -62,14 +69,21 @@ function formatLevelAttr(level?: HeadingStoryArgs['level']): string {
   return level ? ` level="${level}"` : '';
 }
 
-function formatAppearanceAttr(appearance?: HeadingStoryArgs['appearance'], level?: HeadingStoryArgs['level']): string {
+function formatAppearanceAttr(
+  appearance?: HeadingStoryArgs['appearance'],
+  level?: HeadingStoryArgs['level'],
+): string {
   if (appearance === undefined || appearance === level) {
     return '';
   }
   return ` appearance="${appearance}"`;
 }
 
-export function headingElementUsageSnippet({ level, appearance, children }: HeadingStoryArgs): string {
+export function headingElementUsageSnippet({
+  level,
+  appearance,
+  children,
+}: HeadingStoryArgs): string {
   const levelAttr = formatLevelAttr(level);
   const appearanceAttr = formatAppearanceAttr(appearance, level);
   return `<rgrm-heading${levelAttr}${appearanceAttr}>${children}</rgrm-heading>`;

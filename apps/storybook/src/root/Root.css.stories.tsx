@@ -2,12 +2,7 @@ import '@rgrmdesign/rgrm-ds-css/root';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  rootArgTypes,
-  rootCssClassArgTypes,
-  rootFixtures,
-  type RootStoryArgs,
-} from './fixtures';
+import { rootArgTypes, rootCssClassArgTypes, rootFixtures, type RootStoryArgs } from './fixtures';
 import { rootCssUsageSnippet, rootDocsSource } from './snippets';
 
 const meta = {

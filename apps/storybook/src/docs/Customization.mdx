@@ -1,6 +1,6 @@
 import { Meta, Source } from '@storybook/addon-docs/blocks';
 
-<Meta title="Guides/Customization" />
+<Meta title='Guides/Customization' />
 
 # Customization
 
@@ -47,25 +47,25 @@ import { Heading } from '@rgrmdesign/rgrm-ds-react/heading';`}
   language="css"
   code={`/* custom-brand.css */
 
-/* Option A — replace the default (root) theme globally */
+/_ Option A — replace the default (root) theme globally _/
 :root {
-  --rgrm-theme-background: #ffffff;
-  --rgrm-theme-text: #111111;
-  --rgrm-theme-border: #e0e0e0;
-  --rgrm-theme-button-primary-background: #0066cc;
-  --rgrm-theme-button-primary-background-hover: #0052a3;
-  --rgrm-theme-button-primary-color: #ffffff;
+--rgrm-theme-background: #ffffff;
+--rgrm-theme-text: #111111;
+--rgrm-theme-border: #e0e0e0;
+--rgrm-theme-button-primary-background: #0066cc;
+--rgrm-theme-button-primary-background-hover: #0052a3;
+--rgrm-theme-button-primary-color: #ffffff;
 }
 
-/* Option B — customize only the built-in Brand theme */
+/_ Option B — customize only the built-in Brand theme _/
 [data-theme="brand"] {
-  --rgrm-theme-background: #f5f0ff;
-  --rgrm-theme-text: #1a0033;
-  --rgrm-theme-button-primary-background: #6b21a8;
+--rgrm-theme-background: #f5f0ff;
+--rgrm-theme-text: #1a0033;
+--rgrm-theme-button-primary-background: #6b21a8;
 }`}
 />
 
-<Source language="html" code={`<html data-theme="brand"> … </html>`} />
+<Source language='html' code={`<html data-theme="brand"> … </html>`} />
 
 Use the **Theme** toolbar in Storybook (Root / Dark / Brand) to check components in each
 built-in theme after you add overrides.
@@ -76,16 +76,16 @@ built-in theme after you add overrides.
 
 These are the main levers for brand colours and surfaces. Common variables:
 
-| Token | Role |
-| ----- | ---- |
-| `--rgrm-theme-background` | Page / section background |
-| `--rgrm-theme-text` | Primary text colour |
-| `--rgrm-theme-border` | Borders and dividers |
-| `--rgrm-theme-button-primary-background` | Primary button fill |
-| `--rgrm-theme-button-primary-background-hover` | Primary button hover |
-| `--rgrm-theme-button-primary-color` | Primary button label |
-| `--rgrm-theme-link-color` | Inline links |
-| `--rgrm-theme-selection-background` | Text selection highlight |
+| Token                                          | Role                      |
+| ---------------------------------------------- | ------------------------- |
+| `--rgrm-theme-background`                      | Page / section background |
+| `--rgrm-theme-text`                            | Primary text colour       |
+| `--rgrm-theme-border`                          | Borders and dividers      |
+| `--rgrm-theme-button-primary-background`       | Primary button fill       |
+| `--rgrm-theme-button-primary-background-hover` | Primary button hover      |
+| `--rgrm-theme-button-primary-color`            | Primary button label      |
+| `--rgrm-theme-link-color`                      | Inline links              |
+| `--rgrm-theme-selection-background`            | Text selection highlight  |
 
 The full set lives in `@rgrmdesign/rgrm-ds-tokens` (generated from Figma). Inspect
 `dist/css/root.css` and `dist/css/theme-brand.css` in the tokens package for every
@@ -100,7 +100,7 @@ most other components.
 Override the font family token and load the faces yourself:
 
 <Source
-  language="css"
+  language='css'
   code={`:root {
   --rgrm-core-font-primary-family: "Your Font", system-ui, sans-serif;
 }`}
@@ -122,9 +122,9 @@ palette or a single component tweak:
   --rgrm-core-swatch-dark-900: #0a1628;
 }
 
-/* Or override one component token directly */
+/_ Or override one component token directly _/
 :root {
-  --rgrm-button-primary-border-radius: 999px;
+--rgrm-button-primary-border-radius: 999px;
 }`}
 />
 
@@ -154,7 +154,7 @@ You can:
 tokens only inside that block. Useful for alternating bands on one page.
 
 <Source
-  language="tsx"
+  language='tsx'
   code={`<Section theme="brand">
   <Heading level={2}>Brand band</Heading>
   <Paragraph>Uses --rgrm-theme-* from the brand theme.</Paragraph>
@@ -166,7 +166,7 @@ tokens only inside that block. Useful for alternating bands on one page.
 Same pattern with `@import`:
 
 <Source
-  language="css"
+  language='css'
   code={`@import '@rgrmdesign/rgrm-ds-tokens';
 @import './custom-brand.css';
 @import '@rgrmdesign/rgrm-ds-css/fonts';
@@ -187,7 +187,7 @@ Import order matters: **tokens first**, then **your overrides**, then **componen
 ## Limitations
 
 - **Built-in theme names** — `root`, `dark`, and `brand` are the themes defined in the
-  token package and exposed in Storybook. Customization redefines their *values*, not
+  token package and exposed in Storybook. Customization redefines their _values_, not
   their names.
 - **`<rgrm-section theme="…">`** — the Web Component only accepts `root`, `dark`, and
   `brand` on the `theme` attribute. Unknown values fall back to `root`. For a custom

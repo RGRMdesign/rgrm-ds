@@ -3,7 +3,7 @@ import { Heading } from '@rgrmdesign/rgrm-ds-react';
 export function HeadingDemo() {
   return (
     <>
-      <Heading level={1} appearance="display">
+      <Heading level={1} appearance='display'>
         Display heading (React)
       </Heading>
       <Heading level={1}>Heading level 1 (React)</Heading>

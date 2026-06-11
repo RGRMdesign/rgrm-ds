@@ -2,7 +2,7 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 import { FIGMA_LIBRARY_URL } from './links';
 
-<Meta title="Guides/Governance" />
+<Meta title='Guides/Governance' />
 
 # Governance
 
@@ -30,9 +30,7 @@ How the design system is structured, versioned, and extended.
   React and Web Component packages (it is not bundled into them), so it must be available
   on npm as a transitive dependency. Most apps never install it directly; release it in
   lockstep with the wrappers that depend on it.
-- Design tokens live in a **separate repository** (generated from
-  <a href={FIGMA_LIBRARY_URL}>Figma variables</a>) and are consumed here as a peer
-  dependency (`>=0.5.0`).
+- Design tokens live in a **separate repository** (generated from <a href={FIGMA_LIBRARY_URL}>Figma variables</a>) and are consumed here as a peer dependency (`>=0.5.0`).
 - Storybook is the published reference and deploys from `main` to GitHub Pages:
   **https://rgrmdesign.github.io/rgrm-ds/**
 
@@ -59,9 +57,8 @@ matching docs:
 
 ## Contributing
 
-- Visual changes start in the
-  <a href={FIGMA_LIBRARY_URL}>Figma library</a>; token updates flow through the token
-  repository before landing in code.
+- Visual changes start in the <a href={FIGMA_LIBRARY_URL}>Figma library</a>; token updates
+  flow through the token repository before landing in code.
 - Use **Node.js 24.x** (see `.nvmrc`) and the pinned **pnpm** version (`packageManager`
   in the root `package.json`).
 - Run `pnpm format` (Prettier) before committing.

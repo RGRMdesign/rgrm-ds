@@ -14,10 +14,7 @@ import '@rgrmdesign/rgrm-ds-react/fonts';
 import { Button } from '@rgrmdesign/rgrm-ds-react';`;
 }
 
-export function buttonReactUsageSnippet({
-  variant,
-  children,
-}: ButtonStoryArgs): string {
+export function buttonReactUsageSnippet({ variant, children }: ButtonStoryArgs): string {
   const variantProp = variant ? ` variant="${variant}"` : '';
   return `<Button${variantProp}>${children}</Button>`;
 }
@@ -32,10 +29,7 @@ import '@rgrmdesign/rgrm-ds-css/fonts';
 import '@rgrmdesign/rgrm-ds-css/button';`;
 }
 
-export function buttonCssUsageSnippet({
-  variant,
-  children,
-}: ButtonStoryArgs): string {
+export function buttonCssUsageSnippet({ variant, children }: ButtonStoryArgs): string {
   const className = buttonClassNames(variant);
   return `<button type="button" class="${className}"><span class="${BUTTON_LABEL_CLASS}">${children}</span></button>`;
 }
@@ -50,17 +44,12 @@ import '@rgrmdesign/rgrm-ds-elements/fonts';
 import '@rgrmdesign/rgrm-ds-elements/button';`;
 }
 
-export function buttonElementUsageSnippet({
-  variant,
-  children,
-}: ButtonStoryArgs): string {
+export function buttonElementUsageSnippet({ variant, children }: ButtonStoryArgs): string {
   const variantAttr = variant ? ` variant="${variant}"` : '';
   return `<rgrm-button${variantAttr}>${children}</rgrm-button>`;
 }
 
-export function buttonDocsSource(
-  snippet: (args: ButtonStoryArgs) => string,
-): {
+export function buttonDocsSource(snippet: (args: ButtonStoryArgs) => string): {
   transform: (_code: string, context: { args: ButtonStoryArgs }) => string;
 } {
   return {

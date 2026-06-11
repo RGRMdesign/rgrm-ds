@@ -33,7 +33,7 @@ export function DocsThemeCanvas({
   }, [theme]);
 
   return (
-    <div ref={rootRef} className="sb-docs-canvas">
+    <div ref={rootRef} className='sb-docs-canvas'>
       {children}
     </div>
   );

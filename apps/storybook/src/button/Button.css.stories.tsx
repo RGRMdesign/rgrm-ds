@@ -27,7 +27,7 @@ const meta = {
     ...buttonCssClassArgTypes,
   },
   render: ({ variant, children }: ButtonStoryArgs) => (
-    <button type="button" className={buttonClassNames(variant)}>
+    <button type='button' className={buttonClassNames(variant)}>
       <span className={BUTTON_LABEL_CLASS}>{children}</span>
     </button>
   ),

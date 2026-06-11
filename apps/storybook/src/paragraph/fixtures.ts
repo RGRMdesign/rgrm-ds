@@ -7,8 +7,7 @@ export type ParagraphStoryArgs = {
 
 export const paragraphFixtures = {
   default: {
-    children:
-      'Default body paragraph. Typography scales with the design tokens.',
+    children: 'Default body paragraph. Typography scales with the design tokens.',
   },
   large: {
     size: 'large',
@@ -61,8 +60,7 @@ export const paragraphArgTypes = {
 /** React docs for `<Paragraph>`. */
 export const paragraphReactArgTypes = {
   size: {
-    description:
-      'Typography scale. Omit the prop for the default main body style.',
+    description: 'Typography scale. Omit the prop for the default main body style.',
     ...paragraphSizeArgType,
   },
   className: {
@@ -83,11 +81,7 @@ export const paragraphReactArgTypes = {
   },
 };
 
-export const paragraphReactPropArgNames = [
-  'size',
-  'className',
-  'children',
-] as const;
+export const paragraphReactPropArgNames = ['size', 'className', 'children'] as const;
 
 /** Docs-only rows for @rgrmdesign/rgrm-ds-css (shown via `<ArgTypes include={...} />`). */
 export const paragraphCssClassArgTypes = {
