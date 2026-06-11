@@ -22,10 +22,15 @@
     },
     "build-storybook": {
       "dependsOn": ["^build"],
+      "env": ["CHROMATIC"],
       "inputs": ["src/**", ".storybook/**", "package.json"],
       "outputs": ["storybook-static/**"]
     },
     "chromatic": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+    "chromatic:ci": {
       "dependsOn": ["^build"],
       "cache": false
     }

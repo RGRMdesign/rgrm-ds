@@ -28,14 +28,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - name: Build Storybook for Chromatic
-        run: pnpm build-storybook
+      - name: Run Chromatic
+        run: pnpm chromatic:ci
         env:
-          CHROMATIC: 'true'
-
-      - name: Publish to Chromatic
-        uses: chromaui/action@v13
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: apps/storybook/storybook-static
-          autoAcceptChanges: main
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
