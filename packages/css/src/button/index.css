@@ -31,6 +31,7 @@
 }
 
 .rgrm-button--primary {
+  min-block-size: var(--rgrm-button-primary-min-block-size, auto);
   border-radius: var(--rgrm-button-primary-border-radius, 0);
   padding-block: var(--rgrm-button-primary-padding-block-start, 0) var(--rgrm-button-primary-padding-block-end, 0);
   padding-inline: var(--rgrm-button-primary-padding-inline-start, 0) var(--rgrm-button-primary-padding-inline-end, 0);

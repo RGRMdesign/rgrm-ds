@@ -41,7 +41,7 @@
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.11.0"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.12.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",

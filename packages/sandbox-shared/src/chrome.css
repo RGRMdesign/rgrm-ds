@@ -31,7 +31,7 @@ body {
 .sandbox-bar__themes button {
   padding: var(--rgrm-scale-space-1) var(--rgrm-scale-space-3);
   border: var(--rgrm-core-border-width-main) solid var(--rgrm-theme-border);
-  border-radius: var(--rgrm-core-radius-small);
+  border-radius: var(--rgrm-scale-radius-small);
   background: transparent;
   color: inherit;
   font: inherit;
