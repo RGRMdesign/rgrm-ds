@@ -28,10 +28,12 @@
     },
     "chromatic": {
       "dependsOn": ["^build"],
+      "env": ["CHROMATIC_PROJECT_TOKEN"],
       "cache": false
     },
     "chromatic:ci": {
       "dependsOn": ["^build"],
+      "env": ["CHROMATIC_PROJECT_TOKEN"],
       "cache": false
     }
   }
