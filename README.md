@@ -123,6 +123,15 @@ Storybook snapshots run on every pull request via [`.github/workflows/chromatic.
 
 On pull requests, Chromatic posts a visual diff; accept or deny changes in the Chromatic UI. Changes merged to `main` are auto-accepted as the new baseline.
 
+### Accessibility regression (Chromatic + Storybook)
+
+Storybook includes `@storybook/addon-a11y` (axe-core) for local checks — open the **Accessibility** panel on any story to see violations such as `color-contrast` on buttons.
+
+To run the same checks in CI via Chromatic:
+
+1. In your Chromatic project, open **Manage** → **Accessibility tests** → **Enable** (one-time for existing projects).
+2. Push to `main` or open a PR; Chromatic runs accessibility tests alongside visual tests and tracks new violations against the baseline.
+
 ## Scripts
 
 | Script                         | Description                                         |

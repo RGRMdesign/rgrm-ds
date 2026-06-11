@@ -7,6 +7,7 @@ const GITHUB_PAGES_BASE = '/rgrm-ds/';
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(ts|tsx)'],
   addons: [
+    '@storybook/addon-a11y',
     {
       name: '@storybook/addon-docs',
       options: {

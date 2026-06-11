@@ -18,6 +18,13 @@ setupThemeSync();
 
 const preview: Preview = {
   parameters: {
+    a11y: {
+      // Story canvas + docs previews; includes color-contrast (WCAG 2.x AA via axe).
+      context: 'body',
+      config: {
+        rules: [{ id: 'region', enabled: false }],
+      },
+    },
     layout: 'padded',
     docs: {
       codePanel: true,
