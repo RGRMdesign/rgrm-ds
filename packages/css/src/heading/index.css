@@ -10,16 +10,16 @@
   break-after: avoid;
   break-inside: avoid;
   margin: 0;
-  text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
+  text-box-trim: trim-both;
 }
 
 .rgrm-heading--display {
   font-family: var(--rgrm-heading-display-font-family, inherit);
   font-size: var(--rgrm-heading-display-font-size, inherit);
   font-weight: var(--rgrm-heading-display-font-weight, inherit);
-  line-height: var(--rgrm-heading-display-line-height, inherit);
   letter-spacing: var(--rgrm-heading-display-letter-spacing, inherit);
+  line-height: var(--rgrm-heading-display-line-height, inherit);
   text-transform: var(--rgrm-heading-display-text-transform, inherit);
   text-wrap: var(--rgrm-heading-display-text-wrap, inherit);
 }
@@ -28,8 +28,8 @@
   font-family: var(--rgrm-heading-h1-font-family, inherit);
   font-size: var(--rgrm-heading-h1-font-size, inherit);
   font-weight: var(--rgrm-heading-h1-font-weight, inherit);
-  line-height: var(--rgrm-heading-h1-line-height, inherit);
   letter-spacing: var(--rgrm-heading-h1-letter-spacing, inherit);
+  line-height: var(--rgrm-heading-h1-line-height, inherit);
   text-transform: var(--rgrm-heading-h1-text-transform, inherit);
   text-wrap: var(--rgrm-heading-h1-text-wrap, inherit);
 }
@@ -38,8 +38,8 @@
   font-family: var(--rgrm-heading-h2-font-family, inherit);
   font-size: var(--rgrm-heading-h2-font-size, inherit);
   font-weight: var(--rgrm-heading-h2-font-weight, inherit);
-  line-height: var(--rgrm-heading-h2-line-height, inherit);
   letter-spacing: var(--rgrm-heading-h2-letter-spacing, inherit);
+  line-height: var(--rgrm-heading-h2-line-height, inherit);
   text-transform: var(--rgrm-heading-h2-text-transform, inherit);
   text-wrap: var(--rgrm-heading-h2-text-wrap, inherit);
 }
@@ -48,8 +48,8 @@
   font-family: var(--rgrm-heading-h3-font-family, inherit);
   font-size: var(--rgrm-heading-h3-font-size, inherit);
   font-weight: var(--rgrm-heading-h3-font-weight, inherit);
-  line-height: var(--rgrm-heading-h3-line-height, inherit);
   letter-spacing: var(--rgrm-heading-h3-letter-spacing, inherit);
+  line-height: var(--rgrm-heading-h3-line-height, inherit);
   text-transform: var(--rgrm-heading-h3-text-transform, inherit);
   text-wrap: var(--rgrm-heading-h3-text-wrap, inherit);
 }
@@ -58,8 +58,8 @@
   font-family: var(--rgrm-heading-h4-font-family, inherit);
   font-size: var(--rgrm-heading-h4-font-size, inherit);
   font-weight: var(--rgrm-heading-h4-font-weight, inherit);
-  line-height: var(--rgrm-heading-h4-line-height, inherit);
   letter-spacing: var(--rgrm-heading-h4-letter-spacing, inherit);
+  line-height: var(--rgrm-heading-h4-line-height, inherit);
   text-transform: var(--rgrm-heading-h4-text-transform, inherit);
   text-wrap: var(--rgrm-heading-h4-text-wrap, inherit);
 }
@@ -68,8 +68,8 @@
   font-family: var(--rgrm-heading-h5-font-family, inherit);
   font-size: var(--rgrm-heading-h5-font-size, inherit);
   font-weight: var(--rgrm-heading-h5-font-weight, inherit);
-  line-height: var(--rgrm-heading-h5-line-height, inherit);
   letter-spacing: var(--rgrm-heading-h5-letter-spacing, inherit);
+  line-height: var(--rgrm-heading-h5-line-height, inherit);
   text-transform: var(--rgrm-heading-h5-text-transform, inherit);
   text-wrap: var(--rgrm-heading-h5-text-wrap, inherit);
 }
@@ -78,8 +78,8 @@
   font-family: var(--rgrm-heading-h6-font-family, inherit);
   font-size: var(--rgrm-heading-h6-font-size, inherit);
   font-weight: var(--rgrm-heading-h6-font-weight, inherit);
-  line-height: var(--rgrm-heading-h6-line-height, inherit);
   letter-spacing: var(--rgrm-heading-h6-letter-spacing, inherit);
+  line-height: var(--rgrm-heading-h6-line-height, inherit);
   text-transform: var(--rgrm-heading-h6-text-transform, inherit);
   text-wrap: var(--rgrm-heading-h6-text-wrap, inherit);
 }

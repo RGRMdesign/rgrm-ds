@@ -4,24 +4,24 @@
  */
 
 .rgrm-paragraph {
-  margin: 0;
   font-family: var(--rgrm-paragraph-main-font-family, inherit);
   font-size: var(--rgrm-paragraph-main-font-size, inherit);
   font-weight: var(--rgrm-paragraph-main-font-weight, inherit);
-  line-height: var(--rgrm-paragraph-main-line-height, inherit);
   letter-spacing: var(--rgrm-paragraph-main-letter-spacing, inherit);
+  line-height: var(--rgrm-paragraph-main-line-height, inherit);
+  margin: 0;
+  text-box-edge: cap alphabetic;
+  text-box-trim: trim-both;
   text-transform: var(--rgrm-paragraph-main-text-transform, inherit);
   text-wrap: var(--rgrm-paragraph-main-text-wrap, inherit);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
 }
 
 .rgrm-paragraph--small {
   font-family: var(--rgrm-paragraph-small-font-family, inherit);
   font-size: var(--rgrm-paragraph-small-font-size, inherit);
   font-weight: var(--rgrm-paragraph-small-font-weight, inherit);
-  line-height: var(--rgrm-paragraph-small-line-height, inherit);
   letter-spacing: var(--rgrm-paragraph-small-letter-spacing, inherit);
+  line-height: var(--rgrm-paragraph-small-line-height, inherit);
   text-transform: var(--rgrm-paragraph-small-text-transform, inherit);
   text-wrap: var(--rgrm-paragraph-small-text-wrap, inherit);
 }
@@ -30,8 +30,8 @@
   font-family: var(--rgrm-paragraph-large-font-family, inherit);
   font-size: var(--rgrm-paragraph-large-font-size, inherit);
   font-weight: var(--rgrm-paragraph-large-font-weight, inherit);
-  line-height: var(--rgrm-paragraph-large-line-height, inherit);
   letter-spacing: var(--rgrm-paragraph-large-letter-spacing, inherit);
+  line-height: var(--rgrm-paragraph-large-line-height, inherit);
   text-transform: var(--rgrm-paragraph-large-text-transform, inherit);
   text-wrap: var(--rgrm-paragraph-large-text-wrap, inherit);
 }

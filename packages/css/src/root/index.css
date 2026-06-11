@@ -41,14 +41,14 @@ body.rgrm-root {
   --_root-line-height: var(--rgrm-root-line-height, inherit);
   --_root-letter-spacing: var(--rgrm-root-letter-spacing, inherit);
 
-  margin: 0;
-  min-height: 100vh;
-  min-height: 100dvh;
   background-color: var(--_root-background-color);
   color: var(--_root-color);
   font-family: var(--_root-font-family);
   font-size: var(--_root-font-size);
   font-weight: var(--_root-font-weight);
-  line-height: var(--_root-line-height);
   letter-spacing: var(--_root-letter-spacing);
+  line-height: var(--_root-line-height);
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
 }

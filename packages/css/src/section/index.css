@@ -10,17 +10,15 @@
   --_section-background: none;
   --_section-text: inherit;
 
-  position: relative;
+  align-items: stretch;
   background: var(--_section-background);
   color: var(--_section-text);
-  flex-flow: column;
-  justify-content: center;
-  align-items: stretch;
   display: flex;
-  position: relative;
+  flex-flow: column;
   isolation: isolate;
-  padding-block-start: var(--_section-padding-block-start);
-  padding-block-end: var(--_section-padding-block-end);
+  justify-content: center;
+  padding-block: var(--_section-padding-block-start) var(--_section-padding-block-end);
+  position: relative;
 }
 
 .rgrm-section[data-theme] {
@@ -69,25 +67,25 @@
 }
 
 .rgrm-section__background {
-  position: absolute;
   inset: 0;
-  z-index: 0;
   overflow: hidden;
+  position: absolute;
+  z-index: 0;
 }
 
 .rgrm-section__container {
   --_section-container-max-width: var(--rgrm-core-max-width-main);
   --_section-container-width: calc(100% - (var(--rgrm-scale-site-margin) * 2));
 
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  gap: var(--rgrm-scale-space-6);
+  justify-content: center;
   margin-inline: auto;
   max-width: var(--_section-container-max-width);
+  position: relative;
   width: var(--_section-container-width);
-  flex-flow: column;
-  justify-content: center;
-  display: flex;
-  gap: var(--rgrm-scale-space-6);
+  z-index: 1;
 }
 
 .rgrm-section__container--small {

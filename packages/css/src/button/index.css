@@ -6,19 +6,18 @@
  */
 
 .rgrm-button {
-  box-sizing: border-box;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5em;
+  appearance: none;
   border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
   font-family: inherit;
   font-size: var(--rgrm-scale-font-size-main);
+  gap: 0.5em;
+  justify-content: center;
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
   transition:
     background-color 0.15s ease,
     border-color 0.15s ease,
@@ -26,20 +25,20 @@
 }
 
 .rgrm-button__label {
-  text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
+  text-box-trim: trim-both;
 }
 
 .rgrm-button--primary {
-  min-block-size: var(--rgrm-button-primary-min-block-size, auto);
+  background-color: var(--rgrm-button-primary-background-color, transparent);
+  border-color: var(--rgrm-button-primary-border-color, transparent);
   border-radius: var(--rgrm-button-primary-border-radius, 0);
+  color: var(--rgrm-button-primary-color, inherit);
+  min-block-size: var(--rgrm-button-primary-min-block-size, auto);
   padding-block: var(--rgrm-button-primary-padding-block-start, 0)
     var(--rgrm-button-primary-padding-block-end, 0);
   padding-inline: var(--rgrm-button-primary-padding-inline-start, 0)
     var(--rgrm-button-primary-padding-inline-end, 0);
-  background-color: var(--rgrm-button-primary-background-color, transparent);
-  border-color: var(--rgrm-button-primary-border-color, transparent);
-  color: var(--rgrm-button-primary-color, inherit);
 }
 
 .rgrm-button--primary:hover {
