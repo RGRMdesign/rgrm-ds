@@ -22,7 +22,7 @@
     },
     "build-storybook": {
       "dependsOn": ["^build"],
-      "env": ["CHROMATIC"],
+      "env": ["STORYBOOK_PAGES"],
       "inputs": ["src/**", ".storybook/**", "package.json"],
       "outputs": ["storybook-static/**"]
     },

@@ -26,9 +26,9 @@ const config: StorybookConfig = {
     defaultName: 'Documentation',
   },
   async viteFinal(config, { configType }) {
-    if (configType === 'PRODUCTION') {
-      // GitHub Pages needs a subpath; Chromatic hosts at its own origin (CHROMATIC=true).
-      config.base = process.env.CHROMATIC === 'true' ? '/' : GITHUB_PAGES_BASE;
+    // Only GitHub Pages project sites need a subpath; Chromatic and local builds use `/`.
+    if (configType === 'PRODUCTION' && process.env.STORYBOOK_PAGES === 'true') {
+      config.base = GITHUB_PAGES_BASE;
     }
     return config;
   },

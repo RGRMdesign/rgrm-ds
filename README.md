@@ -105,7 +105,7 @@ Storybook is deployed from `main` via [`.github/workflows/deploy-storybook.yml`]
 
 One-time setup in the GitHub repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
-Production builds use `base: '/rgrm-ds/'` in `apps/storybook/.storybook/main.ts` (local `pnpm storybook` is unchanged). Chromatic builds set `CHROMATIC=true` so assets load from `/` instead.
+Production builds for GitHub Pages set `STORYBOOK_PAGES=true` so `base` is `/rgrm-ds/` in `apps/storybook/.storybook/main.ts`. Chromatic and local `pnpm build-storybook` use `/` (the Vite default).
 
 ### Visual regression (Chromatic)
 
