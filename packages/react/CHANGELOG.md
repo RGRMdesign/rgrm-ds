@@ -1,5 +1,16 @@
 # @rgrmdesign/rgrm-ds-react
 
+## 0.5.7
+
+### Patch Changes
+
+- [`436be73`](https://github.com/RGRMdesign/rgrm-ds/commit/436be7307a3f0fb9886fdc9aca09826a6882db2f) - Require `@rgrmdesign/rgrm-ds-tokens` >= 0.12.0. Radius and size tokens moved from core to the fluid scale collection.
+  - `@rgrmdesign/rgrm-ds-css/button` — apply `--rgrm-button-primary-min-block-size` on the primary variant
+  - Replace `--rgrm-core-radius-*` references with `--rgrm-scale-radius-*`
+
+- Updated dependencies [[`436be73`](https://github.com/RGRMdesign/rgrm-ds/commit/436be7307a3f0fb9886fdc9aca09826a6882db2f)]:
+  - @rgrmdesign/rgrm-ds-css@0.5.7
+
 ## 0.5.6
 
 ### Patch Changes

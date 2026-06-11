@@ -1,6 +1,6 @@
 {
   "name": "@rgrmdesign/rgrm-ds-react",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "React components for the RGRM design system. Styles come from @rgrmdesign/rgrm-ds-css.",
   "license": "MIT",
   "type": "module",
