@@ -8,10 +8,12 @@ import React from 'react';
 
 import { applyDocumentTheme, resolveTheme } from './applyTheme';
 import { DocsThemeCanvas } from './DocsThemeCanvas';
+import { registerRgrmElements } from './registerElements';
 import { setupThemeSync } from './themeSync';
 import './preview.css';
 
 applyRootDocumentClasses();
+registerRgrmElements();
 setupThemeSync();
 
 const preview: Preview = {
