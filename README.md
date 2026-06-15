@@ -205,6 +205,16 @@ git push --follow-tags
 > First release: packages start at `0.0.0`. A `minor` changeset publishes them as
 > `0.1.0`; choose `major` if you want to start at `1.0.0`.
 
+## License
+
+Source code in this repository is released under the [MIT License](LICENSE).
+
+The MIT License does not grant trademark rights. See [TRADEMARK.md](TRADEMARK.md) for
+guidance on using the RGRM Design name and brand.
+
+Design tokens (`@rgrmdesign/rgrm-ds-tokens`) are licensed separately in their own
+repository.
+
 ## Adding a new component
 
 Components live _inside_ the existing layer packages — you do **not** create new
