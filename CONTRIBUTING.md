@@ -8,13 +8,13 @@ Please read the [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
 
 ## Ways to contribute
 
-| Contribution | How |
-| ------------ | --- |
-| Bug report | [Open a bug issue](https://github.com/RGRMdesign/rgrm-ds/issues/new?template=bug_report.md) |
-| Feature or component idea | [Open a feature request](https://github.com/RGRMdesign/rgrm-ds/issues/new?template=feature_request.md) |
-| Design feedback | Open a feature request with screenshots or Figma links — no code required |
-| Code change | Fork, branch, open a pull request (see below) |
-| Design tokens | Use the separate [`rgrm-ds-tokens`](https://www.npmjs.com/package/@rgrmdesign/rgrm-ds-tokens) repository |
+| Contribution              | How                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Bug report                | [Open a bug issue](https://github.com/RGRMdesign/rgrm-ds/issues/new?template=bug_report.md)              |
+| Feature or component idea | [Open a feature request](https://github.com/RGRMdesign/rgrm-ds/issues/new?template=feature_request.md)   |
+| Design feedback           | Open a feature request with screenshots or Figma links — no code required                                |
+| Code change               | Fork, branch, open a pull request (see below)                                                            |
+| Design tokens             | Use the separate [`rgrm-ds-tokens`](https://www.npmjs.com/package/@rgrmdesign/rgrm-ds-tokens) repository |
 
 Check the [roadmap](README.md#roadmap) for planned work. If you want to pick something up,
 comment on an existing issue first so we avoid duplicate effort.
