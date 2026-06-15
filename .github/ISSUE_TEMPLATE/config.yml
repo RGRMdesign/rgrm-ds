@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/RGRMdesign/rgrm-ds/blob/main/CONTRIBUTING.md
+    about: How to contribute code, design feedback, or documentation
+  - name: Security report
+    url: https://github.com/RGRMdesign/rgrm-ds/security/advisories/new
+    about: Report a vulnerability privately (do not open a public issue)

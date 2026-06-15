@@ -7,6 +7,9 @@ properties from
 [`@rgrmdesign/rgrm-ds-tokens`](https://www.npmjs.com/package/@rgrmdesign/rgrm-ds-tokens)
 (design tokens generated from Figma variables, maintained in a separate repository).
 
+**Contributions welcome.** See [CONTRIBUTING.md](CONTRIBUTING.md) for how to report
+issues, propose features, or open a pull request.
+
 ## Roadmap
 
 The design system is in early development. The architecture (monorepo, per-layer
@@ -214,6 +217,11 @@ guidance on using the RGRM Design name and brand.
 
 Design tokens (`@rgrmdesign/rgrm-ds-tokens`) are licensed separately in their own
 repository.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). By participating, you agree to abide by the
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Adding a new component
 
