@@ -18,12 +18,12 @@ Published docs: **https://rgrmdesign.github.io/rgrm-ds/**
 
 **Available now**
 
-| Category     | Components                                      |
-| ------------ | ----------------------------------------------- |
-| Foundation   | Root, Fonts                                     |
-| Typography   | Heading, Paragraph                              |
-| Layout       | Section, Inline, Stack                          |
-| Interaction  | Button (`primary` variant)                      |
+| Category    | Components                 |
+| ----------- | -------------------------- |
+| Foundation  | Root, Fonts                |
+| Typography  | Heading, Paragraph         |
+| Layout      | Section, Inline, Stack     |
+| Interaction | Button (`primary` variant) |
 
 **Next**
 
@@ -146,23 +146,23 @@ To run the same checks in CI via Chromatic:
 
 ## Scripts
 
-| Script                         | Description                                         |
-| ------------------------------ | --------------------------------------------------- |
-| `pnpm dev`                     | Turbo: package watch builds + all sandboxes.        |
-| `pnpm dev:css`                 | Only `sandbox-css`.                                 |
-| `pnpm dev:react`               | Only `sandbox-react`.                               |
-| `pnpm dev:element`             | Only `sandbox-element`.                             |
-| `pnpm storybook`               | Storybook dev server (`apps/storybook`, port 6006). |
-| `pnpm build-storybook`         | Static Storybook build.                             |
-| `pnpm chromatic`               | Publish Storybook snapshots to Chromatic (local).   |
-| `pnpm build`                   | Builds every package and all sandboxes.             |
-| `pnpm build:packages`          | Builds only the publishable `packages/*`.           |
-| `pnpm clean`                   | Removes build output and caches.                    |
-| `pnpm format` / `format:check` | Prettier across the repo.                           |
-| `pnpm lint:css` / `lint:css:fix` | Stylelint across CSS files.                       |
-| `pnpm changeset`               | Record a changeset for the next release.            |
-| `pnpm version-packages`        | Apply changesets: bump versions + changelogs.       |
-| `pnpm release`                 | Build packages then `changeset publish` to npm.     |
+| Script                           | Description                                         |
+| -------------------------------- | --------------------------------------------------- |
+| `pnpm dev`                       | Turbo: package watch builds + all sandboxes.        |
+| `pnpm dev:css`                   | Only `sandbox-css`.                                 |
+| `pnpm dev:react`                 | Only `sandbox-react`.                               |
+| `pnpm dev:element`               | Only `sandbox-element`.                             |
+| `pnpm storybook`                 | Storybook dev server (`apps/storybook`, port 6006). |
+| `pnpm build-storybook`           | Static Storybook build.                             |
+| `pnpm chromatic`                 | Publish Storybook snapshots to Chromatic (local).   |
+| `pnpm build`                     | Builds every package and all sandboxes.             |
+| `pnpm build:packages`            | Builds only the publishable `packages/*`.           |
+| `pnpm clean`                     | Removes build output and caches.                    |
+| `pnpm format` / `format:check`   | Prettier across the repo.                           |
+| `pnpm lint:css` / `lint:css:fix` | Stylelint across CSS files.                         |
+| `pnpm changeset`                 | Record a changeset for the next release.            |
+| `pnpm version-packages`          | Apply changesets: bump versions + changelogs.       |
+| `pnpm release`                   | Build packages then `changeset publish` to npm.     |
 
 ## Publishing to npm (Changesets)
 
