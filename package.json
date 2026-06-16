@@ -53,7 +53,9 @@
       "lightningcss-cli"
     ],
     "overrides": {
-      "esbuild": "^0.28.1"
+      "esbuild": "^0.28.1",
+      "js-yaml": "4.2.0",
+      "read-yaml-file": "2.1.0"
     }
   }
 }
