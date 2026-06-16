@@ -1,0 +1,45 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { inlineElementAttributeArgNames } from './fixtures';
+import * as ElementStories from './Inline.element.stories';
+import { inlineElementInstallSnippet, inlineElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name='Documentation' />
+
+# Web component
+
+Custom element `<rgrm-inline>` via `@rgrmdesign/rgrm-ds-elements/inline`. Importing the
+package registers the element and loads `@rgrmdesign/rgrm-ds-css/inline`.
+
+The element uses **light DOM** so children participate in the document flow and design
+tokens apply normally.
+
+## Install
+
+<Source language='bash' code={inlineElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the custom element once in your app entry.
+
+<Source language='tsx' code={inlineElementSetupSnippet()} />
+
+## Attributes
+
+<ArgTypes of={ElementStories} include={inlineElementAttributeArgNames} />
+
+## No gap
+
+<Canvas of={ElementStories.Default} />
+
+## Small
+
+<Canvas of={ElementStories.GapSm} />
+
+## Medium
+
+<Canvas of={ElementStories.GapMd} />
+
+## Large
+
+<Canvas of={ElementStories.GapLg} />

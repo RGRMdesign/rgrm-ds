@@ -1,0 +1,45 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { inlineCssClassArgNames } from './fixtures';
+import * as CssStories from './Inline.css.stories';
+import { inlineCssInstallSnippet, inlineCssSetupSnippet } from './snippets';
+
+<Meta of={CssStories} name='Documentation' />
+
+# CSS
+
+Vanilla HTML via `@rgrmdesign/rgrm-ds-css/inline`. Apply `.rgrm-inline` and optional gap
+modifiers (`.rgrm-inline--gap-sm`, `.rgrm-inline--gap-md`, `.rgrm-inline--gap-lg`).
+
+Use `@rgrmdesign/rgrm-ds-react` or `@rgrmdesign/rgrm-ds-elements` when you prefer a
+framework wrapper that applies these classes for you.
+
+## Install
+
+<Source language='bash' code={inlineCssInstallSnippet()} />
+
+## Setup
+
+Import tokens and the stylesheet once in your app entry.
+
+<Source language='tsx' code={inlineCssSetupSnippet()} />
+
+## Classes
+
+<ArgTypes of={CssStories} include={inlineCssClassArgNames} />
+
+## No gap
+
+<Canvas of={CssStories.Default} />
+
+## Small
+
+<Canvas of={CssStories.GapSm} />
+
+## Medium
+
+<Canvas of={CssStories.GapMd} />
+
+## Large
+
+<Canvas of={CssStories.GapLg} />

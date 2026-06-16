@@ -1,0 +1,42 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { inlineReactPropArgNames } from './fixtures';
+import * as ReactStories from './Inline.react.stories';
+import { inlineReactInstallSnippet, inlineReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name='Documentation' />
+
+# React
+
+React wrapper via `@rgrmdesign/rgrm-ds-react`. Importing the package also loads
+`@rgrmdesign/rgrm-ds-css` — no separate stylesheet import is required.
+
+## Install
+
+<Source language='bash' code={inlineReactInstallSnippet()} />
+
+## Setup
+
+Import tokens once in your app entry, then the React wrapper (CSS loads automatically).
+
+<Source language='tsx' code={inlineReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={inlineReactPropArgNames} />
+
+## No gap
+
+<Canvas of={ReactStories.Default} />
+
+## Small
+
+<Canvas of={ReactStories.GapSm} />
+
+## Medium
+
+<Canvas of={ReactStories.GapMd} />
+
+## Large
+
+<Canvas of={ReactStories.GapLg} />

@@ -22,6 +22,10 @@
       "types": "./dist/heading/index.d.ts",
       "import": "./dist/heading/index.js"
     },
+    "./inline": {
+      "types": "./dist/inline/index.d.ts",
+      "import": "./dist/inline/index.js"
+    },
     "./paragraph": {
       "types": "./dist/paragraph/index.d.ts",
       "import": "./dist/paragraph/index.js"
@@ -33,6 +37,10 @@
     "./section": {
       "types": "./dist/section/index.d.ts",
       "import": "./dist/section/index.js"
+    },
+    "./stack": {
+      "types": "./dist/stack/index.d.ts",
+      "import": "./dist/stack/index.js"
     },
     "./fonts": {
       "import": "./dist/fonts.js"

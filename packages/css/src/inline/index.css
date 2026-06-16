@@ -1,0 +1,25 @@
+/**
+ * Inline layout for the RGRM design system.
+ * Places children in a horizontal flex row with optional gap from
+ * `--rgrm-scale-space-*` primitive tokens.
+ */
+
+.rgrm-inline {
+  --_inline-gap: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--_inline-gap);
+}
+
+.rgrm-inline--gap-sm {
+  --_inline-gap: var(--rgrm-scale-space-1);
+}
+
+.rgrm-inline--gap-md {
+  --_inline-gap: var(--rgrm-scale-space-4);
+}
+
+.rgrm-inline--gap-lg {
+  --_inline-gap: var(--rgrm-scale-space-6);
+}

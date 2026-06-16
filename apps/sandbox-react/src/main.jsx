@@ -8,8 +8,10 @@ import { createRoot } from 'react-dom/client';
 
 import { ButtonDemo } from './ButtonDemo.jsx';
 import { HeadingDemo } from './HeadingDemo.jsx';
+import { InlineDemo } from './InlineDemo.jsx';
 import { ParagraphDemo } from './ParagraphDemo.jsx';
 import { SectionDemo } from './SectionDemo.jsx';
+import { StackDemo } from './StackDemo.jsx';
 
 initThemeSwitcher();
 
@@ -19,6 +21,8 @@ if (root) {
     <Root>
       <HeadingDemo />
       <ParagraphDemo />
+      <InlineDemo />
+      <StackDemo />
       <ButtonDemo />
     </Root>,
   );

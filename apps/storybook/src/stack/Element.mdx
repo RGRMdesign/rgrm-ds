@@ -1,0 +1,53 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { stackElementAttributeArgNames } from './fixtures';
+import * as ElementStories from './Stack.element.stories';
+import { stackElementInstallSnippet, stackElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name='Documentation' />
+
+# Web component
+
+Custom element `<rgrm-stack>` via `@rgrmdesign/rgrm-ds-elements/stack`. Importing the
+package registers the element and loads `@rgrmdesign/rgrm-ds-css/stack`.
+
+The element uses **light DOM** so children participate in the document flow and design
+tokens apply normally.
+
+## Install
+
+<Source language='bash' code={stackElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the custom element once in your app entry.
+
+<Source language='tsx' code={stackElementSetupSnippet()} />
+
+## Attributes
+
+<ArgTypes of={ElementStories} include={stackElementAttributeArgNames} />
+
+## No gap
+
+<Canvas of={ElementStories.Default} />
+
+## Extra small
+
+<Canvas of={ElementStories.GapXs} />
+
+## Small
+
+<Canvas of={ElementStories.GapSm} />
+
+## Medium
+
+<Canvas of={ElementStories.GapMd} />
+
+## Large
+
+<Canvas of={ElementStories.GapLg} />
+
+## Extra large
+
+<Canvas of={ElementStories.GapXl} />

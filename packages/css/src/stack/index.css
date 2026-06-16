@@ -1,0 +1,33 @@
+/**
+ * Stack layout for the RGRM design system.
+ * Places children in a vertical flex column with optional gap from
+ * `--rgrm-scale-space-*` primitive tokens.
+ */
+
+.rgrm-stack {
+  --_stack-gap: 0;
+
+  display: flex;
+  flex-flow: column;
+  gap: var(--_stack-gap);
+}
+
+.rgrm-stack--gap-xs {
+  --_stack-gap: var(--rgrm-scale-space-1);
+}
+
+.rgrm-stack--gap-sm {
+  --_stack-gap: var(--rgrm-scale-space-2);
+}
+
+.rgrm-stack--gap-md {
+  --_stack-gap: var(--rgrm-scale-space-4);
+}
+
+.rgrm-stack--gap-lg {
+  --_stack-gap: var(--rgrm-scale-space-6);
+}
+
+.rgrm-stack--gap-xl {
+  --_stack-gap: var(--rgrm-scale-space-8);
+}

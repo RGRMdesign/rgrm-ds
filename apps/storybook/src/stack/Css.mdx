@@ -1,0 +1,53 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { stackCssClassArgNames } from './fixtures';
+import * as CssStories from './Stack.css.stories';
+import { stackCssInstallSnippet, stackCssSetupSnippet } from './snippets';
+
+<Meta of={CssStories} name='Documentation' />
+
+# CSS
+
+Vanilla HTML via `@rgrmdesign/rgrm-ds-css/stack`. Apply `.rgrm-stack` and optional gap
+modifiers (`.rgrm-stack--gap-xs` through `.rgrm-stack--gap-xl`).
+
+Use `@rgrmdesign/rgrm-ds-react` or `@rgrmdesign/rgrm-ds-elements` when you prefer a
+framework wrapper that applies these classes for you.
+
+## Install
+
+<Source language='bash' code={stackCssInstallSnippet()} />
+
+## Setup
+
+Import tokens and the stylesheet once in your app entry.
+
+<Source language='tsx' code={stackCssSetupSnippet()} />
+
+## Classes
+
+<ArgTypes of={CssStories} include={stackCssClassArgNames} />
+
+## No gap
+
+<Canvas of={CssStories.Default} />
+
+## Extra small
+
+<Canvas of={CssStories.GapXs} />
+
+## Small
+
+<Canvas of={CssStories.GapSm} />
+
+## Medium
+
+<Canvas of={CssStories.GapMd} />
+
+## Large
+
+<Canvas of={CssStories.GapLg} />
+
+## Extra large
+
+<Canvas of={CssStories.GapXl} />
