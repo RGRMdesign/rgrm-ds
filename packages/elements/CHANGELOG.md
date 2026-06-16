@@ -1,5 +1,16 @@
 # @rgrmdesign/rgrm-ds-elements
 
+## 0.7.1
+
+### Patch Changes
+
+- [`c708362`](https://github.com/RGRMdesign/rgrm-ds/commit/c7083629428e2a5979b3fc2d29edf06ff8754c3a) - Update button typography and require `@rgrmdesign/rgrm-ds-tokens` >= 0.13.1.
+  - **Button** — inherit `font-size` from parent context instead of `--rgrm-scale-font-size-main`; apply `--rgrm-button-primary-font-weight` from component tokens
+  - Bump minimum `@rgrmdesign/rgrm-ds-tokens` peer dependency to >= 0.13.1 across CSS, React, and Elements packages
+
+- Updated dependencies [[`c708362`](https://github.com/RGRMdesign/rgrm-ds/commit/c7083629428e2a5979b3fc2d29edf06ff8754c3a)]:
+  - @rgrmdesign/rgrm-ds-css@0.7.1
+
 ## 0.7.0
 
 ### Minor Changes
