@@ -15,6 +15,6 @@ export default defineConfig({
   format: ['esm'],
   dts: true,
   sourcemap: true,
-  clean: true,
+  clean: !process.argv.includes('--watch'),
   external: ['react', 'react/jsx-runtime'],
 });
