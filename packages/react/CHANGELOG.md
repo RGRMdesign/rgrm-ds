@@ -1,5 +1,22 @@
 # @rgrmdesign/rgrm-ds-react
 
+## 0.7.0
+
+### Minor Changes
+
+- [`fe52469`](https://github.com/RGRMdesign/rgrm-ds/commit/fe5246995b2e539d9c8a6bf30ce7d3303b380389) - Add Link component for inline navigation styling.
+  - **Link** — inline anchor with underline driven by `--rgrm-link-*` component tokens (`@rgrmdesign/rgrm-ds-tokens` >= 0.13.0)
+  - `@rgrmdesign/rgrm-ds-core` — `linkClassNames()`
+  - `@rgrmdesign/rgrm-ds-css` — `.rgrm-link` BEM styles
+  - `@rgrmdesign/rgrm-ds-react` — `<Link>` component
+  - `@rgrmdesign/rgrm-ds-elements` — `<rgrm-link>` custom element
+
+### Patch Changes
+
+- Updated dependencies [[`fe52469`](https://github.com/RGRMdesign/rgrm-ds/commit/fe5246995b2e539d9c8a6bf30ce7d3303b380389)]:
+  - @rgrmdesign/rgrm-ds-core@0.6.0
+  - @rgrmdesign/rgrm-ds-css@0.7.0
+
 ## 0.6.0
 
 ### Minor Changes
