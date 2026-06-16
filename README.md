@@ -14,25 +14,34 @@ issues, propose features, or open a pull request.
 
 The design system is in early development. The architecture (monorepo, per-layer
 packages, design tokens) is in place; the component library is still small and growing.
+Published docs: **https://rgrmdesign.github.io/rgrm-ds/**
 
 **Available now**
 
-- Heading
-- Paragraph
-- Section
-- Button
+| Category     | Components                                      |
+| ------------ | ----------------------------------------------- |
+| Foundation   | Root, Fonts                                     |
+| Typography   | Heading, Paragraph                              |
+| Layout       | Section, Inline, Stack                          |
+| Interaction  | Button (`primary` variant)                      |
 
 **Next**
 
-- Expand the component library (e.g. Link, List, …)
+- Content: Link, List, Divider, Image
+- Interaction: Button variants (secondary, ghost) + disabled state
 
 **Later**
 
-- Broader theming, accessibility audit, and automated tests
+- Forms: Label, Input, Textarea, Field
+- Containers: Card, Alert
+- Complex UI: Nav, Tabs, Modal, Table
+- Platform: broader theming, accessibility audit, automated tests
 
-Phases (Now / Next / Later) are intentionally used instead of dates or versions so the
-roadmap stays accurate during rapid iteration. The **Available now** list is the source
-of truth for what actually ships today.
+Phases (Now / Next / Later) use priority order instead of dates or versions so the
+roadmap stays accurate during rapid iteration. The **Available now** table is the source
+of truth for what actually ships today. Planned work is tracked in
+[GitHub Issues](https://github.com/RGRMdesign/rgrm-ds/issues) — comment on an issue
+before starting work.
 
 ## Structure
 
@@ -59,7 +68,7 @@ barrel (`.`) that re-exports everything, so consumers keep fine-grained tree-sha
 and Web Component layers never duplicate it. It is **published to npm** because `react`
 and `elements` depend on it at runtime (it is not bundled into them), so it ships as a
 transitive dependency — most apps never install `core` directly. The packages only _use_
-the token custom properties (`var(--font-size-h1)`, …); the tokens themselves are a
+the token custom properties (`var(--rgrm-theme-text)`, …); the tokens themselves are a
 **peer dependency** so they are loaded exactly once by the consuming app.
 
 ## Requirements
@@ -150,6 +159,7 @@ To run the same checks in CI via Chromatic:
 | `pnpm build:packages`          | Builds only the publishable `packages/*`.           |
 | `pnpm clean`                   | Removes build output and caches.                    |
 | `pnpm format` / `format:check` | Prettier across the repo.                           |
+| `pnpm lint:css` / `lint:css:fix` | Stylelint across CSS files.                       |
 | `pnpm changeset`               | Record a changeset for the next release.            |
 | `pnpm version-packages`        | Apply changesets: bump versions + changelogs.       |
 | `pnpm release`                 | Build packages then `changeset publish` to npm.     |
