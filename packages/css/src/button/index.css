@@ -13,7 +13,8 @@
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
-  font-size: var(--rgrm-scale-font-size-main);
+  font-size: inherit;
+  font-weight: var(--rgrm-button-primary-font-weight, inherit);
   gap: 0.5em;
   justify-content: center;
   text-align: center;
