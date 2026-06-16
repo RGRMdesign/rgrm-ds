@@ -1,0 +1,34 @@
+/**
+ * Link for the RGRM design system.
+ * Consumes component tokens from @rgrmdesign/rgrm-ds-tokens.
+ *
+ * Component tokens in v0.13+ (e.g. `--rgrm-link-color`, underline thickness/offset, and
+ * per-state `text-decoration-line`).
+ */
+
+.rgrm-link {
+  color: var(--rgrm-link-color, inherit);
+  cursor: pointer;
+  text-decoration-line: var(--rgrm-link-text-decoration-line, underline);
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: var(--rgrm-link-text-decoration-thickness, from-font);
+  text-underline-offset: var(--rgrm-link-text-underline-offset, 0.15em);
+  transition:
+    color 0.15s ease,
+    text-decoration-line 0.15s ease;
+}
+
+.rgrm-link:hover {
+  color: var(--rgrm-link-color-hover, currentColor);
+  text-decoration-line: var(--rgrm-link-text-decoration-line-hover, none);
+}
+
+.rgrm-link:active {
+  color: var(--rgrm-link-color-active, currentColor);
+  text-decoration-line: var(--rgrm-link-text-decoration-line-active, none);
+}
+
+.rgrm-link:focus-visible {
+  outline: 2px solid var(--rgrm-theme-button-primary-background-focus-visible, currentColor);
+  outline-offset: 2px;
+}

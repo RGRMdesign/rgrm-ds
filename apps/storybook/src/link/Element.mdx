@@ -1,0 +1,30 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { linkElementAttributeArgNames } from './fixtures';
+import * as ElementStories from './Link.element.stories';
+import { linkElementInstallSnippet, linkElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name='Documentation' />
+
+# Web component
+
+Custom element via `@rgrmdesign/rgrm-ds-elements/link`. Renders an inner `<a>` and proxies
+common anchor attributes (`href`, `target`, `rel`, …).
+
+## Install
+
+<Source language='bash' code={linkElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the element once in your app entry.
+
+<Source language='tsx' code={linkElementSetupSnippet()} />
+
+## Attributes
+
+<ArgTypes of={ElementStories} include={linkElementAttributeArgNames} />
+
+## Example
+
+<Canvas of={ElementStories.Default} />

@@ -1,4 +1,4 @@
-import { Paragraph } from '@rgrmdesign/rgrm-ds-react';
+import { Link, Paragraph } from '@rgrmdesign/rgrm-ds-react';
 
 export function ParagraphDemo() {
   return (
@@ -9,6 +9,10 @@ export function ParagraphDemo() {
       <Paragraph>
         Default body paragraph (React). The quick brown fox jumps over the lazy dog while typography
         scales with the design tokens.
+      </Paragraph>
+      <Paragraph>
+        Inline link example: <Link href='https://example.com'>Voorbeeld link</Link> inside body
+        copy.
       </Paragraph>
       <Paragraph size='small'>Small paragraph (React) for captions and fine print.</Paragraph>
     </>

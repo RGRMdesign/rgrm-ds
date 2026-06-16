@@ -26,6 +26,10 @@
       "types": "./dist/inline/index.d.ts",
       "import": "./dist/inline/index.js"
     },
+    "./link": {
+      "types": "./dist/link/index.d.ts",
+      "import": "./dist/link/index.js"
+    },
     "./paragraph": {
       "types": "./dist/paragraph/index.d.ts",
       "import": "./dist/paragraph/index.js"

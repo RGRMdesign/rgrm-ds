@@ -84,12 +84,16 @@ These are the main levers for brand colours and surfaces. Common variables:
 | `--rgrm-theme-button-primary-background`       | Primary button fill       |
 | `--rgrm-theme-button-primary-background-hover` | Primary button hover      |
 | `--rgrm-theme-button-primary-color`            | Primary button label      |
-| `--rgrm-theme-link-color`                      | Inline links              |
 | `--rgrm-theme-selection-background`            | Text selection highlight  |
 
 The full set lives in `@rgrmdesign/rgrm-ds-tokens` (generated from Figma). Inspect
 `dist/css/root.css` and `dist/css/theme-brand.css` in the tokens package for every
 `--rgrm-theme-*` name.
+
+Link styling is driven by **component tokens** (Link):
+`--rgrm-link-color`, `--rgrm-link-color-hover`, `--rgrm-link-color-active`, plus underline
+controls `--rgrm-link-text-underline-offset` and
+`--rgrm-link-text-decoration-thickness` (`--rgrm-link-text-decoration-line*`).
 
 Component tokens (e.g. `--rgrm-button-primary-background-color`) are wired to semantic
 tokens inside the token bundle. Overriding `--rgrm-theme-*` is enough for buttons and

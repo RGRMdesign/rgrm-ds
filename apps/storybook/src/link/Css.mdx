@@ -1,0 +1,29 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { linkCssClassArgNames } from './fixtures';
+import * as CssStories from './Link.css.stories';
+import { linkCssInstallSnippet, linkCssSetupSnippet } from './snippets';
+
+<Meta of={CssStories} name='Documentation' />
+
+# CSS
+
+Vanilla HTML via `@rgrmdesign/rgrm-ds-css/link`. Apply `.rgrm-link` on a native `<a>`.
+
+## Install
+
+<Source language='bash' code={linkCssInstallSnippet()} />
+
+## Setup
+
+Import tokens and the stylesheet once in your app entry.
+
+<Source language='tsx' code={linkCssSetupSnippet()} />
+
+## Classes
+
+<ArgTypes of={CssStories} include={linkCssClassArgNames} />
+
+## Example
+
+<Canvas of={CssStories.Default} />

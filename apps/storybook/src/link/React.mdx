@@ -1,0 +1,30 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { linkReactPropArgNames } from './fixtures';
+import * as ReactStories from './Link.react.stories';
+import { linkReactInstallSnippet, linkReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name='Documentation' />
+
+# React
+
+React wrapper via `@rgrmdesign/rgrm-ds-react/link`. Renders a native `<a>` with the
+`.rgrm-link` class.
+
+## Install
+
+<Source language='bash' code={linkReactInstallSnippet()} />
+
+## Setup
+
+Import tokens and the component once in your app entry.
+
+<Source language='tsx' code={linkReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={linkReactPropArgNames} />
+
+## Example
+
+<Canvas of={ReactStories.Default} />
