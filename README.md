@@ -22,12 +22,13 @@ Published docs: **https://rgrmdesign.github.io/rgrm-ds/**
 | ----------- | -------------------------- |
 | Foundation  | Root, Fonts                |
 | Typography  | Heading, Paragraph         |
+| Content     | Link                       |
 | Layout      | Section, Inline, Stack     |
 | Interaction | Button (`primary` variant) |
 
 **Next**
 
-- Content: Link, List, Divider, Image
+- Content: List, Divider, Image
 - Interaction: Button variants (secondary, ghost) + disabled state
 
 **Later**
