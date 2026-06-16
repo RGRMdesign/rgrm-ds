@@ -6,11 +6,7 @@ import '@rgrmdesign/rgrm-ds-elements/stack';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
 
-import {
-  stackElementArgTypes,
-  stackFixtures,
-  type StackStoryArgs,
-} from './fixtures';
+import { stackElementArgTypes, stackFixtures, type StackStoryArgs } from './fixtures';
 import { stackDocsSource, stackElementUsageSnippet } from './snippets';
 
 const meta = {

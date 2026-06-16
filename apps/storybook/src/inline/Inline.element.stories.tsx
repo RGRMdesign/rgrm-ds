@@ -4,11 +4,7 @@ import '@rgrmdesign/rgrm-ds-elements/inline';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
 
-import {
-  inlineElementArgTypes,
-  inlineFixtures,
-  type InlineStoryArgs,
-} from './fixtures';
+import { inlineElementArgTypes, inlineFixtures, type InlineStoryArgs } from './fixtures';
 import { inlineDocsSource, inlineElementUsageSnippet } from './snippets';
 
 function demoButton(label: string) {

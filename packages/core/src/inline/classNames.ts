@@ -8,5 +8,7 @@ export function inlineClassNames(
   { gap = '-' }: InlineClassNamesOptions = {},
   className?: string,
 ): string {
-  return ['rgrm-inline', gap !== '-' && `rgrm-inline--gap-${gap}`, className].filter(Boolean).join(' ');
+  return ['rgrm-inline', gap !== '-' && `rgrm-inline--gap-${gap}`, className]
+    .filter(Boolean)
+    .join(' ');
 }

@@ -8,5 +8,7 @@ export function stackClassNames(
   { gap = '-' }: StackClassNamesOptions = {},
   className?: string,
 ): string {
-  return ['rgrm-stack', gap !== '-' && `rgrm-stack--gap-${gap}`, className].filter(Boolean).join(' ');
+  return ['rgrm-stack', gap !== '-' && `rgrm-stack--gap-${gap}`, className]
+    .filter(Boolean)
+    .join(' ');
 }
