@@ -7,7 +7,7 @@ import { rootArgTypes, rootFixtures, type RootStoryArgs } from './fixtures';
 import { rootDocsSource, rootElementUsageSnippet } from './snippets';
 
 const meta = {
-  title: 'Foundations/Root/Element',
+  title: 'Foundations/Root/Web Components',
   parameters: {
     docs: {
       description: {

@@ -7,7 +7,7 @@ import { buttonElementArgTypes, buttonFixtures, type ButtonStoryArgs } from './f
 import { buttonDocsSource, buttonElementUsageSnippet } from './snippets';
 
 const meta = {
-  title: 'Actions/Button/Element',
+  title: 'Actions/Button/Web Components',
   parameters: {
     docs: {
       description: {

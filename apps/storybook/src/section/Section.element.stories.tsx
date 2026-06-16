@@ -14,7 +14,7 @@ import {
 import { sectionDocsSource, sectionElementUsageSnippet } from './snippets';
 
 const meta = {
-  title: 'Wrappers/Section/Element',
+  title: 'Wrappers/Section/Web Components',
   parameters: {
     layout: 'fullscreen',
     docs: {

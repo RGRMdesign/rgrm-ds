@@ -12,7 +12,7 @@ function demoButton(label: string) {
 }
 
 const meta = {
-  title: 'Wrappers/Inline/Element',
+  title: 'Wrappers/Inline/Web Components',
   parameters: {
     docs: {
       description: {

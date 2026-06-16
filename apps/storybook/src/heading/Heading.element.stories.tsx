@@ -7,7 +7,7 @@ import { headingElementArgTypes, headingFixtures, type HeadingStoryArgs } from '
 import { headingDocsSource, headingElementUsageSnippet } from './snippets';
 
 const meta = {
-  title: 'Typography/Heading/Element',
+  title: 'Typography/Heading/Web Components',
   parameters: {
     docs: {
       description: {

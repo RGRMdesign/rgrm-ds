@@ -11,7 +11,7 @@ import {
 import { linkDocsSource, linkElementUsageSnippet } from './snippets';
 
 const meta = {
-  title: 'Content/Link/Element',
+  title: 'Content/Link/Web Components',
   parameters: {
     docs: {
       description: {

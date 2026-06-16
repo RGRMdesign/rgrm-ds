@@ -10,7 +10,7 @@ import { stackElementArgTypes, stackFixtures, type StackStoryArgs } from './fixt
 import { stackDocsSource, stackElementUsageSnippet } from './snippets';
 
 const meta = {
-  title: 'Wrappers/Stack/Element',
+  title: 'Wrappers/Stack/Web Components',
   parameters: {
     docs: {
       description: {

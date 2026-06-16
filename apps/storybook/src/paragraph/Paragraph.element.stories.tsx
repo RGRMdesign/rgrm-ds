@@ -7,7 +7,7 @@ import { paragraphElementArgTypes, paragraphFixtures, type ParagraphStoryArgs } 
 import { paragraphDocsSource, paragraphElementUsageSnippet } from './snippets';
 
 const meta = {
-  title: 'Typography/Paragraph/Element',
+  title: 'Typography/Paragraph/Web Components',
   parameters: {
     docs: {
       description: {
