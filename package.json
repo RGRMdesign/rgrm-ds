@@ -24,6 +24,7 @@
     "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,mdx,html,yaml,yml}\"",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "stylelint \"**/*.css\" --fix",
+    "prepare": "husky",
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install --lockfile-only",
     "release": "pnpm build:packages && changeset publish"
@@ -36,7 +37,16 @@
     "stylelint": "^17.13.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-order": "^8.1.1",
-    "turbo": "^2.9.16"
+    "turbo": "^2.9.16",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,mdx,html,yaml,yml}": "prettier --write",
+    "*.css": [
+      "prettier --write",
+      "stylelint --fix"
+    ]
   },
   "pnpm": {
     "onlyBuiltDependencies": [

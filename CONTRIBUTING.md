@@ -34,7 +34,7 @@ Requirements: Node.js 24.x and pnpm 10.33.0 (see [`.nvmrc`](.nvmrc)).
 ## Pull request workflow
 
 1. Fork the repository and create a branch from `main`.
-2. Make your changes. Run `pnpm format` and `pnpm lint:css` before opening the PR.
+2. Make your changes. Pre-commit hooks auto-format staged files; CI still runs `format:check` and `lint:css` as a safety net.
 3. Add a **changeset** for any change that should ship to npm:
 
    ```bash
