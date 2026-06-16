@@ -1,5 +1,23 @@
 # @rgrmdesign/rgrm-ds-elements
 
+## 0.6.0
+
+### Minor Changes
+
+- [`4ebf248`](https://github.com/RGRMdesign/rgrm-ds/commit/4ebf248f12031e08de1371a2181ddab68893446f) - Add Inline and Stack layout components.
+  - **Inline** — horizontal flex row with optional gap (`-`, `sm`, `md`, `lg`) using `--rgrm-scale-space-*` tokens
+  - **Stack** — vertical flex column with optional gap (`-`, `xs`, `sm`, `md`, `lg`, `xl`) using `--rgrm-scale-space-*` tokens
+  - `@rgrmdesign/rgrm-ds-core` — `inlineClassNames()`, `stackClassNames()`, and gap types
+  - `@rgrmdesign/rgrm-ds-css` — `.rgrm-inline` and `.rgrm-stack` BEM styles
+  - `@rgrmdesign/rgrm-ds-react` — `<Inline>` and `<Stack>` components
+  - `@rgrmdesign/rgrm-ds-elements` — `<rgrm-inline>` and `<rgrm-stack>` custom elements
+
+### Patch Changes
+
+- Updated dependencies [[`4ebf248`](https://github.com/RGRMdesign/rgrm-ds/commit/4ebf248f12031e08de1371a2181ddab68893446f)]:
+  - @rgrmdesign/rgrm-ds-core@0.5.0
+  - @rgrmdesign/rgrm-ds-css@0.6.0
+
 ## 0.5.7
 
 ### Patch Changes
