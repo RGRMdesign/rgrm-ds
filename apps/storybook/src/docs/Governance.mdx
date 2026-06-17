@@ -43,8 +43,12 @@ matching docs:
    a build step and a `./<name>` export.
 3. **React / Elements** — wrappers that re-use the core logic and CSS classes, each with
    a `./<name>` sub-path export.
-4. **Sandboxes** — a demo in each matching sandbox app.
-5. **Storybook** — an Overview plus React, CSS, and Web component documentation page.
+4. **Sandboxes** — a demo in all three sandbox apps (`sandbox-css`, `sandbox-react`,
+   `sandbox-element`).
+5. **Storybook** — Overview plus CSS, React, and Web Components docs and stories,
+   `fixtures.ts`, `snippets.ts`, and a `storySort` entry in `preview.tsx`.
+6. **Release** — changeset (minor for new components) and roadmap table updated when the
+   component ships.
 
 ## Accessibility
 
@@ -61,5 +65,6 @@ matching docs:
 - Use **Node.js 24.x** (see `.nvmrc`) and the pinned **pnpm** version (`packageManager`
   in the root `package.json`).
 - Run `pnpm format` (Prettier) before committing.
-- Add or update the Storybook page and sandbox demo alongside any component change.
-- See the repository `README.md` for the full "Adding a new component" walkthrough.
+- Add or update Storybook docs and all three sandbox demos alongside any component change.
+- See `README.md` (Adding a new component) and `.cursor/commands/build-component.md` for the
+  full checklist.

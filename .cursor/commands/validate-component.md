@@ -5,13 +5,19 @@ Run full validation for a component change. Report pass/fail for each check.
 ## Commands
 
 ```bash
+pnpm validate:component
+```
+
+Or run individually:
+
+```bash
 pnpm format:check
 pnpm lint:css
 pnpm build:packages
 pnpm build-storybook
 ```
 
-All four must pass.
+All four must pass. `build-storybook` is not in CI — Chromatic runs on the PR, but agents must verify locally before opening a PR.
 
 ## Layer checks
 
@@ -25,6 +31,7 @@ All four must pass.
 - [ ] No hardcoded colours in CSS (only `var(--rgrm-*, fallback)`)
 - [ ] No non-English demo or doc strings (fixtures, sandboxes, Storybook MDX)
 - [ ] Changeset in `.changeset/` (minor for new component)
+- [ ] `README.md` roadmap updated (component in **Available now**, removed from **Next** if listed)
 
 ## PR checklist
 

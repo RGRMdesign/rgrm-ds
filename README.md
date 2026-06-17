@@ -147,23 +147,24 @@ To run the same checks in CI via Chromatic:
 
 ## Scripts
 
-| Script                           | Description                                         |
-| -------------------------------- | --------------------------------------------------- |
-| `pnpm dev`                       | Turbo: package watch builds + all sandboxes.        |
-| `pnpm dev:css`                   | Only `sandbox-css`.                                 |
-| `pnpm dev:react`                 | Only `sandbox-react`.                               |
-| `pnpm dev:element`               | Only `sandbox-element`.                             |
-| `pnpm storybook`                 | Storybook dev server (`apps/storybook`, port 6006). |
-| `pnpm build-storybook`           | Static Storybook build.                             |
-| `pnpm chromatic`                 | Publish Storybook snapshots to Chromatic (local).   |
-| `pnpm build`                     | Builds every package and all sandboxes.             |
-| `pnpm build:packages`            | Builds only the publishable `packages/*`.           |
-| `pnpm clean`                     | Removes build output and caches.                    |
-| `pnpm format` / `format:check`   | Prettier across the repo.                           |
-| `pnpm lint:css` / `lint:css:fix` | Stylelint across CSS files.                         |
-| `pnpm changeset`                 | Record a changeset for the next release.            |
-| `pnpm version-packages`          | Apply changesets: bump versions + changelogs.       |
-| `pnpm release`                   | Build packages then `changeset publish` to npm.     |
+| Script                           | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `pnpm dev`                       | Turbo: package watch builds + all sandboxes.         |
+| `pnpm dev:css`                   | Only `sandbox-css`.                                  |
+| `pnpm dev:react`                 | Only `sandbox-react`.                                |
+| `pnpm dev:element`               | Only `sandbox-element`.                              |
+| `pnpm storybook`                 | Storybook dev server (`apps/storybook`, port 6006).  |
+| `pnpm build-storybook`           | Static Storybook build.                              |
+| `pnpm chromatic`                 | Publish Storybook snapshots to Chromatic (local).    |
+| `pnpm build`                     | Builds every package and all sandboxes.              |
+| `pnpm build:packages`            | Builds only the publishable `packages/*`.            |
+| `pnpm clean`                     | Removes build output and caches.                     |
+| `pnpm format` / `format:check`   | Prettier across the repo.                            |
+| `pnpm lint:css` / `lint:css:fix` | Stylelint across CSS files.                          |
+| `pnpm validate:component`        | Full component validation (format, lint, build, SB). |
+| `pnpm changeset`                 | Record a changeset for the next release.             |
+| `pnpm version-packages`          | Apply changesets: bump versions + changelogs.        |
+| `pnpm release`                   | Build packages then `changeset publish` to npm.      |
 
 ## Publishing to npm (Changesets)
 
@@ -247,5 +248,15 @@ packages per component.
    duplicate BEM class strings in wrappers.
 3. **React / Elements**: add `packages/<react|elements>/src/<name>/`, re-export it from
    `src/index.ts`, register `src/<name>/index.ts` as a tsup entry, and add a `./<name>`
-   sub-path export.
-4. Add demos to the matching sandbox app(s) and a Storybook page.
+   sub-path export (Elements: `sideEffects` + `registerElements.ts`).
+4. **Sandboxes** — demo in all three: `sandbox-css`, `sandbox-react` (`<Root>`), and
+   `sandbox-element`.
+5. **Storybook** — Overview + CSS + React + Web Components docs and stories, `fixtures.ts`,
+   `snippets.ts`, and a `storySort` entry in `preview.tsx`.
+6. **Release** — `pnpm changeset` (minor for new components), token proposals in
+   `docs/token-proposals/<name>.md` when needed, and update the [roadmap](#roadmap) table.
+
+For the full checklist (including validation and PR steps), see
+[`.cursor/commands/build-component.md`](.cursor/commands/build-component.md) or run
+`/build-component` in Cursor. Cloud agents: add label `agent:build` on a complete issue
+(see [`docs/cursor-automation-build-component.md`](docs/cursor-automation-build-component.md)).

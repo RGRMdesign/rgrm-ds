@@ -96,7 +96,7 @@ Also update `apps/storybook/.storybook/preview.tsx` **storySort** under the corr
 - Story title: `{Category}/{Component}/{CSS|React|Web Components}`
 - Overview MDX: `<Meta title='{Category}/{Component}/Overview' name='Overview' />`
 - Figma link via `FIGMA_LIBRARY_URL` from `apps/storybook/src/docs/links.ts`
-- Category mapping: Foundation → `Foundations`, Layout → `Wrappers`, Interaction → `Actions`
+- Category mapping: Foundation → `Foundations`, Layout → `Wrappers`, Interaction → `Actions`, Forms → `Forms`
 
 ## Sandboxes
 
@@ -115,13 +115,19 @@ Also update `apps/storybook/.storybook/preview.tsx` **storySort** under the corr
 ## Validation
 
 ```bash
+pnpm validate:component
+```
+
+Or individually:
+
+```bash
 pnpm format:check
 pnpm lint:css
 pnpm build:packages
 pnpm build-storybook
 ```
 
-Use `/build-component` for the full build checklist; use `/validate-component` before opening a PR.
+Use `/build-component` for the full build checklist; use `/validate-component` before opening a PR. `build-storybook` is not in CI — Chromatic runs on the PR.
 
 ## Changesets & release
 
@@ -141,10 +147,10 @@ Pre-commit: Husky runs lint-staged (Prettier + Stylelint on staged files).
 
 ## Cloud agent workflow
 
-1. GitHub issue with label `agent:build` describes the component
-2. Cloud agent runs `/build-component` command
+1. GitHub issue with a complete spec — add label `agent:build` (repository owner; triggers webhook — see `docs/cursor-automation-build-component.md`)
+2. Cloud agent runs `/build-component`, then `/validate-component`
 3. Agent opens PR with layer checklist filled in
-4. Local review: `@ds-architect`, `@a11y-reviewer`, `@react-export`, `@element-export`
+4. Local review: `/review-pr` or `@ds-architect`, `@a11y-reviewer`, `@react-export`, `@element-export`
 
 See `docs/pilot-badge.md` for the first pilot (Badge component).
 
@@ -152,7 +158,7 @@ See `docs/pilot-badge.md` for the first pilot (Badge component).
 
 Cloud agents use `.cursor/environment.json`. The `install` script activates **Node 24** via nvm (reads `.nvmrc`, matches `package.json` `engines`). The repo sets `engine-strict=true` (`.npmrc`), so pnpm hard-fails with `ERR_PNPM_UNSUPPORTED_ENGINE` under any other Node major. If `install` or `start` fails with `ERR_PNPM_UNSUPPORTED_ENGINE`, re-run **Start Setup Agent** on the [Cloud Agents dashboard](https://cursor.com/dashboard?tab=cloud-agents) and save a fresh snapshot.
 
-**Node-version PATH gotcha (important):** the VM ships a `/exec-daemon/node` shim (Node 22) that sits **earlier** in `PATH` than the nvm install, so a fresh terminal's `which node` reports v22 even after `nvm use 24` — and any `pnpm`/`turbo` command then fails the engine check. In each new shell, put the active nvm Node first in `PATH` before running pnpm:
+**Node-version PATH gotcha (important):** the VM ships a `/exec-daemon/node` shim (Node 22) that sits **earlier** in `PATH` than the nvm install. `.cursor/environment.json` prepends nvm Node in `install`, `start`, and the Storybook terminal — but **new shells** in the cloud VM still need this before running pnpm:
 
 ```bash
 export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 24
@@ -163,10 +169,7 @@ node --version   # must print v24.x before running pnpm
 After environment bootstrap succeeds, verify before opening a PR:
 
 ```bash
-pnpm format:check
-pnpm lint:css
-pnpm build:packages
-pnpm build-storybook
+pnpm validate:component
 ```
 
 Use `/validate-component` for the full checklist. Storybook runs in the cloud VM terminal (`pnpm storybook -- --ci`) for visual and Accessibility panel checks.

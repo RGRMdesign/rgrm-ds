@@ -22,6 +22,7 @@ Seven files per component: `Overview.mdx`, `Css.mdx`, `React.mdx`, `Element.mdx`
 | Content | Content |
 | Layout | Wrappers |
 | Interaction | Actions |
+| Forms | Forms |
 
 ## Overview MDX
 

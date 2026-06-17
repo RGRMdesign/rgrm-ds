@@ -1,6 +1,6 @@
 name: Trigger component build agent
 
-# Starts a Cursor automation (webhook) when a maintainer adds label agent:build.
+# Starts a Cursor automation (webhook) when the repository owner adds label agent:build.
 # Secrets: CURSOR_AUTOMATION_WEBHOOK_URL, CURSOR_AUTOMATION_WEBHOOK_TOKEN
 # Setup: docs/cursor-automation-build-component.md
 
@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: agent-build-${{ github.event.issue.number }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   trigger-cursor-automation:

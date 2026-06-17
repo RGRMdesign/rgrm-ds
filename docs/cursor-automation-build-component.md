@@ -35,9 +35,11 @@ The workflow `.github/workflows/agent-build.yml` posts to the webhook when the *
 ## 3. Usage
 
 1. Open a **New component** issue with a complete spec
-2. Add label `agent:build` (maintainers only — requires Triage+ on the repo)
+2. Add label `agent:build` (repository owner only)
 3. GitHub Action triggers the Cursor automation
-4. Cloud agent follows `.cursor/commands/build-component.md` and opens a PR with `Closes #<issue>`
+4. Cloud agent follows `.cursor/commands/build-component.md`, runs `/validate-component`, and opens a PR with `Closes #<issue>`
+
+**Fallback (local/debug):** start a cloud agent manually with `/build-component` and link the issue — no webhook required.
 
 ## Agent instructions
 
@@ -51,11 +53,12 @@ If the issue spec is incomplete, comment on the issue and stop — do not open a
 
 Read `AGENTS.md` (including **Language**). Follow `.cursor/commands/build-component.md` end to end for GitHub issue #<issue.number>.
 
+Run `/validate-component` (or `pnpm validate:component`) before opening the PR — all checks must pass.
+
 All repository content must be **English** (fixtures, sandboxes, Storybook, snippets, PR text).
 
-Open a PR against `main`:
+Open a PR against `main` using the PR template: fill **Agent metadata** and **Layer checklist**; body ends with `Closes #<issue.number>`.
 
-- Title: `feat(<kebab-name>): add <PascalName> component`
-- Body ends with: `Closes #<issue.number>`
+Do not self-merge.
 
 ---

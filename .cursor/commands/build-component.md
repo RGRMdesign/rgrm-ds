@@ -54,12 +54,15 @@ Issue body or spec with: component name, Storybook category, variants, API per l
 
 - [ ] `pnpm changeset` → minor for css (+ core/react/elements if changed)
 - [ ] `pnpm format`
-- [ ] Run `/validate-component`
+- [ ] Run `/validate-component` (or `pnpm validate:component`) — all checks must pass
 - [ ] Update `README.md` roadmap table (move component to **Available now**, remove from **Next** if listed)
-- [ ] Open PR against `main` with template filled in:
+- [ ] Open PR against `main` using the PR template:
   - Title: `feat(<name>): add <Name> component`
+  - Fill **Agent metadata** (issue number, token proposals, Chromatic)
+  - Complete the **Layer checklist**
   - Body ends with `Closes #<issue-number>` so GitHub links and auto-closes the issue
   - Never publish to npm
+- [ ] Do not self-merge — maintainer runs `/review-pr`
 
 ## Temporary tokens
 

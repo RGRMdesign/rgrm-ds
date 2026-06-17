@@ -8,7 +8,7 @@
 - Token proposals: docs/token-proposals/<component>.md (yes/no)
 - Chromatic: new/changed snapshots expected (yes/no)
 
-## Laag-checklist
+## Layer checklist
 
 - [ ] CSS — src + export + lightningcss build rule
 - [ ] Core — `classNames.ts` + tsup entry + export
@@ -18,6 +18,7 @@
 - [ ] registerElements.ts updated
 - [ ] sandbox-css / sandbox-react (`<Root>`) / sandbox-element
 - [ ] Changeset (minor) in `.changeset/`
+- [ ] `README.md` roadmap updated (if new component)
 
 ## Checklist
 

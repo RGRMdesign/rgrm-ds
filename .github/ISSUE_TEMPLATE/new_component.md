@@ -33,11 +33,11 @@ Attributes on `<rgrm-<name>>`:
 
 ## Core scope
 
-Every component gets a core module. Default is **classNames only** (like Link). Check extra items only when applicable:
+Every component gets a core module. Pick one:
 
-- [ ] classNames() only (default — leave unchecked if nothing extra)
-- [ ] - variant / size types and modifiers (like Button, Paragraph)
-- [ ] - shared constants or non-trivial logic — describe:
+- [ ] **classNames only** (default — like Link)
+- [ ] **Variants / sizes** — types and modifiers (like Button, Paragraph)
+- [ ] **Shared logic** — constants or non-trivial logic (describe below):
 
 ## Acceptance criteria
 
@@ -56,4 +56,10 @@ Figma link or screenshots (optional):
 
 ## Agent build
 
-Add label `agent:build` when ready for a cloud agent to implement. Then start a cloud agent with `/build-component` and link this issue.
+When the spec above is complete, add label `agent:build` — the GitHub Action triggers the
+Cursor automation webhook (see
+[`docs/cursor-automation-build-component.md`](../../docs/cursor-automation-build-component.md)).
+Repository owner only.
+
+**Fallback (local/debug):** start a cloud agent manually with `/build-component` and link
+this issue.

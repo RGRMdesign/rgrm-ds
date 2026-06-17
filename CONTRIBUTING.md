@@ -49,7 +49,10 @@ Requirements: Node.js 24.x and pnpm 10.33.0 (see [`.nvmrc`](.nvmrc)).
 
 ### What we expect in a PR
 
-- **Components**: follow the steps in [Adding a new component](README.md#adding-a-new-component) — include CSS, framework layers as appropriate, a Storybook story, and sandbox demos.
+- **Components**: follow [Adding a new component](README.md#adding-a-new-component) — all
+  three layers (CSS, React, Web Components), core `classNames()`, all three sandboxes,
+  full Storybook docs, and a changeset. Full checklist:
+  [`.cursor/commands/build-component.md`](.cursor/commands/build-component.md).
 - **Accessibility**: check the Storybook **Accessibility** panel on affected stories.
 - **Visual changes**: Chromatic will post a diff on your PR; maintainers review and accept intentional changes.
 - **Publishing**: contributors do not publish to npm. Merging to `main` triggers the release workflow (see [Publishing to npm](README.md#publishing-to-npm-changesets) in the README).

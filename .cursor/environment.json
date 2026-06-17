@@ -1,10 +1,10 @@
 {
-  "install": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" && nvm install \"$(cat .nvmrc)\" && nvm use \"$(cat .nvmrc)\" && corepack enable && corepack prepare pnpm@10.33.0 --activate && pnpm install --frozen-lockfile",
-  "start": "pnpm build:packages",
+  "install": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" && nvm install \"$(cat .nvmrc)\" && nvm use \"$(cat .nvmrc)\" && export PATH=\"$(dirname \"$(nvm which current)\"):$PATH\" && corepack enable && corepack prepare pnpm@10.33.0 --activate && pnpm install --frozen-lockfile",
+  "start": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" && nvm use \"$(cat .nvmrc)\" && export PATH=\"$(dirname \"$(nvm which current)\"):$PATH\" && pnpm build:packages",
   "terminals": [
     {
       "name": "storybook",
-      "command": "pnpm storybook -- --ci"
+      "command": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" && nvm use \"$(cat .nvmrc)\" && export PATH=\"$(dirname \"$(nvm which current)\"):$PATH\" && pnpm storybook -- --ci"
     }
   ]
 }

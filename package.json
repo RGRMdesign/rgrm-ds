@@ -24,6 +24,7 @@
     "format:check": "prettier --check \"**/*.{css,js,jsx,ts,tsx,json,md,mdx,html,yaml,yml}\"",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "stylelint \"**/*.css\" --fix",
+    "validate:component": "pnpm format:check && pnpm lint:css && pnpm build:packages && pnpm build-storybook",
     "prepare": "husky",
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install --lockfile-only",
