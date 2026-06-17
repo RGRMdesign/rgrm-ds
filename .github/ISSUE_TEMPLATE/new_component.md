@@ -56,4 +56,4 @@ Figma link or screenshots (optional):
 
 ## Agent build
 
-Add label `agent:build` when ready for a cloud agent to implement. Then start a cloud agent with `@build-component` and link this issue.
+Add label `agent:build` when ready for a cloud agent to implement. Then start a cloud agent with `/build-component` and link this issue.

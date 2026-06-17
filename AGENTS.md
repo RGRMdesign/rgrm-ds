@@ -117,7 +117,7 @@ pnpm build:packages
 pnpm build-storybook
 ```
 
-Use slash command `/validate-component` or skill `@build-component` for the full checklist.
+Use `/build-component` for the full build checklist; use `/validate-component` before opening a PR.
 
 ## Changesets & release
 
@@ -138,7 +138,7 @@ Pre-commit: Husky runs lint-staged (Prettier + Stylelint on staged files).
 ## Cloud agent workflow
 
 1. GitHub issue with label `agent:build` describes the component
-2. Cloud agent runs `@build-component` skill
+2. Cloud agent runs `/build-component` command
 3. Agent opens PR with layer checklist filled in
 4. Local review: `@ds-architect`, `@a11y-reviewer`, `@react-export`, `@element-export`
 

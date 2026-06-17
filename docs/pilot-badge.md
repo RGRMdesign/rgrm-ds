@@ -44,7 +44,7 @@ Add label `agent:build` when the spec is complete.
 From Cursor, start a cloud agent with:
 
 ```
-@build-component
+/build-component
 
 Implement the component described in issue #<number>.
 Open a PR against main titled: feat(badge): add Badge component
@@ -81,4 +81,4 @@ Or use `/review-pr` to orchestrate.
 After the pilot succeeds, set up automation at [cursor.com/automations](https://cursor.com/automations):
 
 - Trigger: GitHub label `agent:build` on issue
-- Prompt: Read issue body, run `@build-component`, open PR
+- Prompt: Read issue body, run `/build-component`, open PR
