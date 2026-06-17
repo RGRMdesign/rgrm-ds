@@ -1,0 +1,22 @@
+/**
+ * Badge for the RGRM design system.
+ * Consumes component tokens from @rgrmdesign/rgrm-ds-tokens.
+ *
+ * Inline label/chip for short text (status, count, label). Single default variant.
+ */
+
+.rgrm-badge {
+  align-items: center;
+  background-color: var(--rgrm-badge-background-color, transparent);
+  border-radius: var(--rgrm-badge-border-radius, 0.25rem);
+  box-sizing: border-box;
+  color: var(--rgrm-badge-color, inherit);
+  display: inline-flex;
+  font-family: inherit;
+  font-size: var(--rgrm-badge-font-size, 0.75rem);
+  font-weight: var(--rgrm-badge-font-weight, 600);
+  line-height: var(--rgrm-badge-line-height, 1);
+  padding-block: var(--rgrm-badge-padding-block, 0.125rem);
+  padding-inline: var(--rgrm-badge-padding-inline, 0.5rem);
+  white-space: nowrap;
+}

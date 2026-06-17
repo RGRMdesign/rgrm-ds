@@ -1,0 +1,30 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { badgeReactPropArgNames } from './fixtures';
+import * as ReactStories from './Badge.react.stories';
+import { badgeReactInstallSnippet, badgeReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name='Documentation' />
+
+# React
+
+React wrapper via `@rgrmdesign/rgrm-ds-react/badge`. Renders a native `<span>` with the
+`.rgrm-badge` class.
+
+## Install
+
+<Source language='bash' code={badgeReactInstallSnippet()} />
+
+## Setup
+
+Import tokens and the component once in your app entry.
+
+<Source language='tsx' code={badgeReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={badgeReactPropArgNames} />
+
+## Example
+
+<Canvas of={ReactStories.Default} />
