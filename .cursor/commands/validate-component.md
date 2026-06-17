@@ -23,6 +23,7 @@ All four must pass.
 - [ ] `preview.tsx` storySort entry present
 - [ ] `registerElements.ts` includes the component
 - [ ] No hardcoded colours in CSS (only `var(--rgrm-*, fallback)`)
+- [ ] No non-English demo or doc strings (fixtures, sandboxes, Storybook MDX)
 - [ ] Changeset in `.changeset/` (minor for new component)
 
 ## PR checklist

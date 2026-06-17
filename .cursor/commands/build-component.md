@@ -38,6 +38,7 @@ Issue body or spec with: component name, Storybook category, variants, API per l
 
 ## Docs & demos
 
+- [ ] All user-facing copy in **English** (fixtures, stories, sandboxes, MDX, snippets) — match Button/Link examples
 - [ ] `docs/token-proposals/<name>.md` for new tokens
 - [ ] Storybook: `Overview.mdx` (FIGMA_LIBRARY_URL, "Choose an implementation")
 - [ ] `Css.mdx` + `<Name>.css.stories.tsx` (title: `{Category}/{Name}/CSS`)

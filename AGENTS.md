@@ -2,6 +2,10 @@
 
 Central entry point for Cursor agents (cloud and local) working in this repository.
 
+## Language
+
+All content in this repository is **English**: documentation, Storybook MDX, fixtures, snippets, sandbox demos, PR descriptions, and user-visible example strings (e.g. `"New"`, not `"Nieuw"`). Do not use Dutch or other languages unless an issue explicitly requires it.
+
 ## Canonical documentation
 
 Read these before changing components:
