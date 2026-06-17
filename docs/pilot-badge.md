@@ -76,9 +76,10 @@ Or use `/review-pr` to orchestrate.
 2. Update `rgrm-ds-tokens` repo → publish to npm
 3. Remove CSS fallbacks once tokens are published
 
-## Optional: Cursor Automation
+## Cursor Automation (webhook)
 
-After the pilot succeeds, set up automation at [cursor.com/automations](https://cursor.com/automations):
+GitHub Action + Cursor webhook automation — see `docs/cursor-automation-build-component.md`:
 
-- Trigger: GitHub label `agent:build` on issue
-- Prompt: Read issue body, run `/build-component`, open PR
+1. Create automation at [cursor.com/automations](https://cursor.com/automations) (webhook trigger, Composer 2.5)
+2. Add repo secrets `CURSOR_AUTOMATION_WEBHOOK_URL` and `CURSOR_AUTOMATION_WEBHOOK_TOKEN`
+3. Add label `agent:build` on a complete component issue → workflow triggers the cloud agent
