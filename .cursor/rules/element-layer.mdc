@@ -1,0 +1,30 @@
+---
+description: Web component conventions — light DOM, rgrm-* tags, sideEffects, registerElements
+globs: packages/elements/**
+alwaysApply: false
+---
+
+# Web Components layer
+
+Light DOM only — **never** `attachShadow`.
+
+## Pattern
+
+```ts
+// index.ts — CSS side-effect first
+import '@rgrmdesign/rgrm-ds-css/button';
+export { RGRM_BUTTON_TAG, RgrmButtonElement } from './button-element.js';
+```
+
+- Tag: `RGRM_<NAME>_TAG = 'rgrm-<name>'`
+- Inner element gets BEM classes via core `classNames()`
+- `observedAttributes` for all public HTML attributes
+- `customElements.define` in `index.ts`
+- Register in `apps/storybook/.storybook/registerElements.ts`
+
+## Package registration
+
+- tsup entry + `package.json` export + barrel
+- Add `"./dist/<name>/index.js"` to **`sideEffects`** array
+
+Reference: `packages/elements/src/button/`

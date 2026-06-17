@@ -1,0 +1,10 @@
+{
+  "install": "corepack enable && pnpm install --frozen-lockfile",
+  "start": "pnpm build:packages",
+  "terminals": [
+    {
+      "name": "storybook",
+      "command": "pnpm storybook -- --ci"
+    }
+  ]
+}

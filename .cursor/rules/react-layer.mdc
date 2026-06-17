@@ -1,0 +1,30 @@
+---
+description: React wrapper conventions — thin components, core classNames, sub-path exports
+globs: packages/react/**
+alwaysApply: false
+---
+
+# React layer
+
+Thin wrappers only. No CSS imports in component files — styles come via `@rgrmdesign/rgrm-ds-css` dependency.
+
+## Pattern
+
+```tsx
+import { buttonClassNames, type ButtonVariant } from '@rgrmdesign/rgrm-ds-core/button';
+
+export function Button({ variant = 'primary', className, children, ...rest }: ButtonProps) {
+  return (
+    <button className={buttonClassNames(variant, className)} {...rest}>
+      {buttonContent(children)}
+    </button>
+  );
+}
+```
+
+- Extend the correct HTML element type (`ButtonHTMLAttributes`, etc.)
+- Merge `className` via core `classNames()` — no inline styles
+- Wrap text children in `*_LABEL_CLASS` span when the CSS expects it (see Button)
+- Register: tsup entry, `package.json` export, barrel `src/index.ts`
+
+Reference: `packages/react/src/button/Button.tsx`

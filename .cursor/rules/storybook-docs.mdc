@@ -1,0 +1,36 @@
+---
+description: Storybook docs and stories — categories, titles, fixtures, storySort
+globs: apps/storybook/**
+alwaysApply: false
+---
+
+# Storybook
+
+Seven files per component: `Overview.mdx`, `Css.mdx`, `React.mdx`, `Element.mdx`, three `*.stories.tsx`, plus shared `fixtures.ts` and `snippets.ts`.
+
+## Titles
+
+- Stories: `{Category}/{Component}/{CSS|React|Web Components}` — use **"Web Components"**, not "Element"
+- Overview: `<Meta title='{Category}/{Component}/Overview' name='Overview' />`
+
+## Categories (README → sidebar)
+
+| Roadmap | Storybook |
+| ------- | --------- |
+| Foundation | Foundations |
+| Typography | Typography |
+| Content | Content |
+| Layout | Wrappers |
+| Interaction | Actions |
+
+## Overview MDX
+
+- Import `FIGMA_LIBRARY_URL` from `../docs/links`
+- Include "Choose an implementation" with links to all three layer docs
+- Preview canvas from CSS stories
+
+## storySort
+
+Add the component under the correct category in `apps/storybook/.storybook/preview.tsx`.
+
+Reference: `apps/storybook/src/button/` and `apps/storybook/src/link/Overview.mdx`

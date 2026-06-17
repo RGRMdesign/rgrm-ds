@@ -2,6 +2,23 @@
 
 <!-- What does this PR change and why? -->
 
+## Agent metadata
+
+- Issue: #
+- Token proposals: docs/token-proposals/<component>.md (yes/no)
+- Chromatic: new/changed snapshots expected (yes/no)
+
+## Laag-checklist
+
+- [ ] CSS — src + export + lightningcss build rule
+- [ ] Core — src (or n/a) + tsup entry + export
+- [ ] React — src + tsup entry + export
+- [ ] Element — src + tsup entry + export + sideEffects
+- [ ] Storybook — Overview + 3 layer docs + 3 stories + storySort
+- [ ] registerElements.ts updated
+- [ ] sandbox-css / sandbox-react (`<Root>`) / sandbox-element
+- [ ] Changeset (minor) in `.changeset/`
+
 ## Checklist
 
 - [ ] Pre-commit hooks ran (or `pnpm format` / `pnpm lint:css` pass locally)

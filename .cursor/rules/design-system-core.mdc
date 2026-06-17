@@ -1,0 +1,36 @@
+---
+description: Core design system architecture, naming, and release policy for all agents
+alwaysApply: true
+---
+
+# Design system core
+
+Read `AGENTS.md` and Storybook guides (`DesignPrinciples.mdx`, `Governance.mdx`) before editing.
+
+## Architecture
+
+- One package per **layer** (css, core, react, elements) — never a package per component
+- CSS is the visual source of truth; React and Elements are thin wrappers with identical BEM output
+- Shared logic lives in `@rgrmdesign/rgrm-ds-core` — never duplicate class-name builders
+
+## Build order
+
+CSS → Core (optional) → React + Elements → 3 sandboxes → Storybook (Overview + CSS + React + Web Components docs)
+
+## Naming
+
+- BEM: `.rgrm-{block}`, `.rgrm-{block}--{modifier}`, `.rgrm-{block}__{element}`
+- Tokens: `--rgrm-{group}-{name}` (semantic, not primitive swatches)
+- Web components: `<rgrm-{name}>` with `RGRM_{NAME}_TAG` constant
+
+## Definition of done
+
+A component is complete only when it exists in CSS, React, Elements, all three sandboxes, and Storybook with matching docs across all themes (Root / Dark / Brand).
+
+## Release
+
+- `pnpm changeset` → **minor** for new components; commit `.changeset/*.md`
+- Never publish to npm from an agent run
+- Peer tokens: `@rgrmdesign/rgrm-ds-tokens` — minimum in `packages/css/package.json` `peerDependencies` (`>=…` = any newer version OK)
+
+Reference: Button in all layers (`packages/*/src/button/`).

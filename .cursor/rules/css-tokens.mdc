@@ -1,0 +1,39 @@
+---
+description: CSS layer conventions — BEM, tokens, Stylelint, package registration
+globs: packages/css/**
+alwaysApply: false
+---
+
+# CSS layer
+
+All visuals live here. React and Elements must not re-style.
+
+## BEM + tokens
+
+```css
+/* ✅ GOOD */
+.rgrm-button--primary {
+  color: var(--rgrm-button-primary-color, inherit);
+  padding-block: var(--rgrm-button-primary-padding-block-start, 0);
+}
+
+/* ❌ BAD — hardcoded colour */
+.rgrm-button--primary {
+  color: #05102e;
+}
+```
+
+- Use semantic tokens (`--rgrm-theme-*`, `--rgrm-{component}-*`)
+- Missing tokens: `var(--rgrm-*, <fallback>)` + document in `docs/token-proposals/<name>.md`
+- Prefer fluid `clamp()` tokens for scalable properties
+
+## Package registration
+
+When adding a component:
+
+1. `src/<name>/index.css`
+2. `@import` in `src/index.css`
+3. lightningcss line in `package.json` `scripts.build`
+4. Exports: `"./<name>"` and `"./<name>.css"`
+
+Run `pnpm lint:css` — Stylelint must pass.
