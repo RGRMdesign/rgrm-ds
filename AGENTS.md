@@ -158,3 +158,10 @@ pnpm build-storybook
 ```
 
 Use `/validate-component` for the full checklist. Storybook runs in the cloud VM terminal (`pnpm storybook -- --ci`) for visual and Accessibility panel checks.
+
+### Running dev servers in the cloud VM
+
+- Sandboxes import the **built** package `dist`, so packages must be built first. `pnpm build:packages` does this; the `dev`/`storybook`/`build-storybook` Turbo tasks also run `^build` automatically.
+- Prefer running **one** sandbox at a time (`pnpm dev:css` → 5173, `pnpm dev:react` → 5174, `pnpm dev:element` → 5175) plus `pnpm storybook` (6006) as a separate process. Running `pnpm dev` (all three sandboxes + every package watcher at once) is memory-heavy and has OOM-killed a sandbox here (Vite shows `net::ERR_INSUFFICIENT_RESOURCES` and the process exits `137`).
+- If a sandbox port is already taken, Vite silently shifts to the next free port (e.g. 5176) — read the dev log for the actual URL rather than assuming the documented port.
+- Running `pnpm dev` cold can briefly flash a Vite "Failed to resolve import `@rgrmdesign/rgrm-ds-*`" overlay until the package watch builds finish; reload after a few seconds.
