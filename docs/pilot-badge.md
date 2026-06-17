@@ -7,7 +7,7 @@ Run this after merging the agent configuration (`.cursor/`, `AGENTS.md`, GitHub 
 ## Prerequisites
 
 - [ ] Cloud Agent environment linked to `RGRMdesign/rgrm-ds` on [cursor.com/dashboard](https://cursor.com/dashboard?tab=cloud-agents)
-- [ ] `.cursor/environment.json` + `.cursor/Dockerfile` committed on `main` (Node 24 base image)
+- [ ] `.cursor/environment.json` committed on `main` (Node 24 via nvm in `install`)
 - [ ] GitHub label `agent:build` created (see below)
 
 ### Create the `agent:build` label

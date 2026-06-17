@@ -146,7 +146,7 @@ See `docs/pilot-badge.md` for the first pilot (Badge component).
 
 ## Cursor Cloud specific instructions
 
-Cloud agents use `.cursor/environment.json` with a **Node 24** Dockerfile (matches `.nvmrc` and `package.json` `engines`). If `install` or `start` fails with `ERR_PNPM_UNSUPPORTED_ENGINE`, the environment snapshot is stale — re-save it from [Cloud Agents dashboard](https://cursor.com/dashboard?tab=cloud-agents) after merging environment changes.
+Cloud agents use `.cursor/environment.json`. The `install` script activates **Node 24** via nvm (reads `.nvmrc`, matches `package.json` `engines`). If `install` or `start` fails with `ERR_PNPM_UNSUPPORTED_ENGINE`, re-run **Start Setup Agent** on the [Cloud Agents dashboard](https://cursor.com/dashboard?tab=cloud-agents) and save a fresh snapshot.
 
 After environment bootstrap succeeds, verify before opening a PR:
 
