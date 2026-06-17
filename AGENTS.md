@@ -143,3 +143,33 @@ Pre-commit: Husky runs lint-staged (Prettier + Stylelint on staged files).
 4. Local review: `@ds-architect`, `@a11y-reviewer`, `@react-export`, `@element-export`
 
 See `docs/pilot-badge.md` for the first pilot (Badge component).
+
+## Cursor Cloud specific instructions
+
+Cloud agents use `.cursor/environment.json`. The `install` script activates **Node 24** via nvm (reads `.nvmrc`, matches `package.json` `engines`). The repo sets `engine-strict=true` (`.npmrc`), so pnpm hard-fails with `ERR_PNPM_UNSUPPORTED_ENGINE` under any other Node major. If `install` or `start` fails with `ERR_PNPM_UNSUPPORTED_ENGINE`, re-run **Start Setup Agent** on the [Cloud Agents dashboard](https://cursor.com/dashboard?tab=cloud-agents) and save a fresh snapshot.
+
+**Node-version PATH gotcha (important):** the VM ships a `/exec-daemon/node` shim (Node 22) that sits **earlier** in `PATH` than the nvm install, so a fresh terminal's `which node` reports v22 even after `nvm use 24` — and any `pnpm`/`turbo` command then fails the engine check. In each new shell, put the active nvm Node first in `PATH` before running pnpm:
+
+```bash
+export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 24
+export PATH="$(dirname "$(nvm which current)"):$PATH"
+node --version   # must print v24.x before running pnpm
+```
+
+After environment bootstrap succeeds, verify before opening a PR:
+
+```bash
+pnpm format:check
+pnpm lint:css
+pnpm build:packages
+pnpm build-storybook
+```
+
+Use `/validate-component` for the full checklist. Storybook runs in the cloud VM terminal (`pnpm storybook -- --ci`) for visual and Accessibility panel checks.
+
+### Running dev servers in the cloud VM
+
+- Sandboxes import the **built** package `dist`, so packages must be built first. `pnpm build:packages` does this; the `dev`/`storybook`/`build-storybook` Turbo tasks also run `^build` automatically.
+- Prefer running **one** sandbox at a time (`pnpm dev:css` → 5173, `pnpm dev:react` → 5174, `pnpm dev:element` → 5175) plus `pnpm storybook` (6006) as a separate process. Running `pnpm dev` (all three sandboxes + every package watcher at once) is memory-heavy and has OOM-killed a sandbox here (Vite shows `net::ERR_INSUFFICIENT_RESOURCES` and the process exits `137`).
+- If a sandbox port is already taken, Vite silently shifts to the next free port (e.g. 5176) — read the dev log for the actual URL rather than assuming the documented port.
+- Running `pnpm dev` cold can briefly flash a Vite "Failed to resolve import `@rgrmdesign/rgrm-ds-*`" overlay until the package watch builds finish; reload after a few seconds.
