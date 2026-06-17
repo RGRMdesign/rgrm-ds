@@ -7,6 +7,7 @@ export default defineConfig({
     'src/heading/index.ts',
     'src/inline/index.ts',
     'src/link/index.ts',
+    'src/badge/index.ts',
     'src/paragraph/index.ts',
     'src/root/index.ts',
     'src/section/index.ts',

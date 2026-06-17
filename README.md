@@ -22,7 +22,7 @@ Published docs: **https://rgrmdesign.github.io/rgrm-ds/**
 | ----------- | -------------------------- |
 | Foundation  | Root, Fonts                |
 | Typography  | Heading, Paragraph         |
-| Content     | Link                       |
+| Content     | Link, Badge                |
 | Layout      | Section, Inline, Stack     |
 | Interaction | Button (`primary` variant) |
 
