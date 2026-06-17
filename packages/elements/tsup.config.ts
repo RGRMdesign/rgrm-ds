@@ -4,6 +4,7 @@ export default defineConfig({
   entry: [
     'src/fonts.ts',
     'src/index.ts',
+    'src/badge/index.ts',
     'src/button/index.ts',
     'src/heading/index.ts',
     'src/inline/index.ts',

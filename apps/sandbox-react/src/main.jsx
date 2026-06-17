@@ -6,6 +6,7 @@ import { initThemeSwitcher } from 'sandbox-shared/theme.js';
 
 import { createRoot } from 'react-dom/client';
 
+import { BadgeDemo } from './BadgeDemo.jsx';
 import { ButtonDemo } from './ButtonDemo.jsx';
 import { HeadingDemo } from './HeadingDemo.jsx';
 import { InlineDemo } from './InlineDemo.jsx';
@@ -21,6 +22,7 @@ if (root) {
     <Root>
       <HeadingDemo />
       <ParagraphDemo />
+      <BadgeDemo />
       <InlineDemo />
       <StackDemo />
       <ButtonDemo />
