@@ -146,7 +146,15 @@ See `docs/pilot-badge.md` for the first pilot (Badge component).
 
 ## Cursor Cloud specific instructions
 
-Cloud agents use `.cursor/environment.json`. The `install` script activates **Node 24** via nvm (reads `.nvmrc`, matches `package.json` `engines`). If `install` or `start` fails with `ERR_PNPM_UNSUPPORTED_ENGINE`, re-run **Start Setup Agent** on the [Cloud Agents dashboard](https://cursor.com/dashboard?tab=cloud-agents) and save a fresh snapshot.
+Cloud agents use `.cursor/environment.json`. The `install` script activates **Node 24** via nvm (reads `.nvmrc`, matches `package.json` `engines`). The repo sets `engine-strict=true` (`.npmrc`), so pnpm hard-fails with `ERR_PNPM_UNSUPPORTED_ENGINE` under any other Node major. If `install` or `start` fails with `ERR_PNPM_UNSUPPORTED_ENGINE`, re-run **Start Setup Agent** on the [Cloud Agents dashboard](https://cursor.com/dashboard?tab=cloud-agents) and save a fresh snapshot.
+
+**Node-version PATH gotcha (important):** the VM ships a `/exec-daemon/node` shim (Node 22) that sits **earlier** in `PATH` than the nvm install, so a fresh terminal's `which node` reports v22 even after `nvm use 24` — and any `pnpm`/`turbo` command then fails the engine check. In each new shell, put the active nvm Node first in `PATH` before running pnpm:
+
+```bash
+export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use 24
+export PATH="$(dirname "$(nvm which current)"):$PATH"
+node --version   # must print v24.x before running pnpm
+```
 
 After environment bootstrap succeeds, verify before opening a PR:
 
