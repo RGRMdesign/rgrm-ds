@@ -143,3 +143,18 @@ Pre-commit: Husky runs lint-staged (Prettier + Stylelint on staged files).
 4. Local review: `@ds-architect`, `@a11y-reviewer`, `@react-export`, `@element-export`
 
 See `docs/pilot-badge.md` for the first pilot (Badge component).
+
+## Cursor Cloud specific instructions
+
+Cloud agents use `.cursor/environment.json` with a **Node 24** Dockerfile (matches `.nvmrc` and `package.json` `engines`). If `install` or `start` fails with `ERR_PNPM_UNSUPPORTED_ENGINE`, the environment snapshot is stale — re-save it from [Cloud Agents dashboard](https://cursor.com/dashboard?tab=cloud-agents) after merging environment changes.
+
+After environment bootstrap succeeds, verify before opening a PR:
+
+```bash
+pnpm format:check
+pnpm lint:css
+pnpm build:packages
+pnpm build-storybook
+```
+
+Use `/validate-component` for the full checklist. Storybook runs in the cloud VM terminal (`pnpm storybook -- --ci`) for visual and Accessibility panel checks.
