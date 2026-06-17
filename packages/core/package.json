@@ -18,6 +18,10 @@
       "types": "./dist/button/index.d.ts",
       "import": "./dist/button/index.js"
     },
+    "./divider": {
+      "types": "./dist/divider/index.d.ts",
+      "import": "./dist/divider/index.js"
+    },
     "./heading": {
       "types": "./dist/heading/index.d.ts",
       "import": "./dist/heading/index.js"

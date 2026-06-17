@@ -51,6 +51,16 @@ const preview: Preview = {
               'Web Components',
               ['Documentation', '*'],
             ],
+            'Divider',
+            [
+              'Overview',
+              'CSS',
+              ['Documentation', '*'],
+              'React',
+              ['Documentation', '*'],
+              'Web Components',
+              ['Documentation', '*'],
+            ],
           ],
           'Typography',
           [

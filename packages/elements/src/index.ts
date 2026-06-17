@@ -1,4 +1,5 @@
 export * from './button/index.js';
+export * from './divider/index.js';
 export * from './heading/index.js';
 export * from './inline/index.js';
 export * from './link/index.js';

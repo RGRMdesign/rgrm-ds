@@ -1,0 +1,30 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { dividerReactPropArgNames } from './fixtures';
+import * as ReactStories from './Divider.react.stories';
+import { dividerReactInstallSnippet, dividerReactSetupSnippet } from './snippets';
+
+<Meta of={ReactStories} name='Documentation' />
+
+# React
+
+React wrapper via `@rgrmdesign/rgrm-ds-react/divider`. Renders a native `<hr>` with the
+`.rgrm-divider` class.
+
+## Install
+
+<Source language='bash' code={dividerReactInstallSnippet()} />
+
+## Setup
+
+Import tokens and the component once in your app entry.
+
+<Source language='tsx' code={dividerReactSetupSnippet()} />
+
+## Props
+
+<ArgTypes of={ReactStories} include={dividerReactPropArgNames} />
+
+## Example
+
+<Canvas of={ReactStories.Default} />

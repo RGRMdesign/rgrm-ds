@@ -1,0 +1,14 @@
+/**
+ * Divider for the RGRM design system.
+ * Consumes component tokens from @rgrmdesign/rgrm-ds-tokens.
+ */
+
+.rgrm-divider {
+  border: 0;
+  border-block-start: var(--rgrm-divider-border-width, 1px) solid
+    var(--rgrm-divider-color, var(--rgrm-theme-border, currentColor));
+  box-sizing: border-box;
+  inline-size: 100%;
+  margin-block: var(--rgrm-divider-margin-block, var(--rgrm-scale-space-4, 1.5rem));
+  margin-inline: 0;
+}

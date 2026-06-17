@@ -1,0 +1,29 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+
+import * as ElementStories from './Divider.element.stories';
+import { dividerElementInstallSnippet, dividerElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name='Documentation' />
+
+# Web component
+
+Custom element via `@rgrmdesign/rgrm-ds-elements/divider`. Renders an inner native `<hr>`
+with the `.rgrm-divider` class.
+
+## Install
+
+<Source language='bash' code={dividerElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the element once in your app entry.
+
+<Source language='tsx' code={dividerElementSetupSnippet()} />
+
+## Attributes
+
+Divider has no public attributes.
+
+## Example
+
+<Canvas of={ElementStories.Default} />

@@ -1,0 +1,30 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { dividerCssClassArgNames } from './fixtures';
+import * as CssStories from './Divider.css.stories';
+import { dividerCssInstallSnippet, dividerCssSetupSnippet } from './snippets';
+
+<Meta of={CssStories} name='Documentation' />
+
+# CSS
+
+Vanilla HTML via `@rgrmdesign/rgrm-ds-css/divider`. Apply `.rgrm-divider` on a native
+`<hr>`.
+
+## Install
+
+<Source language='bash' code={dividerCssInstallSnippet()} />
+
+## Setup
+
+Import tokens and the stylesheet once in your app entry.
+
+<Source language='tsx' code={dividerCssSetupSnippet()} />
+
+## Classes
+
+<ArgTypes of={CssStories} include={dividerCssClassArgNames} />
+
+## Example
+
+<Canvas of={CssStories.Default} />

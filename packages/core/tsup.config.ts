@@ -4,6 +4,7 @@ export default defineConfig({
   entry: [
     'src/index.ts',
     'src/button/index.ts',
+    'src/divider/index.ts',
     'src/heading/index.ts',
     'src/inline/index.ts',
     'src/link/index.ts',
