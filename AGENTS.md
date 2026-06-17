@@ -27,14 +27,14 @@ Consumers pick one of **three equivalent layers** — same visuals, same behavio
 
 **CSS is the single source of truth for visuals.** React and Web Components are thin wrappers that apply the exact same BEM classes — they never add their own styling.
 
-### Shared core (optional)
+### Shared core (required)
 
-When a component has variants, modifiers, or non-trivial class logic, add **`packages/core`** so React and Web Components do not duplicate it:
+Every three-layer component includes **`packages/core`** so React and Web Components share the same class logic (see Link for the minimal case):
 
-- `classNames()` builders, shared types, constants (`BUTTON_LABEL_CLASS`, `RGRM_BUTTON_TAG`)
-- Imported by both `@rgrmdesign/rgrm-ds-react/<name>` and `@rgrmdesign/rgrm-ds-elements/<name>`
+- At minimum: `<name>ClassNames(className?)` — e.g. `linkClassNames()`, `badgeClassNames()`
+- Add variant types, modifier constants, or shared logic when the component needs them (Button, Paragraph)
 
-Skip core for trivial components that only need a static BEM class string.
+Imported by both `@rgrmdesign/rgrm-ds-react/<name>` and `@rgrmdesign/rgrm-ds-elements/<name>`. Minimal reference: **Link** (`packages/core/src/link/`). Full reference: **Button**.
 
 ### Web Components specifics
 
@@ -48,7 +48,7 @@ The Elements layer is not “CSS with a tag” — each component is a **custom 
 
 ### Build order
 
-CSS → Core (if needed) → React + Web Components (in parallel) → three sandboxes → Storybook (Overview + CSS + React + Web Components docs).
+CSS → Core → React + Web Components (in parallel) → three sandboxes → Storybook (Overview + CSS + React + Web Components docs).
 
 Reference implementation: **Button** — `packages/{css,core,react,elements}/src/button/` and `apps/storybook/src/button/`.
 

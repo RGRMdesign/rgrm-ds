@@ -18,9 +18,9 @@ Issue body or spec with: component name, Storybook category, variants, API per l
 - [ ] lightningcss build line in `packages/css/package.json` `scripts.build`
 - [ ] Exports: `./<name>` and `./<name>.css` in `packages/css/package.json`
 
-## Core (if classNames/types needed)
+## Core (required — classNames minimum)
 
-- [ ] `packages/core/src/<name>/classNames.ts` + `index.ts`
+- [ ] `packages/core/src/<name>/classNames.ts` + `index.ts` (minimal: like Link; with variants: like Button)
 - [ ] tsup entry in `packages/core/tsup.config.ts`
 - [ ] Export in `packages/core/package.json` + barrel `src/index.ts`
 

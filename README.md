@@ -239,10 +239,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). By participating, you agree to abide by 
 Components live _inside_ the existing layer packages — you do **not** create new
 packages per component.
 
-1. **Core** (optional): add `packages/core/src/<name>/` for any framework-agnostic
-   logic/types and register `src/<name>/index.ts` as a tsup entry.
-2. **CSS**: add `packages/css/src/<name>/index.css`, `@import` it from
+1. **CSS**: add `packages/css/src/<name>/index.css`, `@import` it from
    `packages/css/src/index.css`, and add a build step + `./<name>` export.
+2. **Core**: add `packages/core/src/<name>/` with at least a `classNames()` helper
+   (see Link for the minimal case; Button when variants apply). Register
+   `src/<name>/index.ts` as a tsup entry. React and Elements import from core — never
+   duplicate BEM class strings in wrappers.
 3. **React / Elements**: add `packages/<react|elements>/src/<name>/`, re-export it from
    `src/index.ts`, register `src/<name>/index.ts` as a tsup entry, and add a `./<name>`
    sub-path export.

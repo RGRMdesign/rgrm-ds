@@ -11,8 +11,7 @@ How the design system is structured, versioned, and extended.
 ## Architecture principles
 
 - **One package per layer, not per component.** Adding a component never adds a package;
-  it lives inside the existing `css`, `react`, `elements`, and (optionally) `core`
-  packages.
+  it lives inside the existing `css`, `core`, `react`, and `elements` packages.
 - **CSS is the single source of truth for visuals.** React and Web Component layers are
   thin wrappers that apply the same BEM classes — never re-style on top.
 - **Tokens are a peer dependency.** Packages only _use_ token custom properties
@@ -30,7 +29,7 @@ How the design system is structured, versioned, and extended.
   React and Web Component packages (it is not bundled into them), so it must be available
   on npm as a transitive dependency. Most apps never install it directly; release it in
   lockstep with the wrappers that depend on it.
-- Design tokens live in a **separate repository** (generated from <a href={FIGMA_LIBRARY_URL}>Figma variables</a>) and are consumed here as a peer dependency (`>=0.5.0`).
+- Design tokens live in a **separate repository** (generated from <a href={FIGMA_LIBRARY_URL}>Figma variables</a>) and are consumed here as a peer dependency (`>=0.13.1`).
 - Storybook is the published reference and deploys from `main` to GitHub Pages:
   **https://rgrmdesign.github.io/rgrm-ds/**
 
@@ -39,7 +38,7 @@ How the design system is structured, versioned, and extended.
 A component is considered complete when it exists across all relevant layers with
 matching docs:
 
-1. **Core** (optional) — framework-agnostic logic/types.
+1. **Core** — `classNames()` at minimum (see Link); variant types or shared constants when needed (see Button).
 2. **CSS** — `packages/css/src/<name>/index.css`, imported from the package barrel, with
    a build step and a `./<name>` export.
 3. **React / Elements** — wrappers that re-use the core logic and CSS classes, each with

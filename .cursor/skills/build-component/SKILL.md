@@ -13,17 +13,17 @@ description: Builds a complete RGRM design system component across CSS, React, a
 
 ## Build order
 
-CSS → Core (if needed) → React + Elements → sandboxes → Storybook
+CSS → Core → React + Elements → sandboxes → Storybook
 
 ## Reference files
 
-| Layer     | Path                                             |
-| --------- | ------------------------------------------------ |
-| CSS       | `packages/css/src/button/index.css`              |
-| Core      | `packages/core/src/button/classNames.ts`         |
-| React     | `packages/react/src/button/Button.tsx`           |
-| Element   | `packages/elements/src/button/button-element.ts` |
-| Storybook | `apps/storybook/src/button/`                     |
+| Layer     | Path                                                                     |
+| --------- | ------------------------------------------------------------------------ |
+| CSS       | `packages/css/src/button/index.css`                                      |
+| Core      | `packages/core/src/link/classNames.ts` (minimal) or `button/` (variants) |
+| React     | `packages/react/src/button/Button.tsx`                                   |
+| Element   | `packages/elements/src/button/button-element.ts`                         |
+| Storybook | `apps/storybook/src/button/`                                             |
 
 ## Temporary tokens
 

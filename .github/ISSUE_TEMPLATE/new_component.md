@@ -31,14 +31,18 @@ Props (with defaults):
 
 Attributes on `<rgrm-<name>>`:
 
-## Core needed?
+## Core scope
 
-- [ ] Yes — classNames, types
-- [ ] No
+Every component gets a core module. Default is **classNames only** (like Link). Check extra items only when applicable:
+
+- [ ] classNames() only (default — leave unchecked if nothing extra)
+- [ ] - variant / size types and modifiers (like Button, Paragraph)
+- [ ] - shared constants or non-trivial logic — describe:
 
 ## Acceptance criteria
 
 - [ ] CSS layer complete
+- [ ] Core layer complete (`classNames.ts` minimum)
 - [ ] React layer complete
 - [ ] Web Component layer complete
 - [ ] All three sandboxes updated

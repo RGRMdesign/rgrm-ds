@@ -15,7 +15,7 @@ Read `AGENTS.md` and Storybook guides (`DesignPrinciples.mdx`, `Governance.mdx`)
 
 ## Build order
 
-CSS → Core (optional) → React + Elements → 3 sandboxes → Storybook (Overview + CSS + React + Web Components docs)
+CSS → Core → React + Elements → 3 sandboxes → Storybook (Overview + CSS + React + Web Components docs)
 
 ## Naming
 
@@ -25,7 +25,7 @@ CSS → Core (optional) → React + Elements → 3 sandboxes → Storybook (Over
 
 ## Definition of done
 
-A component is complete only when it exists in CSS, React, Elements, all three sandboxes, and Storybook with matching docs across all themes (Root / Dark / Brand).
+A component is complete only when it exists in CSS, Core (`classNames` minimum), React, Elements, all three sandboxes, and Storybook with matching docs across all themes (Root / Dark / Brand).
 
 ## Release
 

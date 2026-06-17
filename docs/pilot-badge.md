@@ -23,13 +23,13 @@ gh label create "agent:build" \
 
 Use the **New component** issue template with:
 
-| Field              | Value                                       |
-| ------------------ | ------------------------------------------- |
-| Name               | Badge                                       |
-| Storybook category | Content                                     |
-| Roadmap phase      | Pilot (not on roadmap yet)                  |
-| Variants           | `default` only                              |
-| Core needed        | No — single static BEM block (`rgrm-badge`) |
+| Field              | Value                       |
+| ------------------ | --------------------------- |
+| Name               | Badge                       |
+| Storybook category | Content                     |
+| Roadmap phase      | Pilot (not on roadmap yet)  |
+| Variants           | `default` only              |
+| Core scope         | classNames only (like Link) |
 
 **Suggested scope** (keep the pilot small):
 

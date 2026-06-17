@@ -11,7 +11,7 @@
 ## Laag-checklist
 
 - [ ] CSS — src + export + lightningcss build rule
-- [ ] Core — src (or n/a) + tsup entry + export
+- [ ] Core — `classNames.ts` + tsup entry + export
 - [ ] React — src + tsup entry + export
 - [ ] Element — src + tsup entry + export + sideEffects
 - [ ] Storybook — Overview + 3 layer docs + 3 stories + storySort
