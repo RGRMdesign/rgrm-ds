@@ -30,6 +30,10 @@
       "types": "./dist/link/index.d.ts",
       "import": "./dist/link/index.js"
     },
+    "./badge": {
+      "types": "./dist/badge/index.d.ts",
+      "import": "./dist/badge/index.js"
+    },
     "./paragraph": {
       "types": "./dist/paragraph/index.d.ts",
       "import": "./dist/paragraph/index.js"
@@ -64,6 +68,7 @@
     "./dist/section/index.js",
     "./dist/inline/index.js",
     "./dist/link/index.js",
+    "./dist/badge/index.js",
     "./dist/stack/index.js"
   ],
   "scripts": {

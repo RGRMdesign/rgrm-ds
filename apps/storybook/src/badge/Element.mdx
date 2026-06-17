@@ -1,0 +1,25 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+
+import * as ElementStories from './Badge.element.stories';
+import { badgeElementInstallSnippet, badgeElementSetupSnippet } from './snippets';
+
+<Meta of={ElementStories} name='Documentation' />
+
+# Web component
+
+Custom element via `@rgrmdesign/rgrm-ds-elements/badge`. Renders an inner `<span>` with badge
+styles. Text content is passed as light-DOM children.
+
+## Install
+
+<Source language='bash' code={badgeElementInstallSnippet()} />
+
+## Setup
+
+Import tokens and register the element once in your app entry.
+
+<Source language='tsx' code={badgeElementSetupSnippet()} />
+
+## Example
+
+<Canvas of={ElementStories.Default} />
