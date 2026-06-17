@@ -54,7 +54,11 @@ Issue body or spec with: component name, Storybook category, variants, API per l
 - [ ] `pnpm changeset` → minor for css (+ core/react/elements if changed)
 - [ ] `pnpm format`
 - [ ] Run `/validate-component`
-- [ ] Open PR against `main` with template filled in; never publish to npm
+- [ ] Update `README.md` roadmap table (move component to **Available now**, remove from **Next** if listed)
+- [ ] Open PR against `main` with template filled in:
+  - Title: `feat(<name>): add <Name> component`
+  - Body ends with `Closes #<issue-number>` so GitHub links and auto-closes the issue
+  - Never publish to npm
 
 ## Temporary tokens
 
