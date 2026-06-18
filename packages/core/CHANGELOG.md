@@ -1,5 +1,11 @@
 # @rgrmdesign/rgrm-ds-core
 
+## 0.7.0
+
+### Minor Changes
+
+- [#33](https://github.com/RGRMdesign/rgrm-ds/pull/33) [`6d582eb`](https://github.com/RGRMdesign/rgrm-ds/commit/6d582eb18116d5028a79f16311adad03485bb8c3) - Add Badge component across CSS, Core, React, and Web Components layers.
+
 ## 0.6.0
 
 ### Minor Changes
