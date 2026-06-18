@@ -50,8 +50,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/css
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.13.1
-        version: 0.13.1
+        specifier: ^0.14.0
+        version: 0.14.0
       sandbox-shared:
         specifier: workspace:*
         version: link:../../packages/sandbox-shared
@@ -69,8 +69,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/elements
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.13.1
-        version: 0.13.1
+        specifier: ^0.14.0
+        version: 0.14.0
       sandbox-shared:
         specifier: workspace:*
         version: link:../../packages/sandbox-shared
@@ -88,8 +88,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/react
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.13.1
-        version: 0.13.1
+        specifier: ^0.14.0
+        version: 0.14.0
       react:
         specifier: ^19.2.3
         version: 19.2.7
@@ -125,8 +125,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/react
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.13.1
-        version: 0.13.1
+        specifier: ^0.14.0
+        version: 0.14.0
       react:
         specifier: ^19.2.3
         version: 19.2.7
@@ -186,8 +186,8 @@ importers:
         specifier: ^5.2.5
         version: 5.2.5
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: '>=0.13.1'
-        version: 0.13.1
+        specifier: '>=0.14.0'
+        version: 0.14.0
     devDependencies:
       chokidar-cli:
         specifier: ^3.0.0
@@ -209,8 +209,8 @@ importers:
         version: link:../css
     devDependencies:
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.13.1
-        version: 0.13.1
+        specifier: ^0.14.0
+        version: 0.14.0
       rimraf:
         specifier: ^6.0.1
         version: 6.1.3
@@ -231,8 +231,8 @@ importers:
         version: link:../css
     devDependencies:
       '@rgrmdesign/rgrm-ds-tokens':
-        specifier: ^0.13.1
-        version: 0.13.1
+        specifier: ^0.14.0
+        version: 0.14.0
       '@types/react':
         specifier: ^19.2.7
         version: 19.2.16
@@ -937,8 +937,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rgrmdesign/rgrm-ds-tokens@0.13.1':
-    resolution: {integrity: sha512-yYK6fpqVuk4QbLrhkEsrxahU3VgiGlKmIqfUFWs3RQ3bBP9xYdhwBjSvJl9NIE56z9mIyORVTSx3q8yT4uvO5Q==}
+  '@rgrmdesign/rgrm-ds-tokens@0.14.0':
+    resolution: {integrity: sha512-LdRuCX/WsRUpwVkBMwl38wv9dazto347Dc1AWhszhKNhK5ztKYzPW6DUEiGkGkKahWibGsL6niOIwT/JnxKh9w==}
     engines: {node: '>=22.13'}
 
   '@rolldown/binding-android-arm64@1.0.3':
@@ -3832,7 +3832,7 @@ snapshots:
   '@oxc-resolver/binding-win32-x64-msvc@11.20.0':
     optional: true
 
-  '@rgrmdesign/rgrm-ds-tokens@0.13.1': {}
+  '@rgrmdesign/rgrm-ds-tokens@0.14.0': {}
 
   '@rolldown/binding-android-arm64@1.0.3':
     optional: true

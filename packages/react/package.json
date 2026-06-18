@@ -71,11 +71,11 @@
     "@rgrmdesign/rgrm-ds-css": "workspace:*"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.13.1",
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.14.0",
     "react": ">=18"
   },
   "devDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": "^0.13.1",
+    "@rgrmdesign/rgrm-ds-tokens": "^0.14.0",
     "@types/react": "^19.2.7",
     "react": "^19.2.3",
     "rimraf": "^6.0.1",

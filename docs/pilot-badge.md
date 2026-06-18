@@ -36,7 +36,7 @@ Use the **New component** issue template with:
 
 - Inline label/chip for short text (e.g. status, count)
 - Renders as `<span>` (CSS) / wraps children (React / `<rgrm-badge>`)
-- Token-driven colours from semantic/badge tokens; propose missing tokens in `docs/token-proposals/badge.md`
+- Token-driven colours from `--rgrm-badge-*` tokens in `@rgrmdesign/rgrm-ds-tokens`
 
 ## Step 2: Trigger cloud agent
 
@@ -70,6 +70,5 @@ Or invoke review skills explicitly:
 
 ## Step 5: After merge
 
-1. Token proposals in `docs/token-proposals/badge.md` → implement in Figma
-2. Update `rgrm-ds-tokens` repo → publish to npm
-3. Remove CSS fallbacks once tokens are published
+1. ~~Token proposals → Figma → `rgrm-ds-tokens`~~ **Done** — badge tokens ship in `@rgrmdesign/rgrm-ds-tokens` ≥ 0.14.0
+2. ~~Remove CSS fallbacks in `packages/css/src/badge/index.css`~~ **Done**
