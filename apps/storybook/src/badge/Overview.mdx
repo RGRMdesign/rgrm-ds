@@ -1,0 +1,33 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+import { FIGMA_LIBRARY_URL } from '../docs/links';
+import * as CssStories from './Badge.css.stories';
+
+<Meta title='Content/Badge/Overview' name='Overview' />
+
+# Badge
+
+Inline label or chip for short status text, counts, or category labels (e.g. "New",
+"Draft", "3 items"). Used next to headings, in lists, or inside cards — not as an
+interactive control.
+
+Visual styles live in `@rgrmdesign/rgrm-ds-css`; React and the web component are thin
+wrappers that apply the same `rgrm-` classes.
+
+Load `@rgrmdesign/rgrm-ds-tokens` once in your app so the CSS custom properties are
+defined.
+
+**Design spec** — <a href={FIGMA_LIBRARY_URL}>View in Figma</a> for anatomy, variants,
+and usage notes.
+
+## Preview
+
+<Canvas of={CssStories.Default} sourceState='none' />
+
+## Choose an implementation
+
+Pick a page in the sidebar under **Content → Badge**, or jump directly:
+
+- **React** — [`@rgrmdesign/rgrm-ds-react`](?path=/docs/content-badge-react--documentation) for React apps
+- **CSS** — [`@rgrmdesign/rgrm-ds-css`](?path=/docs/content-badge-css--documentation) for hand-written HTML or any stack without a wrapper
+- **Web component** — [`@rgrmdesign/rgrm-ds-elements`](?path=/docs/content-badge-web-components--documentation) for vanilla JS, server-rendered HTML, or non-React frameworks

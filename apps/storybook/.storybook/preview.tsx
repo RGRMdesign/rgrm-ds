@@ -41,6 +41,16 @@ const preview: Preview = {
           ['Getting started', 'Design principles', 'Customization', 'Governance'],
           'Content',
           [
+            'Badge',
+            [
+              'Overview',
+              'CSS',
+              ['Documentation', '*'],
+              'React',
+              ['Documentation', '*'],
+              'Web Components',
+              ['Documentation', '*'],
+            ],
             'Link',
             [
               'Overview',

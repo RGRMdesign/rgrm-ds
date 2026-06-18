@@ -1,0 +1,33 @@
+import { Meta, Canvas, Source, ArgTypes } from '@storybook/addon-docs/blocks';
+
+import { badgeCssClassArgNames } from './fixtures';
+import * as CssStories from './Badge.css.stories';
+import { badgeCssInstallSnippet, badgeCssSetupSnippet } from './snippets';
+
+<Meta of={CssStories} name='Documentation' />
+
+# CSS
+
+Vanilla HTML via `@rgrmdesign/rgrm-ds-css/badge`. Apply `.rgrm-badge` on a native `<span>`.
+
+## Install
+
+<Source language='bash' code={badgeCssInstallSnippet()} />
+
+## Setup
+
+Import tokens and the stylesheet once in your app entry.
+
+<Source language='tsx' code={badgeCssSetupSnippet()} />
+
+## Classes
+
+<ArgTypes of={CssStories} include={badgeCssClassArgNames} />
+
+## Example
+
+<Canvas of={CssStories.Default} />
+
+## Examples
+
+<Canvas of={CssStories.Examples} />

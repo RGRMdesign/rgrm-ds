@@ -22,6 +22,8 @@
     "./paragraph.css": "./dist/paragraph.css",
     "./link": "./dist/link.css",
     "./link.css": "./dist/link.css",
+    "./badge": "./dist/badge.css",
+    "./badge.css": "./dist/badge.css",
     "./root": "./dist/root.css",
     "./root.css": "./dist/root.css",
     "./section": "./dist/section.css",
@@ -42,12 +44,12 @@
     "src"
   ],
   "scripts": {
-    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && lightningcss --minify --bundle --targets \">= 0.25%\" src/index.css -o dist/index.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/root/index.css -o dist/root.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/button/index.css -o dist/button.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/heading/index.css -o dist/heading.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/paragraph/index.css -o dist/paragraph.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/link/index.css -o dist/link.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/section/index.css -o dist/section.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/inline/index.css -o dist/inline.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/stack/index.css -o dist/stack.css",
+    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && lightningcss --minify --bundle --targets \">= 0.25%\" src/index.css -o dist/index.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/root/index.css -o dist/root.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/button/index.css -o dist/button.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/heading/index.css -o dist/heading.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/paragraph/index.css -o dist/paragraph.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/link/index.css -o dist/link.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/badge/index.css -o dist/badge.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/section/index.css -o dist/section.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/inline/index.css -o dist/inline.css && lightningcss --minify --bundle --targets \">= 0.25%\" src/stack/index.css -o dist/stack.css",
     "dev": "chokidar \"src/**/*.css\" -c \"pnpm run build\" --initial",
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@rgrmdesign/rgrm-ds-tokens": ">=0.13.1"
+    "@rgrmdesign/rgrm-ds-tokens": ">=0.14.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
